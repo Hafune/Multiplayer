@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="464163b28bf1a5b4aa3895b9fbca956e">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <ui:VisualElement name="RootContainer" class="text-font-base default_text_size" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Defalut.png?fileID=21300000&amp;guid=72f28ca191c2f4b18b6ace1d3a7ea55b&amp;type=3#StageFrame_01_Single_Defalut&quot;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-scale: 0.5px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; min-width: 350px; max-width: 500px;">
+        <ui:VisualElement style="align-items: center; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/CardFrame_02_Border.png?fileID=21300000&amp;guid=0ee5ce27866c14801b7b6442f15c4628&amp;type=3#CardFrame_02_Border&quot;); -unity-slice-scale: 0.3px;">
+            <ui:Label tabindex="-1" text="Asd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="title_size primary_labels_color" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+            <ui:VisualElement name="Icon" class="size_1x1" style="-unity-background-scale-mode: scale-to-fit;" />
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement name="CostContainer" style="flex-direction: row; display: flex;">
+                    <ui:Label tabindex="-1" text="#cost" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels system_labels_color" />
+                    <ui:Label tabindex="-1" text=":" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels_color double_dots" />
+                    <ui:Label tabindex="-1" text="cost" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CostValue" class="default_text_size value_labels_color" />
+                    <ui:Label tabindex="-1" text="#cost_currency" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size primary_labels_color" />
+                </ui:VisualElement>
+                <ui:VisualElement name="RecoveryContainer" style="flex-direction: row;">
+                    <ui:Label tabindex="-1" text="#recovery" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels system_labels_color" />
+                    <ui:Label tabindex="-1" text=":" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels_color double_dots" />
+                    <ui:Label tabindex="-1" text="recovery" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RecoveryValue" class="default_text_size value_labels_color" />
+                    <ui:Label tabindex="-1" text="#cost_currency" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size primary_labels_color" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CooldownContainer" style="flex-direction: row;">
+                    <ui:Label tabindex="-1" text="#cooldown" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels system_labels_color" />
+                    <ui:Label tabindex="-1" text=":" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size system_labels_color double_dots" />
+                    <ui:Label tabindex="-1" text="ItemSlot" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CooldownValue" class="default_text_size value_labels_color" />
+                    <ui:Label tabindex="-1" text="#sec" parse-escape-sequences="true" display-tooltip-when-elided="true" class="default_text_size primary_labels_color" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" text="Совершает размашистый удар, который вызывает у противников в радиусе &lt;color=&quot;green&quot;&gt;12&lt;/color&gt; м кровотечение, в течение &lt;color=&quot;green&quot;&gt;5&lt;/color&gt; сек. наносящее им физический урон в размере &lt;color=&quot;green&quot;&gt;1100%&lt;/color&gt; урона от оружия." enable-rich-text="true" class="primary_labels_color" style="white-space: normal; -unity-text-align: upper-left;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

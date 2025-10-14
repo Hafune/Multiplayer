@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="d8badf6ea0310284186abdf92e3aa04f">
+    <ui:Template name="LabelNewVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/LabelNewVT/LabelNewVT.uxml?fileID=9197481963319205126&amp;guid=f0df278ee7cad5447964b88298e6c033&amp;type=3#LabelNewVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotOptionsVT.uss?fileID=7433441132597879392&amp;guid=a4317bc4173f4c9418beecc5f27972ac&amp;type=3#ActionMenuSlotOptionsVT" />
+    <ui:VisualElement name="Container" class="rune-item">
+        <ui:VisualElement name="Icon" class="rune-icon no-rune" />
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label text="Без руны" name="RuneName" class="rune-name" />
+        </ui:VisualElement>
+        <ui:VisualElement name="UnactiveOverlay" class="rune-unactive-overlay">
+            <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RequiredLevel" class="action-slot-required-level" />
+        </ui:VisualElement>
+        <ui:Instance template="LabelNewVT" name="LabelNewVT" style="position: absolute; top: -44px; display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

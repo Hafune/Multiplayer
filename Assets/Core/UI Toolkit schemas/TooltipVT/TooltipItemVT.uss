@@ -1,0 +1,7 @@
+.compare_values_green_color {
+    color: rgb(0, 255, 0);
+}
+
+.compare_row {
+    flex-direction: row;
+}

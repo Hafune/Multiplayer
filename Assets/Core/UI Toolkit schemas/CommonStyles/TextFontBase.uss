@@ -1,0 +1,20 @@
+.text-font-base {
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/Cambria%20Math.ttf?fileID=12800000&guid=2deb3e250adbe3d4e9d0aa9f71187462&type=3#Cambria Math");
+}
+
+.primary_labels_color {
+    color: rgb(255, 255, 255);
+}
+
+.other_labels_color {
+    color: rgb(136, 136, 136);
+}
+
+.main_value_size {
+    font-size: 63px;
+}
+
+.title_size {
+    font-size: 20px;
+}

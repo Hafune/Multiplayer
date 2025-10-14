@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="f5903fce076a62646ad3963f45a092a7">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/PopConfirmVT/PopConfirmVT.uss?fileID=7433441132597879392&amp;guid=1b5833bc279690d49b71e510b3d25e37&amp;type=3#PopConfirmVT" />
+    <ui:VisualElement tabindex="-1" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.35);">
+        <ui:VisualElement name="PopConfirmWrapper" focusable="true" style="position: absolute; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 60px; align-items: center; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;); min-width: 30%;">
+            <ui:Label tabindex="-1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#10;Curabitur iaculis eros at lectus lacinia, at varius risus congue. &#10;Fusce laoreet mauris nec elementum aliquet." parse-escape-sequences="true" display-tooltip-when-elided="true" name="Message" style="font-size: 24px; -unity-font: url(&quot;project://database/Assets/Fonts/Cambria%20Math.ttf?fileID=12800000&amp;guid=2deb3e250adbe3d4e9d0aa9f71187462&amp;type=3#Cambria Math&quot;); -unity-font-definition: initial; -unity-font-style: bold; color: rgb(225, 225, 225); min-height: 90px; -unity-text-align: middle-left;" />
+            <ui:VisualElement style="flex-direction: row; justify-content: center; position: absolute; bottom: -51px;">
+                <ui:VisualElement name="SubmitButton" class="button" style="margin-right: 10px; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_RL_Background.png?fileID=21300000&amp;guid=587c54f6e8ea028469003563ccce57f0&amp;type=3#Button_RL_Background&quot;);">
+                    <ui:Label text="#submit" display-tooltip-when-elided="true" class="button-text" style="flex-shrink: 1;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CancelButton" class="button" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_RL_Background.png?fileID=21300000&amp;guid=587c54f6e8ea028469003563ccce57f0&amp;type=3#Button_RL_Background&quot;);">
+                    <ui:Label text="#cancel" display-tooltip-when-elided="true" class="buttonText button-text" style="flex-shrink: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

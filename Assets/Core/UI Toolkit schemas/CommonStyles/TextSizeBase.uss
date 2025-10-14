@@ -1,0 +1,5 @@
+.default_text_size {
+    font-size: 18px;
+    padding-bottom: 0;
+    padding-top: 0;
+}

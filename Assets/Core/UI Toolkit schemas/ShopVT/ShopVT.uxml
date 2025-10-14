@@ -1,0 +1,662 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="2e06608257f901a42a7a7f9f5bad0575">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/InventoryVT/InventoryCells.uss?fileID=7433441132597879392&amp;guid=bdefb22a2d25ecf43832bb2ad7635457&amp;type=3#InventoryCells" />
+    <ui:VisualElement class="text-color-base text-font-base default_text_size" style="flex-grow: 1; justify-content: center; align-items: flex-start;">
+        <Core.FocusableVisualElement name="ShopArea" tabindex="-1" style="flex-grow: 1; flex-direction: row; justify-content: flex-end; background-image: url(&quot;project://database/Assets/Additionals/Classic_RPG_GUI/Parts/big_bar_bg.png?fileID=732661371&amp;guid=90ef21589078a9d4aaa982eb1258d332&amp;type=3#big_bar_bg_0&quot;);">
+            <ui:VisualElement style="flex-grow: 1; width: 540px; max-width: 540px; background-image: url(&quot;project://database/Assets/Additionals/Classic_RPG_GUI/Parts/big_bar_frame.png?fileID=21300000&amp;guid=89fd731f50e11fc4682618136b80dd27&amp;type=3#big_bar_frame&quot;); -unity-slice-scale: 0.5px;">
+                <ui:VisualElement style="flex-grow: 1;" />
+                <ui:VisualElement style="position: absolute; background-image: url(&quot;project://database/Assets/Additionals/4000_Fantasy_Icons/Z_Other/Bonus_icons/Bag.png?fileID=2800000&amp;guid=590c2ec4eb5d6ba40b98d65f0e459639&amp;type=3#Bag&quot;); width: 128px; height: 128px; top: 59px; left: 208px;" />
+                <ui:VisualElement name="InventoryContainer" style="flex-grow: 1; position: absolute; width: 413px; height: 692px; top: 265px; left: 65px;">
+                    <ui:VisualElement style="flex-grow: 1;">
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="row">
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                            <ui:VisualElement class="item_cell_Image" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ItemsBackgroundsContainer" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemBackgroundCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemBackground" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ItemsContainer" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="ItemCellContainer" class="cell" style="flex-grow: 1;">
+                                <ui:VisualElement name="ItemCell" class="cell item_cell" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="OverlayContainer" style="flex-grow: 1; position: absolute; width: 100%; height: 100%;">
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Row" class="row">
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                            <Core.FocusableVisualElement name="OverlayCell" class="cell" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement tabindex="-1" name="CloseButton" style="position: absolute; width: 36px; height: 36px; right: 0; top: 0; background-image: url(&quot;project://database/Assets/Additionals/Classic_RPG_GUI/Parts/Mini_exit.png?fileID=21300000&amp;guid=9a43ce2f63eaa854c98daae97827b4c9&amp;type=3#Mini_exit&quot;);" />
+            </ui:VisualElement>
+        </Core.FocusableVisualElement>
+    </ui:VisualElement>
+</ui:UXML>

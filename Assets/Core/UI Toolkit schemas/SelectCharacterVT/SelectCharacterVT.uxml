@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="b846d6ccaeb94474ca9ffc2a015dd5fb">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/SelectCharacterVT/SelectCharacterVT.uss?fileID=7433441132597879392&amp;guid=c5929c96f757c3344aaa9b962c70726a&amp;type=3#SelectCharacterVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/FocusableLabel.uss?fileID=7433441132597879392&amp;guid=3a411ca424cbe6247bc9ea990ad76d1a&amp;type=3#FocusableLabel" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/NavigationBar.uss?fileID=7433441132597879392&amp;guid=aef2a06e51c7977458c609b4e786304a&amp;type=3#NavigationBar" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TitleBackground.uss?fileID=7433441132597879392&amp;guid=0f2432af235148243978f2cea839f490&amp;type=3#TitleBackground" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:VisualElement name="CharactersMenu" style="position: absolute; bottom: 200px;">
+            <ui:VisualElement name="CharacterMenuSlots" style="flex-direction: row;">
+                <ui:VisualElement name="FirstSlot" class="character-frame__container" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; position: absolute; display: flex;">
+                <ui:VisualElement name="SelectionFrame" class="text-font-base text-color-base character-frame__container character-frame__selection" style="position: absolute;">
+                    <ui:VisualElement style="flex-grow: 1; border-left-color: rgb(123, 28, 41); border-right-color: rgb(123, 28, 41); border-top-color: rgb(123, 28, 41); border-bottom-color: rgb(123, 28, 41); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px;">
+                        <ui:Label tabindex="-1" text="#player1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: -37px; right: 0; -unity-font-style: bold; font-size: 22px;" />
+                        <ui:Label tabindex="-1" text="OK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Ok" style="position: absolute; top: -90px; right: 0; -unity-font-style: bold; font-size: 40px; display: none;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="SelectionFrame" class="text-font-base text-color-base character-frame__container character-frame__selection" style="position: absolute;">
+                    <ui:VisualElement style="flex-grow: 1; border-left-color: rgb(56, 131, 214); border-right-color: rgb(56, 131, 214); border-top-color: rgb(56, 131, 214); border-bottom-color: rgb(56, 131, 214); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px;">
+                        <ui:Label tabindex="-1" text="#player2" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; top: -37px; -unity-font-style: bold; font-size: 22px;" />
+                        <ui:Label tabindex="-1" text="OK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Ok" style="position: absolute; top: -90px; -unity-font-style: bold; font-size: 40px; display: flex;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="NavigationBar" class="text-color-base text-font-base navigation-bar" style="position: absolute; bottom: 0; right: 0; left: 0;">
+            <ui:VisualElement class="navigation-bar-background" />
+            <ui:VisualElement class="navigation-bar-button-container">
+                <Core.InputSprites.UpInputSpriteElement class="navigation-bar-button-icon" />
+                <ui:Label text="#up" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement class="navigation-bar-button-container">
+                <Core.InputSprites.DownInputSpriteElement class="navigation-bar-button-icon" />
+                <ui:Label text="#down" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+            <ui:VisualElement class="navigation-bar-button-container">
+                <Core.InputSprites.SubmitInputSpriteElement class="navigation-bar-button-icon" />
+                <ui:Label text="#submit" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

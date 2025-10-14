@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="78bc0811fed44234f805530de36b8541">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/ButtonEffects.uss?fileID=7433441132597879392&amp;guid=1b16437254f23e84682f26a14a68ea59&amp;type=3#ButtonEffects" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;); padding-top: 32px; padding-right: 32px; padding-bottom: 50px; padding-left: 32px; max-width: 80%; flex-wrap: wrap;">
+            <ui:VisualElement style="flex-direction: row; align-items: center;">
+                <ui:Label tabindex="-1" text="#click_to_atack" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text-font-base text-color-base" style="font-size: 24px;" />
+                <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Additionals/Cursors/Cursors%2064/Cursor_Basic2.png?fileID=2800000&amp;guid=51cb6ee928f89b64691ef4dfd57c03e9&amp;type=3#Cursor_Basic2&quot;); width: 48px; height: 48px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; align-items: center;">
+                <ui:Label tabindex="-1" text="#shift_click_to_atack_on_place" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text-font-base text-color-base" style="font-size: 24px;" />
+                <ui:VisualElement style="width: 128px; height: 32px; background-image: url(&quot;project://database/Assets/Sprites/SimpleKeys/Jumbo/Light/Single%20PNGs/SHIFT_WITH_ARROW.png?fileID=2800000&amp;guid=ad02bd01c93ec2049ac050dff24c798e&amp;type=3#SHIFT_WITH_ARROW&quot;); margin-right: 16px;" />
+                <ui:Label tabindex="-1" text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" class="text-color-base text-font-base" style="font-size: 30px; -unity-font-style: bold;" />
+                <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Additionals/Cursors/Cursors%2064/Cursor_Basic2.png?fileID=2800000&amp;guid=51cb6ee928f89b64691ef4dfd57c03e9&amp;type=3#Cursor_Basic2&quot;); width: 48px; height: 48px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button text="#continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonOk" tabindex="-1" class="text-color-base text-font-base my_button" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_RL_Background.png?fileID=21300000&amp;guid=587c54f6e8ea028469003563ccce57f0&amp;type=3#Button_RL_Background&quot;); background-color: rgba(188, 188, 188, 0); font-size: 24px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); padding-top: 36px; padding-right: 36px; padding-bottom: 36px; padding-left: 36px; margin-top: -60px;" />
+    </ui:VisualElement>
+</ui:UXML>

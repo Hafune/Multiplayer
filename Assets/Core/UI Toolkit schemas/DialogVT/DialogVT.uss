@@ -1,0 +1,18 @@
+.icon {
+    width: 128px;
+    height: 128px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.text-container {
+    flex-grow: 1;
+}
+
+.title-underline {
+    position: absolute;
+    background-color: rgb(50, 120, 189);
+    bottom: 6px;
+    top: 9px;
+    left: -50px;
+    right: -20px;
+}

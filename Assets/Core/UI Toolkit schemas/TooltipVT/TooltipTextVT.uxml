@@ -1,0 +1,8 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="073689b4a44017743b33e00fc8774d26">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement name="RootContainer" class="text-font-base default_text_size" style="position: absolute; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Defalut.png?fileID=21300000&amp;guid=72f28ca191c2f4b18b6ace1d3a7ea55b&amp;type=3#StageFrame_01_Single_Defalut&quot;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-scale: 0.5px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+        <ui:Label tabindex="-1" text="Asd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Text" class="title_size primary_labels_color" />
+    </ui:VisualElement>
+</ui:UXML>

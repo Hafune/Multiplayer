@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e7c3cce78f4b8d89ab0e22a5fe64a7, type: 3}
+  m_Name: Champions Drop
+  m_EditorClassIdentifier: 
+  <Chances>k__BackingField:
+  - <DropChance>k__BackingField: 1
+    <VariantsConfig>k__BackingField: {fileID: 11400000, guid: 17e98cb73c7b466499a1eacaead8d486,
+      type: 2}
+  - <DropChance>k__BackingField: 0.35
+    <VariantsConfig>k__BackingField: {fileID: 11400000, guid: 17e98cb73c7b466499a1eacaead8d486,
+      type: 2}
+  - <DropChance>k__BackingField: 0.1
+    <VariantsConfig>k__BackingField: {fileID: 11400000, guid: 17e98cb73c7b466499a1eacaead8d486,
+      type: 2}
+  <Exacts>k__BackingField: []

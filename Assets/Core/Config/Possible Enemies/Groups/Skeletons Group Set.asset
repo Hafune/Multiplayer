@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3bfbb372324e7b9d89f655d8f24004, type: 3}
+  m_Name: Skeletons Group Set
+  m_EditorClassIdentifier: 
+  _enemies:
+  - enemies: {fileID: 11400000, guid: c16cf93bbbf74a64b88cb27080df3959, type: 2}
+    weight: 4
+  - enemies: {fileID: 11400000, guid: 8157e08cd08019a49b23c1c513163de4, type: 2}
+    weight: 2
+  - enemies: {fileID: 11400000, guid: 22fb987d8c5f5314c839a8739e591912, type: 2}
+    weight: 1

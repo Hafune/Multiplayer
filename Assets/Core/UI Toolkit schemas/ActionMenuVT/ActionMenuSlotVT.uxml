@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="e95646d63c4d2a64c96e2603e120381c">
+    <ui:Template name="LabelNewVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/LabelNewVT/LabelNewVT.uxml?fileID=9197481963319205126&amp;guid=f0df278ee7cad5447964b88298e6c033&amp;type=3#LabelNewVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuMainVT.uss?fileID=7433441132597879392&amp;guid=86952c174e4b4e849b4152f086b1c560&amp;type=3#ActionMenuMainVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement name="Container" class="skill-slot text-font-base">
+        <ui:Label text="ОСНОВНОЕ" name="CategoryTitle" class="skill-category offensive" />
+        <ui:VisualElement class="skill-frame">
+            <ui:VisualElement class="skill-icon-container">
+                <ui:VisualElement name="Icon" class="skill-icon" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:Label name="ActionName" text="Сокрушающий удар" class="skill-name" style="margin-bottom: -10px;" />
+                <ui:Label name="RuneName" text="Сокрушающий удар" class="action-slot-rune-name" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="HotKeyContainer" picking-mode="Ignore" class="skill-binding">
+            <ui:VisualElement name="HotkeyIcon" class="mouse-icon" style="display: none;" />
+            <ui:Label text="1" name="Hotkey" class="key-binding" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="UnactiveOverlay" style="position: absolute; bottom: 0; right: 0; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.6); display: none;" />
+    </ui:VisualElement>
+    <ui:Instance template="LabelNewVT" name="LabelNewVT" style="position: absolute; top: -31px; left: 191px; display: none;" />
+</ui:UXML>

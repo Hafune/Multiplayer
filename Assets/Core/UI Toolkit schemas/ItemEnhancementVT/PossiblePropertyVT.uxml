@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="9d849d87faae7d14fa52b22f4eda2987">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/PossiblePropertyVT.uss?fileID=7433441132597879392&amp;guid=983ffc42c47354742985bf51f8f61a65&amp;type=3#PossiblePropertyVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <ui:VisualElement name="Container" class="default_text_size text-font-base secondary_labels_color" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-between; padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:VisualElement class="possible-properties-value" style="flex-direction: row;">
+                <ui:Label parse-escape-sequences="true" text="[" style="padding-right: 0; margin-right: 0;" />
+                <ui:Label tabindex="-1" text="63" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ValueMin" style="padding-right: 0; padding-left: 0; margin-right: 0; margin-left: 0;" />
+                <ui:Label text="-" />
+                <ui:Label text="139" name="ValueMax" style="padding-right: 0; padding-left: 0; margin-right: 0; margin-left: 0;" />
+                <ui:Label text="]" style="padding-right: 0; padding-left: 0; margin-left: 0; margin-right: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:Label tabindex="-1" text="ед. урона" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" style="white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,69 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="4a8b0f74226ef8c4bae2b8e9c032d8ce">
+    <ui:Template name="SelectablePropertyVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/SelectablePropertyVT.uxml?fileID=9197481963319205126&amp;guid=b4223148473ed56458f98428a1c62465&amp;type=3#SelectablePropertyVT" />
+    <ui:Template name="PossiblePropertyVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/PossiblePropertyVT.uxml?fileID=9197481963319205126&amp;guid=012a04233acfd0e4384e71ed4f330f96&amp;type=3#PossiblePropertyVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/ItemEnhancementVT.uss?fileID=7433441132597879392&amp;guid=35650766f89821541b25735d5691d009&amp;type=3#ItemEnhancementVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/ButtonEffects.uss?fileID=7433441132597879392&amp;guid=1b16437254f23e84682f26a14a68ea59&amp;type=3#ButtonEffects" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <ui:VisualElement name="MainContainer" tabindex="-1" class="main-container text-font-base default_text_size">
+        <ui:VisualElement name="PanelsContainer" class="panels-container" style="height: 950px;">
+            <ui:VisualElement name="LeftPanel" class="left-panel">
+                <ui:VisualElement class="header">
+                    <ui:Label text="#title" class="header-title" />
+                    <ui:Button name="CloseButton" text="×" class="close-button" />
+                </ui:VisualElement>
+                <ui:VisualElement class="content-area">
+                    <ui:VisualElement class="item-slot-area">
+                        <ui:VisualElement name="ItemSlotContainer" class="item-slot" style="flex-grow: 1;">
+                            <ui:VisualElement name="ItemSlot" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="properties-area" style="display: flex;">
+                        <ui:Label text="#select_item" name="SelectItem" class="properties-title" style="display: flex;" />
+                        <ui:Label text="#select_property" name="SelectProperty" class="properties-title" style="display: flex;" />
+                        <ui:Label text="#change_property" name="ChangeProperty" class="properties-title" style="display: flex;" />
+                        <ui:Label text="#select_new_property" name="SelectNewProperty" class="properties-title" style="display: flex;" />
+                        <ui:VisualElement name="PropertiesList">
+                            <ui:Instance template="SelectablePropertyVT" />
+                        </ui:VisualElement>
+                        <ui:Label text="#description_empty_item" name="DescriptionImptyItem" class="properties-title" style="display: flex; flex-grow: 1; flex-shrink: 1; white-space: normal;" />
+                        <ui:Label text="#description_changed_item" name="DescriptionChangedItem" class="properties-title" style="display: flex; flex-grow: 1; flex-shrink: 1; white-space: normal;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="resources-area text-color-base">
+                    <ui:Label text="#resource_requider" name="ResourcesTitle" class="resources-title" style="display: none;" />
+                    <ui:VisualElement name="ResourcesList" class="resources-list" />
+                    <ui:Button name="SelectItemDecorButton" text="#select_item_decor_button" class="hidden enhance-decor-button" />
+                    <ui:Button name="SelectPropertyDecorButton" text="#select_property_decor_button" class="hidden enhance-decor-button" />
+                    <ui:VisualElement name="EnhanceButton" class="enhance-button" style="flex-direction: row; justify-content: center; align-items: center; margin-top: 2px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px;">
+                        <ui:Label text="#enhance_button" class="text-color-base" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <ui:Label text=":" class="text-color-base" style="margin-top: 0; margin-right: 10px; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+                        <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RequiredGold" class="text-color-base" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                        <ui:VisualElement class="gold-icon" />
+                    </ui:VisualElement>
+                    <ui:Button name="SelectNewPropertyButton" text="#select_new_property_button" class="enhance-button hidden text-color-base" style="display: flex;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="gold-area">
+                    <ui:Label text="#gold" class="gold-label" />
+                    <ui:VisualElement class="gold-container">
+                        <ui:Label text="5 307 139 088" name="GoldAmount" class="gold-amount" />
+                        <ui:VisualElement class="gold-icon" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="RightPanel" class="right-panel" style="display: flex;">
+                <ui:VisualElement class="properties-header">
+                    <ui:Label text="#possible_properties_title" class="properties-header-title" />
+                    <ui:Button name="PropertiesCloseButton" text="×" class="close-button" />
+                </ui:VisualElement>
+                <ui:VisualElement class="properties-content">
+                    <ui:VisualElement name="PossiblePropertiesList" style="flex-grow: 1;">
+                        <ui:Instance template="PossiblePropertyVT" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

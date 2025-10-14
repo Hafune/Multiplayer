@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8aff233bc524d0b9cafce756ab98880, type: 3}
+  m_Name: Entities_Boss
+  m_EditorClassIdentifier: 
+  IDs: 657c63cc67f257d61a7333e67c1ab7fe2e24674310c3bc66
+  ExcludeTable: {fileID: 0}
+  Assets:
+  - {fileID: 4127902835804906511, guid: b8c2bdc8ec97ae74eb6ea917e905aee8, type: 3}
+  - {fileID: 4127902835804906511, guid: e2d7ad476e8bb9e42aed2e02a0c05a89, type: 3}
+  - {fileID: 4127902835804906511, guid: 2556647ca88f76643a66126981d00556, type: 3}
+  - {fileID: 4127902835804906511, guid: 55184a736cc6f934ca3730f8b5c4e4b7, type: 3}
+  - {fileID: 4127902835804906511, guid: d7fb046f1c232d6489a91e9583543f9b, type: 3}
+  - {fileID: 4127902835804906511, guid: 0a525733e7eadf3438efec4b1f6fe9ee, type: 3}

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="1fcc2b7d94335eb4bae99b5ccb1e0234">
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; max-width: 90%; max-height: 90%; background-color: rgb(13, 25, 38); border-left-color: rgb(95, 94, 96); border-right-color: rgb(95, 94, 96); border-top-color: rgb(95, 94, 96); border-bottom-color: rgb(95, 94, 96); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label tabindex="-1" text="Cloud data Loading Error:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ErrorTitle" style="color: rgb(250, 84, 84); -unity-font-style: bold; font-size: 20px; -unity-text-align: upper-center;" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="#error_message" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ErrorMessage" style="color: rgb(209, 209, 209); border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); overflow: hidden; max-height: 85%; font-size: 18px;" />
+            <ui:Label tabindex="-1" text="If you already have progress in this game, click &lt;color=#29B737&gt;Try Load Data&lt;/color&gt;.&#10;If you have never played this game before, click &lt;color=#BC3D44&gt;Skip&lt;/color&gt; to start a new game." parse-escape-sequences="true" display-tooltip-when-elided="true" name="Warning" enable-rich-text="true" style="-unity-font-style: bold; font-size: 16px; -unity-text-align: upper-left; color: rgb(255, 255, 255);" />
+            <ui:VisualElement style="flex-direction: row; justify-content: center;">
+                <ui:Button text="Try Load Data" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonRefetch" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(41, 183, 55); -unity-font-style: bold; min-width: 140px;" />
+                <ui:Button text="Skip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonIgnore" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(188, 61, 68); -unity-font-style: bold; min-width: 100px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

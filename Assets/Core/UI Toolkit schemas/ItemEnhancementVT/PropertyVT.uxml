@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="371f434ceb86c6a48bee612272e90fc4">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/PossiblePropertyVT.uss?fileID=7433441132597879392&amp;guid=983ffc42c47354742985bf51f8f61a65&amp;type=3#PossiblePropertyVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ItemEnhancementVT/SelectablePropertyVT.uss?fileID=7433441132597879392&amp;guid=44f6b8f4d7153f2429907f8b810815ec&amp;type=3#SelectablePropertyVT" />
+    <ui:VisualElement name="Container" class="default_text_size text-font-base secondary_labels_color container" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-between; padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="63-139" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Value" />
+            <ui:Label tabindex="-1" text="ед. урона" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Description" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PossiblePropertiesButton" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/btn_icon_mark_question.png?fileID=21300000&amp;guid=29747faf575d84245bbe9fb122d1db2a&amp;type=3#btn_icon_mark_question&quot;); width: 24px; height: 24px;" />
+    </ui:VisualElement>
+</ui:UXML>

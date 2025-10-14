@@ -1,0 +1,12 @@
+.container {
+    padding-left: 24px;
+}
+
+.row {
+    transition-duration: 0.2s;
+}
+
+.row:hover {
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+}

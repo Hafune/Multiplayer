@@ -1,0 +1,49 @@
+.secondary_labels_color {
+    color: rgb(105, 105, 255);
+}
+
+.size_1x2 {
+    height: 128px;
+    width: 64px;
+}
+
+.size_1x1 {
+    height: 64px;
+    width: 64px;
+}
+
+.value_labels_color {
+    color: rgb(0, 255, 0);
+}
+
+.system_labels {
+    margin-right: 0;
+    padding-right: 1px;
+}
+
+.double_dots {
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.system_labels_color {
+    color: rgb(199, 179, 119);
+}
+
+.required_level_red {
+    color: rgb(184, 27, 8);
+}
+
+.gray_rarity_title_color {
+    color: rgb(249, 249, 249);
+}
+
+.blue_rarity_title_color {
+    color: rgb(105, 105, 255);
+}
+
+.yellow_rarity_title_color {
+    color: rgb(248, 204, 53);
+}

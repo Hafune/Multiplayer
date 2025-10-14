@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="13a72ceb823b9404db35866fb70c2f38">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/SettingsTestVT/SettingsTestVT.uss?fileID=7433441132597879392&amp;guid=a536829b546da2b40917211a040696fd&amp;type=3#SettingsTestVT" />
+    <ui:Slider label="Scale" high-value="1" inverted="false" low-value="0" name="Scale" class="slider" style="font-size: 65px; margin-left: 450px; -unity-font-style: bold; color: rgb(255, 255, 255); margin-top: 100px; margin-right: 200px;" />
+</ui:UXML>

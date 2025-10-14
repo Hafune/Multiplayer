@@ -1,0 +1,60 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="cbadbbe00d0ddd34bbe796aa84ca04be">
+    <ui:Template name="ActionMenuSlotVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotVT.uxml?fileID=9197481963319205126&amp;guid=2a8203792492e5b478ae51957018bd67&amp;type=3#ActionMenuSlotVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuMainVT.uss?fileID=7433441132597879392&amp;guid=86952c174e4b4e849b4152f086b1c560&amp;type=3#ActionMenuMainVT" />
+    <ui:VisualElement tabindex="-1" class="skills-window">
+        <ui:VisualElement class="header">
+            <ui:Label text="#skills" class="header-title" />
+            <ui:Button name="close-button" class="close-button">
+                <ui:Label text="X" class="close-icon" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="content" style="flex-grow: 1;">
+            <ui:VisualElement class="section">
+                <ui:Label text="#skills_on_mouse" class="section-title" />
+                <ui:VisualElement class="skills-row">
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotMouseLeft" />
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotMouseRight" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="section">
+                <ui:Label text="#skills_on_panel" class="section-title" />
+                <ui:VisualElement class="skills-grid">
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotButton1" />
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotButton2" />
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotButton3" />
+                    <ui:Instance template="ActionMenuSlotVT" name="ActionSlotButton4" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="section" style="display: none;">
+                <ui:Label text="ПАССИВНЫЕ УМЕНИЯ" class="section-title" />
+                <ui:VisualElement class="passive-skills-row">
+                    <ui:VisualElement name="passive-slot-1" class="passive-slot">
+                        <ui:VisualElement class="passive-icon-container">
+                            <ui:VisualElement name="passive-icon-1" class="passive-icon" />
+                        </ui:VisualElement>
+                        <ui:Label name="passive-name-1" text="Остервенение" class="passive-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-slot-2" class="passive-slot">
+                        <ui:VisualElement class="passive-icon-container">
+                            <ui:VisualElement name="passive-icon-2" class="passive-icon" />
+                        </ui:VisualElement>
+                        <ui:Label name="passive-name-2" text="Буйство" class="passive-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-slot-3" class="passive-slot">
+                        <ui:VisualElement class="passive-icon-container">
+                            <ui:VisualElement name="passive-icon-3" class="passive-icon" />
+                        </ui:VisualElement>
+                        <ui:Label name="passive-name-3" text="Беспощадность" class="passive-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-slot-4" class="passive-slot">
+                        <ui:VisualElement class="passive-icon-container">
+                            <ui:VisualElement name="passive-icon-4" class="passive-icon" />
+                        </ui:VisualElement>
+                        <ui:Label name="passive-name-4" text="Враждебность" class="passive-name" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Button name="close-button-bottom" text="#close" class="close-button-bottom" />
+    </ui:VisualElement>
+</ui:UXML>

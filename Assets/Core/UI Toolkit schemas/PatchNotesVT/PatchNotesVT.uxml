@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="7567d1cda6f901b44a28bf2ad37afbc7">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/PatchNotesVT/PatchNotesVT.uss?fileID=7433441132597879392&amp;guid=4c31265bfed5a7844bc0ea064d68e7a6&amp;type=3#PatchNotesVT" />
+    <ui:VisualElement class="text-color-base default_text_size text-font-base" style="flex-grow: 1;">
+        <ui:VisualElement tabindex="-1" name="ShowButton" class="patch_notes_hide" style="position: absolute; align-self: flex-end; align-items: center;">
+            <ui:VisualElement tabindex="-1" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/UnitFrame_Level_Frame.png?fileID=21300000&amp;guid=e7c9bc1d94aa7114697abeb5a6909a21&amp;type=3#UnitFrame_Level_Frame&quot;); width: 74px; height: 74px; padding-top: 24px; padding-right: 24px; padding-bottom: 24px; padding-left: 24px; align-self: flex-end;">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Icon_PictoIcons_(Original)/btn_icon_mail.png?fileID=21300000&amp;guid=d1021d40c060d4efdac596b6e0101d02&amp;type=3#btn_icon_mail&quot;); -unity-background-image-tint-color: rgb(149, 119, 89);" />
+            </ui:VisualElement>
+            <ui:Label tabindex="-1" text="V123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="VersionText" style="-unity-font-style: bold; margin-top: -10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PatchContainer" tabindex="-1" style="flex-grow: 1; justify-content: center; padding-top: 150px; padding-right: 150px; padding-bottom: 150px; padding-left: 150px; background-color: rgba(0, 0, 0, 0.75);">
+            <ui:ScrollView scroll-deceleration-rate="0,135" class="path_container">
+                <ui:Label tabindex="-1" text="#v0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PatchText" style="font-size: 24px; white-space: normal;" />
+                <ui:VisualElement tabindex="-1" name="CloseButton" style="position: absolute; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Icon_Close.png?fileID=21300000&amp;guid=f8d9926e57201f84c9a9e9aa4ea25021&amp;type=3#Icon_Close&quot;); top: 5px; right: 5px;" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

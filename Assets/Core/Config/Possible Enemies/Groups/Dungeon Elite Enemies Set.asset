@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3bfbb372324e7b9d89f655d8f24004, type: 3}
+  m_Name: Dungeon Elite Enemies Set
+  m_EditorClassIdentifier: 
+  _enemies:
+  - enemies: {fileID: 11400000, guid: 800514e3e29c8b3428070f0cd528f701, type: 2}
+    weight: 1
+  - enemies: {fileID: 11400000, guid: 99d0fa7dd194f1f44946a634ea77c841, type: 2}
+    weight: 1
+  - enemies: {fileID: 11400000, guid: 90b02d22921e51e4b926c56a2810051b, type: 2}
+    weight: 1
+  - enemies: {fileID: 11400000, guid: 7960c960305478741bd489b999060ee8, type: 2}
+    weight: 1

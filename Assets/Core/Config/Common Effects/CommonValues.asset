@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8145d4d2d6b24ed895e7696688b2f4e4, type: 3}
+  m_Name: CommonValues
+  m_EditorClassIdentifier: 
+  <DamageTextEffectPrefab>k__BackingField: {fileID: 8731431403450556868, guid: 73b9b80441a8e324da805e497572569d,
+    type: 3}
+  <CriticalDamageTextEffectPrefab>k__BackingField: {fileID: 7368794508181482600, guid: 2b18ac12114d2b148b75433386a599c1,
+    type: 3}
+  <ChampionMaterial>k__BackingField: {fileID: 2100000, guid: 2f6cd80642d7b744a86f91bc8f688508,
+    type: 2}
+  <EliteMaterial>k__BackingField: {fileID: 2100000, guid: 4b3d9802df4fe654c99a6136e3fea772,
+    type: 2}
+  <MinionMaterial>k__BackingField: {fileID: 2100000, guid: 257c947bfded00c4f80ff8af69758f21,
+    type: 2}
+  <FrozenOrbAffixPrefab>k__BackingField: {fileID: 3100406230861038418, guid: 847a322a489616f4596fcb8d8b301d18,
+    type: 3}
+  <ArcaneOrbAffixPrefab>k__BackingField: {fileID: 3100406230861038418, guid: a70d570f67d3f1f47a5df9b253877aed,
+    type: 3}
+  <PoisonPuddleAffixPrefab>k__BackingField: {fileID: 3100406230861038418, guid: ad8b6d5ec75490242abb3b8286014f57,
+    type: 3}
+  <StoneSkinAffixSlot>k__BackingField:
+    key: StoneSkinAffixSlot
+    maxStackCount: 0
+    vfxStartLogic: {fileID: 0}
+    vfxCancelLogic: {fileID: 0}
+    values:
+    - valueEnum: -387419326
+      value: 2
+    tags: 
+  <FastAffixSlot>k__BackingField:
+    key: FastAffixSlot
+    maxStackCount: 0
+    vfxStartLogic: {fileID: 0}
+    vfxCancelLogic: {fileID: 0}
+    values:
+    - valueEnum: 617633546
+      value: 0.75
+    tags: 

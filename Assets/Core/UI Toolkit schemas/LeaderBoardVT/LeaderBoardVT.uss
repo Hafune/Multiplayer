@@ -1,0 +1,64 @@
+.list {
+}
+
+.listContainer {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.leaderboard_container {
+    background-image: url("project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&guid=ab64d3ca2c72c4740939f58d572de9f0&type=3#Lobby_CC_Box_Frame");
+    padding-top: 45px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.season_container {
+    min-width: 380px;
+}
+
+.season_container_hidden {
+    display: none;
+}
+
+.season_toggle {
+    margin-right: 10px;
+}
+
+.toggle_arrow_left {
+    scale: 1 1;
+}
+
+.toggle_arrow_right {
+    scale: -1 1;
+}
+
+.leaderboard_container_hidden {
+    display: none;
+}
+
+.season-title {
+    background-image: url("project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Popup/Popup_02_Single.png?fileID=21300000&guid=02e071c6b63824833bcd5b11e3471d06&type=3#Popup_02_Single");
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    align-items: center;
+    -unity-slice-scale: 0.3px;
+    align-self: center;
+    position: relative;
+    width: 90%;
+    top: -5px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+}
+
+.season-title-text {
+    font-size: 26px;
+    -unity-font-style: bold;
+    white-space: normal;
+    -unity-text-align: upper-center;
+}

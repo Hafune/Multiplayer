@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="11556d0da15ffcf44a1bbb0dba292148">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <ui:VisualElement class="default_text_size secondary_labels_color" style="flex-direction: row; align-items: center;">
+        <ui:VisualElement name="DefaultValueIcon" style="width: 16px; height: 16px; display: none; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/TextDotSprite.png?fileID=21300000&amp;guid=7e31b2411c6bd214f9230d002d52f576&amp;type=3#TextDotSprite&quot;);" />
+        <ui:VisualElement name="ReplacedValueIcon" style="width: 16px; height: 16px; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Icon_PictoIcons_(Original)/btn_icon_reload.png?fileID=21300000&amp;guid=1c8046dcb4d1e4e1fa8630fa3a59c709&amp;type=3#btn_icon_reload&quot;); -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgb(166, 90, 34); display: none;" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Value" />
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" />
+    </ui:VisualElement>
+</ui:UXML>

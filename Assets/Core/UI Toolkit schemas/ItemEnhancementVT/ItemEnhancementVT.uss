@@ -1,0 +1,295 @@
+.main-container {
+    padding: 20px;
+    height: 100%;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.panels-container {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.left-panel {
+    flex-direction: column;
+    margin-right: 5px;
+    height: 100%;
+    background-color: rgba(10, 8, 8, 0);
+    width: 550px;
+}
+
+.right-panel {
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(10, 8, 8, 0);
+    width: 500px;
+}
+
+.header {
+    flex-direction: row;
+    height: 80px;
+    background-color: rgba(10, 8, 8, 0.95);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header-title {
+    color: rgb(255, 215, 0);
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.close-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-width: 0;
+    font-size: 24px;
+    color: rgb(139, 69, 19);
+    -unity-font-style: bold;
+}
+
+.close-button:hover {
+    background-color: rgba(139, 69, 19, 0.3);
+}
+
+.content-area {
+    background-color: rgba(10, 8, 8, 0.95);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    border-top-width: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.item-slot-area {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.item-slot {
+    width: 120px;
+    height: 180px;
+    background-color: rgb(20, 14, 8);
+    border-width: 3px;
+    border-color: rgb(107, 142, 35);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    border-left-color: rgb(56, 56, 56);
+    border-right-color: rgb(56, 56, 56);
+    border-top-color: rgb(56, 56, 56);
+    border-bottom-color: rgb(56, 56, 56);
+}
+
+.properties-area {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgb(205, 133, 63);
+    border-right-color: rgb(205, 133, 63);
+    border-top-color: rgb(205, 133, 63);
+    border-bottom-color: rgb(205, 133, 63);
+}
+
+.properties-title {
+    color: rgb(201, 154, 80);
+    margin-bottom: 10px;
+    -unity-text-align: middle-center;
+}
+
+.selected-property {
+    background-color: rgba(255, 140, 0, 0.2);
+    padding: 10px;
+    border-width: 1px;
+    border-color: rgb(255, 140, 0);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.resources-area {
+    background-color: rgba(10, 8, 8, 0.95);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    border-top-width: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: -2px;
+}
+
+.resources-title {
+    font-size: 16px;
+    color: rgb(222, 184, 135);
+    -unity-font-style: bold;
+    margin-bottom: 15px;
+}
+
+.resources-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.enhance-button {
+    background-color: rgba(130, 33, 0, 0.8);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 20px;
+    height: 48px;
+}
+
+.enhance-button:hover {
+    background-color: rgba(166, 42, 0, 0.9);
+}
+
+.enhance-decor-button {
+    background-color: rgba(130, 33, 0, 0.8);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 20px;
+    color: rgb(176, 176, 176);
+    height: 48px;
+}
+
+.gold-area {
+    background-color: rgba(10, 8, 8, 0.95);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    border-top-width: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.gold-label {
+    color: rgb(222, 184, 135);
+    -unity-font-style: bold;
+}
+
+.gold-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.gold-amount {
+    color: rgb(255, 215, 0);
+    -unity-font-style: bold;
+    margin-right: 10px;
+}
+
+.gold-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background-image: url("project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Currency_Gold.png?fileID=21300000&guid=89b57e84d2c2a9b4f8bc7f300837c986&type=3#Currency_Gold");
+}
+
+.properties-header {
+    flex-direction: row;
+    height: 80px;
+    background-color: rgba(10, 8, 8, 0.95);
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.properties-header-title {
+    color: rgb(255, 215, 0);
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.properties-content {
+    border-width: 2px;
+    border-color: rgb(205, 133, 63);
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-grow: 1;
+    background-color: rgba(10, 8, 8, 0.95);
+}
+
+.possible-property-item {
+    background-color: transparent;
+    border-width: 0;
+    color: rgb(135, 206, 235);
+    font-size: 13px;
+    padding: 8px 10px;
+    margin-bottom: 3px;
+    -unity-text-align: middle-left;
+    white-space: normal;
+}
+
+.possible-property-item:hover {
+    background-color: rgba(135, 206, 235, 0.2);
+}
+
+.property-item {
+    background-color: transparent;
+    border-width: 0;
+    color: rgb(65, 105, 225);
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    -unity-text-align: middle-left;
+}
+
+.property-item:hover {
+    background-color: rgba(65, 105, 225, 0.2);
+}
+
+.resource-item {
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.resource-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(222, 184, 135, 0.5);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.resource-amount {
+    font-size: 12px;
+    color: rgb(222, 184, 135);
+    -unity-font-style: bold;
+}

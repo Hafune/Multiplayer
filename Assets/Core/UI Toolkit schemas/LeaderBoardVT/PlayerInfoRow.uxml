@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="c63ed9a1291317b47817c5ff00bb55cc">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/LeaderBoardVT/PlayerInfoRowVT.uss?fileID=7433441132597879392&amp;guid=cd183d85f3d3da34db17011f744e6e1d&amp;type=3#PlayerInfoRowVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement tabindex="-1" class="text-color-base text-font-base row" style="flex-direction: row; justify-content: space-between; font-size: 20px;">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Rank" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Name" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Score" />
+        <ui:VisualElement name="ExtraDataContainer" style="flex-grow: 1; position: absolute; flex-direction: row; align-items: center; left: 110%; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/ItemFrame_02_Bg_White_Border.png?fileID=21300000&amp;guid=2ce2c66aecb874b17b5a4fa5babe9209&amp;type=3#ItemFrame_02_Bg_White_Border&quot;); padding-top: 6px; padding-right: 0; padding-bottom: 4px; padding-left: 6px; -unity-slice-scale: 0.5px; align-self: center; display: none;">
+            <ui:VisualElement class="extradata_value">
+                <ui:VisualElement class="extradata_sprite" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Nameplate_LevelFrame.png?fileID=21300000&amp;guid=d0da035a4bade1a489a6754d2828bb01&amp;type=3#Nameplate_LevelFrame&quot;);" />
+                <ui:Label tabindex="-1" text="12" parse-escape-sequences="true" display-tooltip-when-elided="true" name="level" />
+            </ui:VisualElement>
+            <ui:VisualElement class="extradata_value">
+                <ui:VisualElement class="extradata_sprite" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/btn_icon_sword_1.png?fileID=21300000&amp;guid=ff8526b1d620bdb4f9ee3ca2e7b56ba0&amp;type=3#btn_icon_sword_1&quot;);" />
+                <ui:Label tabindex="-1" text="12 321" parse-escape-sequences="true" display-tooltip-when-elided="true" name="damage" />
+            </ui:VisualElement>
+            <ui:VisualElement class="extradata_value">
+                <ui:VisualElement class="extradata_sprite" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/btn_icon_shield.png?fileID=21300000&amp;guid=487cbceeda4438e42944e81cf01a6f92&amp;type=3#btn_icon_shield&quot;);" />
+                <ui:Label tabindex="-1" text="321" parse-escape-sequences="true" display-tooltip-when-elided="true" name="toughness" />
+            </ui:VisualElement>
+            <ui:VisualElement class="extradata_value">
+                <ui:VisualElement class="extradata_sprite" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Icon_PictoIcons_(Original)/btn_icon_plus.png?fileID=21300000&amp;guid=50e238e2509184567abda05de5af2257&amp;type=3#btn_icon_plus&quot;);" />
+                <ui:Label tabindex="-1" text="1111" parse-escape-sequences="true" display-tooltip-when-elided="true" name="recovery" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

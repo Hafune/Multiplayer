@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="c1dfbccb3467d93429f9b3b05e39489d">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/InventoryVT/InventoryCells.uss?fileID=7433441132597879392&amp;guid=bdefb22a2d25ecf43832bb2ad7635457&amp;type=3#InventoryCells" />
+    <Core.FocusableVisualElement name="Focusable" style="flex-grow: 1; justify-content: center; align-items: center;">
+        <ui:VisualElement name="Background" class="item_background_cell item_cell" />
+        <ui:VisualElement name="Icon" class="item_cell" />
+    </Core.FocusableVisualElement>
+</ui:UXML>

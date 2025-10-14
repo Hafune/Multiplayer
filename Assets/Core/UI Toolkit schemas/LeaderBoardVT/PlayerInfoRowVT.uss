@@ -1,0 +1,19 @@
+.player_frame {
+    background-image: url("project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/StageFrame_03_Single_Complete.png?fileID=21300000&guid=d2df93f80dc99014783906a096eabba0&type=3#StageFrame_03_Single_Complete");
+    -unity-slice-scale: 0.4px;
+}
+
+.row {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.extradata_sprite {
+    width: 32px;
+    height: 32px;
+}
+
+.extradata_value {
+    flex-direction: row;
+    margin-right: 10px;
+}

@@ -1,0 +1,122 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuPassiveSlotOptionsVT.uss?fileID=7433441132597879392&amp;guid=3f75d3767f7d2574cbcad6b0e744d434&amp;type=3#ActionMenuPassiveSlotOptionsVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuMainVT.uss?fileID=7433441132597879392&amp;guid=86952c174e4b4e849b4152f086b1c560&amp;type=3#ActionMenuMainVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotOptionsVT.uss?fileID=7433441132597879392&amp;guid=a4317bc4173f4c9418beecc5f27972ac&amp;type=3#ActionMenuSlotOptionsVT" />
+    <ui:VisualElement name="passive-skill-picker-window" class="skills-window">
+        <ui:VisualElement class="header">
+            <ui:Label text="УМЕНИЯ" class="header-title" />
+            <ui:Button name="close-button" class="close-button">
+                <ui:Label text="X" class="close-icon" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="content">
+            <ui:VisualElement class="slot-selection-section">
+                <ui:Label text="ВЫБРАТЬ ЯЧЕЙКУ ДЛЯ ПАССИВНОГО УМЕНИЯ" class="section-title" />
+                <ui:VisualElement class="passive-slots-row">
+                    <ui:VisualElement name="passive-target-slot-1" class="passive-target-slot">
+                        <ui:VisualElement class="passive-slot-icon" />
+                        <ui:Label text="Слот 1" class="passive-slot-label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-target-slot-2" class="passive-target-slot">
+                        <ui:VisualElement class="passive-slot-icon" />
+                        <ui:Label text="Слот 2" class="passive-slot-label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-target-slot-3" class="passive-target-slot">
+                        <ui:VisualElement class="passive-slot-icon" />
+                        <ui:Label text="Слот 3" class="passive-slot-label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-target-slot-4" class="passive-target-slot selected">
+                        <ui:VisualElement class="passive-slot-icon" />
+                        <ui:Label text="Слот 4" class="passive-slot-label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="available-passives-section">
+                <ui:Label text="ДОСТУПНЫЕ ПАССИВНЫЕ УМЕНИЯ" class="section-title" />
+                <ui:VisualElement class="passives-grid">
+                    <ui:VisualElement name="passive-skill-1" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Кусок мяса" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-2" class="passive-skill-item selected">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Остервенение" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-3" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Стальные нервы" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-4" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Мастерское владение оружием" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-5" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Ободряющий пример" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-6" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Ярость берсерка" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-7" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Кровожадность" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-8" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Враждебность" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-9" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Суеверие" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-10" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Твердость" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-11" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Неотвратимая кара" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-12" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Неутомимость" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-13" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Задира" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-14" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Неудержимость" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-15" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Беспощадность" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-16" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Милость Бул-Катоса" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-17" class="passive-skill-item empty" />
+                    <ui:VisualElement name="passive-skill-18" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Мощь земли" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-19" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Нападение и защита" class="passive-skill-name" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="passive-skill-20" class="passive-skill-item">
+                        <ui:VisualElement class="passive-skill-icon" />
+                        <ui:Label text="Буйство" class="passive-skill-name" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="action-buttons">
+            <ui:Button name="accept-button" text="ПРИНЯТЬ" class="action-button primary" />
+            <ui:Button name="cancel-button" text="ОТМЕНА" class="action-button secondary" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

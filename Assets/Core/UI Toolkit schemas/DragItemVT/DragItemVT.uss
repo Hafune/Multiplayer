@@ -1,0 +1,8 @@
+.default_size {
+    width: 64px;
+    height: 64px;
+}
+
+.size_1x2 {
+    height: 128px;
+}

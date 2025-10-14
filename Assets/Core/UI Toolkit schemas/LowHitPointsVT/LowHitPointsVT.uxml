@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="4e0e0ede617464f4399aef757b783a1a">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/LowHitPointsVT/LowHitPointsVT.uss?fileID=7433441132597879392&amp;guid=ec6b2ad1ed10793428ab69e2a8d1ca98&amp;type=3#LowHitPointsVT" />
+    <ui:VisualElement name="Frame" class="low_hp_fade_out" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/LowHitPointsVT/Eff_red_01.png?fileID=2800000&amp;guid=6efe5bbc5b24d3b45944b3261a1b7815&amp;type=3#Eff_red_01&quot;); transition-duration: 0.5s;" />
+</ui:UXML>

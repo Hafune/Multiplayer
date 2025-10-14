@@ -1,0 +1,26 @@
+.main-menu-item {
+    font-size: 30px;
+    -unity-font-style: bold;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.container {
+}
+
+.character-frame__container {
+    flex-grow: 1;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.character-frame__selection {
+    position: absolute;
+    display: none;
+}

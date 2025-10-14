@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="f284a33e30dc835438d919d62e4af4eb">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/DragItemVT/DragItemVT.uss?fileID=7433441132597879392&amp;guid=9e8b2e6bd54f4fd49a14c0579938029f&amp;type=3#DragItemVT" />
+    <ui:VisualElement name="Pivot" style="justify-content: center; align-items: center; position: absolute;">
+        <ui:VisualElement name="Icon" class="default_size" style="flex-grow: 1; position: absolute;" />
+    </ui:VisualElement>
+</ui:UXML>

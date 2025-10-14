@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="1321db087bf7f074c9e98e8431c12761">
+    <ui:Template name="LabelNewVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/LabelNewVT/LabelNewVT.uxml?fileID=9197481963319205126&amp;guid=f0df278ee7cad5447964b88298e6c033&amp;type=3#LabelNewVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotOptionsVT.uss?fileID=7433441132597879392&amp;guid=a4317bc4173f4c9418beecc5f27972ac&amp;type=3#ActionMenuSlotOptionsVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement name="Container" class="skill-item text-font-base">
+        <ui:VisualElement name="Icon" class="skill-icon-large" />
+        <ui:VisualElement style="flex-grow: 1; align-items: center; flex-basis: 0;">
+            <ui:Label text="Молот Древних" name="ActionName" class="skill-item-name text-color-base" />
+        </ui:VisualElement>
+        <ui:VisualElement name="UnactiveOverlay" class="unactive-overlay">
+            <ui:Label tabindex="-1" text="99" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RequiredLevel" class="action-slot-required-level" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Instance template="LabelNewVT" name="LabelNewVT" style="position: absolute; top: -36px; left: 24px; display: none;" />
+</ui:UXML>

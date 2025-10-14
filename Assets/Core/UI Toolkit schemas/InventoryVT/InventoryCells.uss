@@ -1,0 +1,65 @@
+.row {
+    flex-basis: 1px;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.cell {
+    flex-grow: 1;
+}
+
+.item_cell {
+    position: absolute;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.item_cell_Image {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Additionals/Classic_RPG_GUI/Parts/inventory_frame.png?fileID=2800000&guid=1012f58a33331d24882571b8b0c4af2a&type=3#inventory_frame");
+    opacity: 0.5;
+}
+
+.cell_size_1x2 {
+    height: 200%;
+}
+
+.property_container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.property_name {
+    color: rgb(203, 155, 80);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.property_value {
+    color: rgb(254, 254, 254);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.main_property_size {
+}
+
+.second_property_container {
+    -unity-text-align: upper-center;
+}
+
+.item_background_cell {
+}
+
+.waist_size .item_background_cell {
+    max-height: 32px;
+}
+
+.accessories_size .item_background_cell {
+    max-height: 44px;
+    max-width: 44px;
+}
+
+.equipment_slots {
+}

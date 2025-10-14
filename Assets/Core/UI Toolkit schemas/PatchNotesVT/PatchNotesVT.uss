@@ -1,0 +1,12 @@
+.patch_notes_hide {
+    opacity: 0.25;
+}
+
+.path_container {
+    background-image: url("project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&guid=ab64d3ca2c72c4740939f58d572de9f0&type=3#Lobby_CC_Box_Frame");
+    flex-grow: 1;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}

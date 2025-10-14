@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="e3f313e5913f9e248b69908d4a1e98bf">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/SettingsVT/SettingsVT.uss?fileID=7433441132597879392&amp;guid=2bd0326aba8298c4295ed6696772600d&amp;type=3#SettingsVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/FocusableLabel.uss?fileID=7433441132597879392&amp;guid=3a411ca424cbe6247bc9ea990ad76d1a&amp;type=3#FocusableLabel" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Core.FocusableNodeElement name="FocusableNode" class="text-color-base text-font-base font-size settings-container" style="background-color: rgba(0, 0, 0, 0.5);">
+        <ui:VisualElement style="padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;);">
+            <ui:VisualElement>
+                <Core.FocusableSlider label="#master_volume" value="0.5" high-value="1" name="MasterVolume" class="slider focusable-label" />
+                <Core.FocusableSlider label="#background_volume" value="0.5" high-value="1" name="BackgroundVolume" class="slider focusable-label" />
+                <Core.FocusableSlider label="#sfx_volume" value="0.5" high-value="1" name="SfxVolume" class="focusable-label slider" />
+                <Core.FocusableVisualElement name="Language" class="focusable-label" style="flex-direction: row; justify-content: space-between;">
+                    <ui:Label text="#language_label" display-tooltip-when-elided="true" focusable="false" tabindex="-1" style="flex-direction: row; justify-content: flex-end; align-items: center;" />
+                    <ui:VisualElement style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement name="LanguageLeftArrow" tabindex="-1" style="background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-2236324273849735119&amp;guid=fd2091b70e3c2ee48849f4af8cd19a33&amp;type=3#arrow-left@2x&quot;); width: 32px; height: 32px;" />
+                        <ui:Label text="#language_value" display-tooltip-when-elided="true" />
+                        <ui:VisualElement name="LanguageRightArrow" tabindex="-1" style="background-image: url(&quot;project://database/Assets/UnityDefaultRuntimeTheme%201.tss?fileID=-1087164816274819069&amp;guid=1cb822ff6098b1041ac815bfdf57bcd4&amp;type=3#arrow-right@2x&quot;); width: 32px; height: 32px;" />
+                    </ui:VisualElement>
+                </Core.FocusableVisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement tabindex="-1" name="CloseButton" style="position: absolute; width: 32px; height: 32px; background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Icon_Close.png?fileID=21300000&amp;guid=f8d9926e57201f84c9a9e9aa4ea25021&amp;type=3#Icon_Close&quot;); top: 5px; right: 5px;" />
+        </ui:VisualElement>
+    </Core.FocusableNodeElement>
+</ui:UXML>

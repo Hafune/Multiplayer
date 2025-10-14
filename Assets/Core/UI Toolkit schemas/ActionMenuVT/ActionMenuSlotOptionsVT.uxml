@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="daa646e56605424458cb8c45995e08ee">
+    <ui:Template name="ActionMenuSlotVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotVT.uxml?fileID=9197481963319205126&amp;guid=2a8203792492e5b478ae51957018bd67&amp;type=3#ActionMenuSlotVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuMainVT.uss?fileID=7433441132597879392&amp;guid=86952c174e4b4e849b4152f086b1c560&amp;type=3#ActionMenuMainVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/ActionMenuVT/ActionMenuSlotOptionsVT.uss?fileID=7433441132597879392&amp;guid=a4317bc4173f4c9418beecc5f27972ac&amp;type=3#ActionMenuSlotOptionsVT" />
+    <ui:VisualElement tabindex="-1" class="skills-window">
+        <ui:VisualElement class="header">
+            <ui:Label text="#skills" class="header-title" />
+            <ui:Button name="close-button" class="close-button">
+                <ui:Label text="X" class="close-icon" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="content">
+            <ui:VisualElement class="skill-selection-section">
+                <ui:Label text="ВСПОМОГАТЕЛЬНОЕ" class="section-title skill-category auxiliary" />
+                <ui:VisualElement class="skill-carousel">
+                    <ui:Button name="SwipeLeftButton" class="carousel-arrow left">
+                        <ui:Label text="&lt;" enable-rich-text="false" class="arrow-icon" />
+                    </ui:Button>
+                    <ui:VisualElement name="ActionsContainer" class="skill-list-horizontal" style="align-items: stretch;" />
+                    <ui:Button name="SwipeRightButton" class="carousel-arrow right">
+                        <ui:Label text="&gt;" enable-rich-text="false" class="arrow-icon" />
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="runes-section">
+                <ui:Label text="РУНЫ УМЕНИЯ" class="section-title" />
+                <ui:VisualElement name="RunesContainer" class="runes-list">
+                    <ui:VisualElement name="NoRune" class="rune-item">
+                        <ui:VisualElement class="rune-icon no-rune" style="background-image: url(&quot;project://database/Assets/Prefabs/Entities/Warrior/runes.png?fileID=665348599&amp;guid=d45ac0a4ce799c1439b13863e05156c8&amp;type=3#runes_5&quot;);" />
+                        <ui:Label text="#no_rune" class="rune-name" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="description-section">
+                <ui:Label text="#selected_skill" class="section-title" />
+                <ui:Instance template="ActionMenuSlotVT" name="SelectedAction" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="action-buttons">
+            <ui:Button name="accept-button" text="#submit" class="action-button primary" />
+            <ui:Button name="cancel-button" text="#cancel" class="action-button primary" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

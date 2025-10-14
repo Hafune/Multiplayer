@@ -1,0 +1,52 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="7dd99336d390c034e8d1fb0139cc47f2">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/LeaderBoardVT/LeaderBoardVT.uss?fileID=7433441132597879392&amp;guid=2be3c13ef33d5e24d802722900ba89ca&amp;type=3#LeaderBoardVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement class="text-font-base text-color-base" style="flex-grow: 1;">
+        <ui:VisualElement style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; flex-direction: row-reverse; justify-content: flex-end;">
+            <ui:VisualElement name="SeasonRewardButton" tabindex="-1" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=2800000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;); padding-top: 70px; padding-right: 70px; padding-bottom: 70px; padding-left: 70px; margin-top: -6px; margin-right: -6px; margin-bottom: -6px; margin-left: -6px; display: none;">
+                <ui:Label tabindex="-1" text="#reward" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 26px; flex-wrap: wrap;" />
+                <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/icon_itemicon_moneybag.png?fileID=21300000&amp;guid=4a134385555cfb34aaa94bd62a987a2c&amp;type=3#icon_itemicon_moneybag&quot;); width: 286px; height: 238px;" />
+                <ui:VisualElement style="flex-grow: 1; flex-direction: row; -unity-text-align: middle-left;">
+                    <ui:Label tabindex="-1" text="123213" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RewardValue" style="font-size: 26px; -unity-font-style: normal;" />
+                    <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Currency_Gold.png?fileID=21300000&amp;guid=89b57e84d2c2a9b4f8bc7f300837c986&amp;type=3#Currency_Gold&quot;); width: 40px; height: 40px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ShowHideToggle" tabindex="-1" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;); -unity-slice-scale: 0.5px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; justify-content: center;">
+                <ui:VisualElement name="ShowHideArrow" class="toggle_arrow_right" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_Arrow_Foreground.png?fileID=2800000&amp;guid=ae1ad94f825c6df40b6dbfa725d79d5f&amp;type=3#Button_Arrow_Foreground&quot;); width: 44px; height: 192px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Leaderboard" tabindex="-1" class="text-font-base text-color-base leaderboard_container leaderboard_container_hidden" style="align-self: flex-start; flex-direction: row-reverse;">
+                <ui:VisualElement name="PreviousSeasonContainer" class="season_container">
+                    <ui:VisualElement class="season-title">
+                        <ui:Label tabindex="-1" text="#previous_season" parse-escape-sequences="true" display-tooltip-when-elided="true" class="season-title-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="listContainer" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Select.png?fileID=21300000&amp;guid=b61d54ada442843bb81c0b4ae4c744fa&amp;type=3#StageFrame_01_Single_Select&quot;); height: 150px;">
+                        <ui:ListView name="PreviousTopList" class="list" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="listContainer" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Complete.png?fileID=21300000&amp;guid=775d51d2084c6436899c5981da7e484b&amp;type=3#StageFrame_01_Single_Complete&quot;);">
+                        <ui:ListView name="PreviousOtherList" class="list" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="PreviousSeasonToggle" tabindex="-1" class="season_toggle" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Lobby_CC_Box_Frame.png?fileID=21300000&amp;guid=ab64d3ca2c72c4740939f58d572de9f0&amp;type=3#Lobby_CC_Box_Frame&quot;); -unity-slice-scale: 0.5px; padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; justify-content: center; align-self: center;">
+                    <ui:VisualElement name="PreviousSeasonArrow" class="toggle_arrow_left" style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_Arrow_Foreground.png?fileID=2800000&amp;guid=ae1ad94f825c6df40b6dbfa725d79d5f&amp;type=3#Button_Arrow_Foreground&quot;); width: 44px; height: 192px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CurrentSeasonContainer" class="season_container">
+                    <ui:VisualElement class="season-title">
+                        <ui:Label tabindex="-1" text="#current_season" parse-escape-sequences="true" display-tooltip-when-elided="true" class="season-title-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="listContainer" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Select.png?fileID=21300000&amp;guid=b61d54ada442843bb81c0b4ae4c744fa&amp;type=3#StageFrame_01_Single_Select&quot;); height: 150px;">
+                        <ui:ListView name="TopList" class="list" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="listContainer" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Complete.png?fileID=21300000&amp;guid=775d51d2084c6436899c5981da7e484b&amp;type=3#StageFrame_01_Single_Complete&quot;);">
+                        <ui:ListView name="OtherList" class="list" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="LoginButton" style="position: absolute; align-self: center; width: 100%; height: 100%; left: 0; top: 0; right: 0; bottom: 0; align-items: center; justify-content: center; display: none;">
+                    <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Button_RL_Background.png?fileID=21300000&amp;guid=587c54f6e8ea028469003563ccce57f0&amp;type=3#Button_RL_Background&quot;); width: 700px; height: 220px; padding-top: 34px; padding-right: 34px; padding-bottom: 34px; padding-left: 34px; justify-content: center; align-items: center;">
+                        <ui:Label tabindex="-1" text="#login" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 30px; -unity-font-style: bold; white-space: normal; -unity-text-align: upper-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be90f0fdc2a4cdbb56f7c9c97e61547, type: 3}
+  m_Name: New Dialog Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - id: c290934d1a1d4bff81aaf15b0c8947ea
+    title: Node
+    position: {x: -7, y: 209}
+    choices:
+    - 28e96366536745f8ad187866613894bd
+    - 4aa1d20927534e8a936d2a83f4fc759f
+    uiExpanded: 1
+    data:
+      rid: -2
+  - id: 28e96366536745f8ad187866613894bd
+    title: Node
+    position: {x: 518, y: 126}
+    choices: []
+    uiExpanded: 0
+    data:
+      rid: -2
+  - id: 4aa1d20927534e8a936d2a83f4fc759f
+    title: Node
+    position: {x: 549, y: 243}
+    choices:
+    - 3de3faa309084b2eb0e8388cc0917f89
+    uiExpanded: 0
+    data:
+      rid: -2
+  - id: 3de3faa309084b2eb0e8388cc0917f89
+    title: Node
+    position: {x: 733, y: 243}
+    choices: []
+    uiExpanded: 1
+    data:
+      rid: 2039222721323204619
+  - id: 11670cebbdb747e48df2769fd4ed680d
+    title: Node
+    position: {x: 588, y: 559}
+    choices: []
+    uiExpanded: 1
+    data:
+      rid: 8722623149407207440
+  - id: e64d8856b4124bec8b4d8aac9976c758
+    title: Node
+    position: {x: 173, y: 424}
+    choices: []
+    uiExpanded: 1
+    data:
+      rid: 8722623149407207485
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2039222721323204619
+      type: {class: DialogNodeData2, ns: Core.Lib.Utils.MyGraph, asm: Assembly-CSharp}
+      data:
+        key: 123
+        testSO: {fileID: 0}
+        list: []
+        key2: 222
+    - rid: 8722623149407207440
+      type: {class: DialogNodeData2, ns: Core.Lib.Utils.MyGraph, asm: Assembly-CSharp}
+      data:
+        key: 123213332
+        testSO: {fileID: 0}
+        list: []
+        key2: 222
+    - rid: 8722623149407207485
+      type: {class: DialogNodeData, ns: Core.Lib.Utils.MyGraph, asm: Assembly-CSharp}
+      data:
+        key: 
+        testSO: {fileID: 0}
+        list: []

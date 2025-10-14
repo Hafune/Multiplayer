@@ -1,0 +1,73 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="9a7e0144302f3ca4ca0fcf1a75b73c85">
+    <ui:Template name="TooltipItemCompareRowVT" src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipItemCompareRowVT.uxml?fileID=9197481963319205126&amp;guid=10f8c416105af08468fe0d6ff2a45245&amp;type=3#TooltipItemCompareRowVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipItemVT.uss?fileID=7433441132597879392&amp;guid=7d8f803bd96b26e4cae0715cb6d63df0&amp;type=3#TooltipItemVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <ui:VisualElement name="RootContainer" class="text-font-base" style="position: absolute; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Defalut.png?fileID=21300000&amp;guid=72f28ca191c2f4b18b6ace1d3a7ea55b&amp;type=3#StageFrame_01_Single_Defalut&quot;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-scale: 0.5px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; min-width: 350px;">
+        <ui:VisualElement style="align-items: center; background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/CardFrame_02_Border.png?fileID=21300000&amp;guid=0ee5ce27866c14801b7b6442f15c4628&amp;type=3#CardFrame_02_Border&quot;); -unity-slice-scale: 0.3px;">
+            <ui:Label tabindex="-1" text="#on_player_mark" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OnPlayerMark" class="title_size system_labels_color" style="background-image: url(&quot;project://database/Assets/Additionals/Layer%20Lab/GUI%20Pro-FantasyRPG/ResourcesData/Sprites/Component/Frame/StageFrame_01_Single_Lock.png?fileID=21300000&amp;guid=e6f468f0f2317498fa03405a1517b00b&amp;type=3#StageFrame_01_Single_Lock&quot;); -unity-slice-scale: 0.5px; top: -32px; position: absolute; right: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-style: normal;" />
+            <ui:Label tabindex="-1" text="Asd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" class="title_size" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:VisualElement name="IconContainer" class="size_1x1" style="border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; overflow: hidden;">
+                <ui:VisualElement name="IconBackground" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border-left-color: rgba(255, 255, 255, 0.03); border-right-color: rgba(255, 255, 255, 0.03); border-top-color: rgba(255, 255, 255, 0.03); border-bottom-color: rgba(255, 255, 255, 0.03);" />
+                <ui:VisualElement name="Icon" style="-unity-background-scale-mode: scale-to-fit; flex-grow: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                    <ui:Label tabindex="-1" text="ItemType" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ItemType" class="default_text_size other_labels_color" />
+                    <ui:Label tabindex="-1" text="ItemSlot" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ItemSlot" class="other_labels_color default_text_size" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainLabel" class="primary_labels_color main_value_size" style="margin-bottom: -15px;" />
+                    <ui:Label tabindex="-1" text="#main_damage_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainLabelDamageDescription" class="other_labels_color default_text_size" />
+                    <ui:Label tabindex="-1" text="#main_block_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainLabelBlockDescription" class="other_labels_color default_text_size" />
+                    <ui:VisualElement name="ExtraContainerDamage">
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                            <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DamageValue" class="primary_labels_color default_text_size" />
+                            <ui:Label tabindex="-1" text="#damage_value_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DamageValueDescription" class="other_labels_color default_text_size" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="AttackSpeedContainer" style="flex-grow: 1; flex-direction: row;">
+                            <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AttackSpeedValue" class="primary_labels_color default_text_size" />
+                            <ui:Label tabindex="-1" text="#attack_speed_value_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AttackSpeedValueDescription" class="other_labels_color default_text_size" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ExtraContainerBlock">
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                            <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BlockChanceValue" class="primary_labels_color default_text_size" />
+                            <ui:Label tabindex="-1" text="#block_chance_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BlockChanceDescription" class="other_labels_color default_text_size" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                            <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BlockValue" class="primary_labels_color default_text_size" />
+                            <ui:Label tabindex="-1" text="#block_value_description" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BlockValueDescription" class="other_labels_color default_text_size" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PrimaryContainer">
+            <ui:Label tabindex="-1" text="#primary_values" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PrimaryValues" class="primary_labels_color default_text_size" />
+        </ui:VisualElement>
+        <ui:VisualElement name="SecondaryContainer">
+            <ui:Label tabindex="-1" text="#secondary_values" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SecondaryValues" class="primary_labels_color default_text_size" />
+        </ui:VisualElement>
+        <ui:VisualElement name="CompareContainer" class="primary_labels_color default_text_size" style="display: flex;">
+            <ui:Label tabindex="-1" text="#changes_by_equip" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" />
+            <ui:Instance template="TooltipItemCompareRowVT" name="CompareDamageContainer" />
+            <ui:Instance template="TooltipItemCompareRowVT" name="CompareToughnessContainer" />
+            <ui:Instance template="TooltipItemCompareRowVT" name="CompareRecoveryContainer" />
+        </ui:VisualElement>
+        <ui:VisualElement class="primary_labels_color" style="align-items: flex-end; flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:Label tabindex="-1" text="#cost" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Cost" class="default_text_size" />
+                <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CostValue" class="default_text_size" style="margin-right: 0;" />
+                <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Currency_Gold.png?fileID=21300000&amp;guid=89b57e84d2c2a9b4f8bc7f300837c986&amp;type=3#Currency_Gold&quot;); width: 16px; height: 16px; align-self: center; margin-left: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="RequiredLevelContainer" style="flex-direction: row;">
+                <ui:Label tabindex="-1" text="#required_level" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RequiredLevel" class="default_text_size" />
+                <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RequiredLevelValue" class="default_text_size" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

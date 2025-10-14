@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/FocusableLabel.uss?fileID=7433441132597879392&amp;guid=3a411ca424cbe6247bc9ea990ad76d1a&amp;type=3#FocusableLabel" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/NavigationBar.uss?fileID=7433441132597879392&amp;guid=aef2a06e51c7977458c609b4e786304a&amp;type=3#NavigationBar" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TitleBackground.uss?fileID=7433441132597879392&amp;guid=0f2432af235148243978f2cea839f490&amp;type=3#TitleBackground" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+</ui:UXML>

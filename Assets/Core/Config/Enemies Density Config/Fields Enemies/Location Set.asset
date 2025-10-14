@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e40237e4cbe454782a34d7b53fbabf3, type: 3}
+  m_Name: Location Set
+  m_EditorClassIdentifier: 
+  _items:
+  - value: {fileID: 11400000, guid: e644ed9b97d18cd43a04dc06b53d3b1e, type: 2}
+    weight: 4
+  - value: {fileID: 11400000, guid: d59816554c685034bba0cc83a9f2cddd, type: 2}
+    weight: 1
+  - value: {fileID: 11400000, guid: 19772a24cf8b671428c455ad6ab8f2ef, type: 2}
+    weight: 4

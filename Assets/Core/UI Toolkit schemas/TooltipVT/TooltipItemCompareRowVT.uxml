@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="ecbae5ff864b0a742a3feb305ced9498">
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipCommon.uss?fileID=7433441132597879392&amp;guid=bd162e5efa36646438cb6647c42fd3d4&amp;type=3#TooltipCommon" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/TooltipVT/TooltipItemVT.uss?fileID=7433441132597879392&amp;guid=7d8f803bd96b26e4cae0715cb6d63df0&amp;type=3#TooltipItemVT" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextSizeBase.uss?fileID=7433441132597879392&amp;guid=f7bcc6a7647b9d247b84b22e25ccabb3&amp;type=3#TextSizeBase" />
+    <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
+    <ui:VisualElement name="CompareRowContainer" class="compare_row primary_labels_color default_text_size">
+        <ui:Label tabindex="-1" text="+" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Plus" class="other_labels_color" style="margin-right: -3px; padding-right: 0;" />
+        <ui:Label tabindex="-1" text="123" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Value" class="other_labels_color" style="margin-right: 0; padding-right: 0;" />
+        <ui:Label tabindex="-1" text="%" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Percent" class="other_labels_color" style="margin-left: 0; padding-left: 0;" />
+        <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ValueDescription" text="aaaaaa" class="primary_labels_color" />
+    </ui:VisualElement>
+</ui:UXML>

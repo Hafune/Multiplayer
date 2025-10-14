@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322957ae225f4ea8bee96e18ea4b0b51, type: 3}
+  m_Name: New Dialog Graph 2
+  m_EditorClassIdentifier: 
+  nodes:
+  - id: d6e153263f2f4bdd8e7129c1a3729829
+    title: Node 2
+    position: {x: 167, y: 182}
+    inputs: []
+    outputs:
+    - 89f04a38b5924e8d90d279d25330ec69
+    uiExpanded: 0
+    data:
+      key: 
+      testSO: {fileID: 0}
+      list: []
+      key2: 
+  - id: b4cb51a798f54731b36677e0839fbed2
+    title: Node
+    position: {x: 711, y: 182}
+    inputs: []
+    outputs: []
+    uiExpanded: 0
+    data:
+      key: 
+      testSO: {fileID: 0}
+      list: []
+      key2: 
+  - id: 89f04a38b5924e8d90d279d25330ec69
+    title: Node
+    position: {x: 711, y: 410}
+    inputs: []
+    outputs: []
+    uiExpanded: 0
+    data:
+      key: 
+      testSO: {fileID: 0}
+      list: []
+      key2: 

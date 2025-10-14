@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="802d6312cdf245f42a8e9badaaa73e05">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+        <ui:VisualElement name="SidebarLeft" style="width: 500px;" />
+        <ui:VisualElement name="SidebarRight" style="width: 500px;">
+            <ui:VisualElement name="QuestsContainer" style="padding-top: 60px;" />
+            <ui:VisualElement name="ProgressBarContainer" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
