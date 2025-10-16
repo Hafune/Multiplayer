@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Core.Systems
 {
-    public class MagnetSystem : IEcsRunSystem
+    public class Magnet2DSystem : IEcsRunSystem
     {
         private readonly float _acceleration = 10f;
         private readonly float _maxSpeed = 15;
@@ -15,7 +15,7 @@ namespace Core.Systems
         private readonly EcsFilterInject<
             Inc<
                 MagnetTag,
-                RigidbodyComponent,
+                Rigidbody2DComponent,
                 EventMagnetAreaTouch>,
             Exc<
                 InProgressTag<MagnetTag>
@@ -24,7 +24,7 @@ namespace Core.Systems
         private readonly EcsFilterInject<
             Inc<
                 InProgressTag<MagnetTag>,
-                RigidbodyComponent
+                Rigidbody2DComponent
             >> _progressFilter;
 
         private readonly EcsFilterInject<
@@ -36,7 +36,7 @@ namespace Core.Systems
         private readonly EcsFilterInject<Inc<EventMagnetAreaTouch>> _eventTouchFilter;
 
         private readonly EcsPoolInject<EventMagnetAreaTouch> _eventMagnetAreaTouchPool;
-        private readonly EcsPoolInject<RigidbodyComponent> _rigidbodyPool;
+        private readonly EcsPoolInject<Rigidbody2DComponent> _rigidbodyPool;
         private readonly EcsPoolInject<InProgressTag<MagnetTag>> _progressPool;
         private readonly EcsPoolInject<ModuleContainerComponent> _transformCenterPool;
 

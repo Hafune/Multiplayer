@@ -1,5 +1,9 @@
 namespace Core.Components
 {
+    public struct ButtonMoveTag : IButtonComponent
+    {
+    }
+    
     public struct ButtonUseHealing : IButtonComponent
     {
     }

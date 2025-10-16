@@ -78,43 +78,44 @@ namespace Core.Services
 
         private void Start()
         {
-            var inputs = _inputService.GetInputs(0);
-            var leftClick = inputs.LeftClick;
-            var rightClick = inputs.RightClick;
+            _inputService.GetInputs(0).Enable();
+            // var inputs = _inputService.GetInputs(0);
+            // var leftClick = inputs.LeftClick;
+            // var rightClick = inputs.RightClick;
 
-            var settingsService = context.Resolve<SettingsService>();
-            inputs.Settings.performed += _ => settingsService.ToggleView();
-
-            _groundClick = new(() =>
-            {
-                leftClick.Disable();
-                rightClick.Disable();
-            }, () =>
-            {
-                leftClick.Enable();
-                rightClick.Enable();
-            });
-
-            //Дикий костыль для обхода бага new InputSystem,
-            //если включение InputAction происходит в том же кадре что и выключение всего PlayerActions то часть остаётся включенной 
-            const string coroutineLockKey = "coroutineLockKey";
-
-            IEnumerator Pause()
-            {
-                _inputService.DisableGameplayInputs();
-                yield return null;
-                _groundClick.Pause(coroutineLockKey);
-            }
-
-            IEnumerator Resume()
-            {
-                _inputService.EnableGameplayInputs();
-                yield return null;
-                _groundClick.Resume(coroutineLockKey);
-            }
-
-            _inputsWrapper = new(this, Pause, Resume);
-            PauseInputs(this);
+            // var settingsService = context.Resolve<SettingsService>();
+            // inputs.Settings.performed += _ => settingsService.ToggleView();
+            //
+            // _groundClick = new(() =>
+            // {
+            //     leftClick.Disable();
+            //     rightClick.Disable();
+            // }, () =>
+            // {
+            //     leftClick.Enable();
+            //     rightClick.Enable();
+            // });
+            //
+            // //Дикий костыль для обхода бага new InputSystem,
+            // //если включение InputAction происходит в том же кадре что и выключение всего PlayerActions то часть остаётся включенной 
+            // const string coroutineLockKey = "coroutineLockKey";
+            //
+            // IEnumerator Pause()
+            // {
+            //     _inputService.DisableGameplayInputs();
+            //     yield return null;
+            //     _groundClick.Pause(coroutineLockKey);
+            // }
+            //
+            // IEnumerator Resume()
+            // {
+            //     _inputService.EnableGameplayInputs();
+            //     yield return null;
+            //     _groundClick.Resume(coroutineLockKey);
+            // }
+            //
+            // _inputsWrapper = new(this, Pause, Resume);
+            // PauseInputs(this);
         }
 
         public void PlayerCompleteGame() => _addressableService.LoadSceneAsync(_mainMenuScene, true);

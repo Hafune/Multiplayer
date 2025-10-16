@@ -3,7 +3,6 @@ using Colyseus.Schema;
 using Core.Generated;
 using Core.Lib;
 using Lib;
-using UnityEngine.Assertions;
 
 namespace Core
 {
@@ -16,12 +15,16 @@ namespace Core
         private void Awake()
         {
             _pools = context.Resolve<ComponentPools>();
-            Assert.IsNotNull(_convertToEntity = GetComponent<ConvertToEntity>());
+            _convertToEntity = GetComponent<ConvertToEntity>();
         }
 
         public void SetupData(Player data) => data.OnChange += OnChange;
 
-        public void OnDisable() => _data.OnChange -= OnChange;
+        public void OnDisable()
+        {
+            if (_data != null)
+                _data.OnChange -= OnChange;
+        }
 
         private void OnChange(List<DataChange> changes)
         {

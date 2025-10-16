@@ -3,16 +3,7 @@ using Core.Lib;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class MoveUpdateProvider : MonoProvider<MoveUpdateComponent>
+public class MoveUpdateProvider : MonoProvider<MoveUpdateTag>
 {
-    [SerializeField] private CircleCollider2D _collider;
 
-    private void OnValidate()
-    {
-        if (!_collider)
-            return;
-
-        value.layer = _collider.gameObject.layer;
-        value.radius = _collider.radius * 1.1f;
-    }
 }

@@ -28,7 +28,7 @@ namespace Core.Systems
                 new EventTimelineActionSystem(),
                 //
                 // new PlaybackAndRecordingActionsSystem(),
-                //Сетап компонентов на старте
+                //Сетап компонентов детям на старте смерти родителя
                 new DeathWithRelationSystem<AimComponent, TargetComponent, DeathWithTargetTag>(context),
                 new DeathWithRelationSystem<NodeComponent, ParentComponent, DeathWithParentTag>(context),
                 new ActionDeathSystem(),
@@ -47,8 +47,7 @@ namespace Core.Systems
                 //Подготовка данных к апдейту
                 //Update-----------
                 new CalculateMoveDestinationSystem(),
-                // new BattleCryVisualSystem(),
-                new DirectionUpdateSystem(),
+                // new DirectionUpdate2DSystem(),
                 new MoveUpdateSystem(),
                 new CompleteIfResourceIsOverSystem(),
                 //

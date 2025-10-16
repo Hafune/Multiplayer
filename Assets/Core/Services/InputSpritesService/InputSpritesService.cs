@@ -42,35 +42,35 @@ namespace Core.Services.SpriteForInputService
         [SerializeField] private TMP_SpriteAsset _keyboardButtons;
         [SerializeField] private InputSpritesData _gamepadSprites;
         [SerializeField] private InputSpritesData _keyboardSprites;
-        private PlayerInputs.GamepadKeyboardReactionActions _gamepadKeyboardReaction;
+        // private PlayerInputs.GamepadKeyboardReactionActions _gamepadKeyboardReaction;
         
         public InputTypes InputType { get; private set; } = InputTypes.Gamepad;
 
         private void Awake()
         {
-            _gamepadKeyboardReaction = new PlayerInputs().GamepadKeyboardReaction;
-            _gamepadKeyboardReaction.Enable();
+            // _gamepadKeyboardReaction = new PlayerInputs().GamepadKeyboardReaction;
+            // _gamepadKeyboardReaction.Enable();
             _panelSettings.textSettings.defaultSpriteAsset = _textAssetGamepad;
 
-            _gamepadKeyboardReaction.AnyGamepadKey.performed += _ =>
-            {
-                if (InputType == InputTypes.Gamepad)
-                    return;
-
-                InputType = InputTypes.Gamepad;
-                _panelSettings.textSettings.defaultSpriteAsset = _textAssetGamepad;
-                OnChange?.Invoke();
-            };
-
-            _gamepadKeyboardReaction.AnyKeyboardKey.performed += _ =>
-            {
-                if (InputType == InputTypes.Keyboard)
-                    return;
-
-                InputType = InputTypes.Keyboard;
-                _panelSettings.textSettings.defaultSpriteAsset = _textAssetKeyboard;
-                OnChange?.Invoke();
-            };
+            // _gamepadKeyboardReaction.AnyGamepadKey.performed += _ =>
+            // {
+            //     if (InputType == InputTypes.Gamepad)
+            //         return;
+            //
+            //     InputType = InputTypes.Gamepad;
+            //     _panelSettings.textSettings.defaultSpriteAsset = _textAssetGamepad;
+            //     OnChange?.Invoke();
+            // };
+            //
+            // _gamepadKeyboardReaction.AnyKeyboardKey.performed += _ =>
+            // {
+            //     if (InputType == InputTypes.Keyboard)
+            //         return;
+            //
+            //     InputType = InputTypes.Keyboard;
+            //     _panelSettings.textSettings.defaultSpriteAsset = _textAssetKeyboard;
+            //     OnChange?.Invoke();
+            // };
         }
 
         public TMP_SpriteAsset GetSpriteAsset()

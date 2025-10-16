@@ -6,17 +6,17 @@ using UnityEngine;
 
 namespace Core.ExternalEntityLogics
 {
-    public class KnockbackAttractionLogic : AbstractEntityLogic
+    public class KnockbackAttraction2DLogic : AbstractEntityLogic
     {
         [SerializeField] private float _distance;
         private EcsPool<EventAttraction> _eventPool;
-        private EcsPool<RigidbodyComponent> _positionPool;
+        private EcsPool<Rigidbody2DComponent> _positionPool;
 
         private void Awake()
         {
             var pools = context.Resolve<ComponentPools>();
             _eventPool = pools.EventAttraction;
-            _positionPool = pools.Rigidbody;
+            _positionPool = pools.Rigidbody2D;
         }
 
         public override void Run(int target)

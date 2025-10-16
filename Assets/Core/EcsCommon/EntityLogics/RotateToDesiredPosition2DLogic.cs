@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core.ExternalEntityLogics
 {
-    public class RotateToDesiredPositionLogic : AbstractEntityLogic
+    public class RotateToDesiredPosition2DLogic : AbstractEntityLogic
     {
         private float _time;
         private ComponentPools _pools;
@@ -16,7 +16,7 @@ namespace Core.ExternalEntityLogics
             var position = (Vector2)_pools.Position.Get(entity).transform.position;
             var line = dest.position - position;
 
-            var rb = _pools.Rigidbody.Get(entity).rigidbody;
+            var rb = _pools.Rigidbody2D.Get(entity).rigidbody;
             rb.rotation = Vector2.SignedAngle(Vector2.right, line.normalized);
         }
     }

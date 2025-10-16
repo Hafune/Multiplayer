@@ -34,14 +34,15 @@ namespace Core.Systems
 
             _buttons = new IButtonHandler[]
             {
-                new ButtonHandler<Button1Tag>(world, actions.Button1),
-                new ButtonHandler<Button2Tag>(world, actions.Button2),
-                new ButtonHandler<Button3Tag>(world, actions.Button3),
-                new ButtonHandler<Button4Tag>(world, actions.Button4),
-                new ButtonHandler<MouseLeftTag>(world, actions.LeftClick),
-                new ButtonHandler<MouseRightTag>(world, actions.RightClick),
-                new ButtonHandler<ButtonUseHealing>(world, actions.UseHealing),
-                new ButtonHandler<ButtonTeleport>(world, actions.TeleportToHub),
+                new ButtonHandler<ButtonMoveTag>(world, actions.Move),
+                // new ButtonHandler<Button1Tag>(world, actions.Button1),
+                // new ButtonHandler<Button2Tag>(world, actions.Button2),
+                // new ButtonHandler<Button3Tag>(world, actions.Button3),
+                // new ButtonHandler<Button4Tag>(world, actions.Button4),
+                // new ButtonHandler<MouseLeftTag>(world, actions.LeftClick),
+                // new ButtonHandler<MouseRightTag>(world, actions.RightClick),
+                // new ButtonHandler<ButtonUseHealing>(world, actions.UseHealing),
+                // new ButtonHandler<ButtonTeleport>(world, actions.TeleportToHub),
             };
         }
 

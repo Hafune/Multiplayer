@@ -17,17 +17,17 @@ namespace Core
         private ComponentPools _pools;
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
 
-        protected override void Awake()
-        {
-            base.Awake();
-            Instance.InitializeClient();
-            Connect();
-        }
-
-        public void SetContext(Context context)
+        public void SetupContext(Context context)
         {
             _context = context;
             _pools = context.Resolve<ComponentPools>();
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            Instance.InitializeClient();
+            Connect();
         }
 
         private async void Connect()
@@ -48,7 +48,7 @@ namespace Core
 
         private void AddPlayer(string key, Player data)
         {
-            var position = new Vector3(data.x, 0, data.y);
+            var position = new Vector3(data.x, 0, data.z);
             var prefab = key == _room.SessionId ? _player : _enemy;
 
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);

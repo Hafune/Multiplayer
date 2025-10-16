@@ -1,13 +1,12 @@
 import { Room, Client } from "colyseus";
 import { Schema, type, MapSchema } from "@colyseus/schema";
-import { log } from "console";
 
 export class Player extends Schema {
     @type("number")
     x = Math.floor(Math.random() * 40) - 20;
 
     @type("number")
-    y = Math.floor(Math.random() * 40) - 20;
+    z = Math.floor(Math.random() * 40) - 20;
 }
 
 export class State extends Schema {
@@ -28,9 +27,8 @@ export class State extends Schema {
         if (movement.x)
             this.players.get(sessionId).x = movement.x;
 
-        if (movement.y)
-            this.players.get(sessionId).y = movement.y;
-
+        if (movement.z)
+            this.players.get(sessionId).z = movement.z;
     }
 }
 
@@ -41,7 +39,7 @@ export class StateHandlerRoom extends Room<State> {
         console.log("StateHandlerRoom created!", options);
 
         this.setState(new State());
-        this.setPatchRate(10);
+        // this.setPatchRate(10);
 
         this.onMessage("move", (client, data) => {
             //console.log("StateHandlerRoom received message from", client.sessionId, ":", data);

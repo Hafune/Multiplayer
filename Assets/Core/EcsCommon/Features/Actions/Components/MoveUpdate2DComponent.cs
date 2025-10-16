@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Core.Components
 {
     [Serializable]
-    public struct MoveUpdateComponent
+    public struct MoveUpdate2DComponent
     {
         [SerializeField] public bool checkWalls;
         [SerializeField] public int layer;

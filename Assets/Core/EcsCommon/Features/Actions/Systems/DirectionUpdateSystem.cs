@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Core.Systems
 {
-    public class DirectionUpdateSystem : IEcsRunSystem
+    public class DirectionUpdate2DSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<
             Inc<
@@ -16,7 +16,7 @@ namespace Core.Systems
                 MoveDestinationComponent,
                 PositionComponent,
                 MoveDirectionComponent,
-                RigidbodyComponent
+                Rigidbody2DComponent
             >> _filter;
 
         private readonly ComponentPools _pools;
@@ -29,7 +29,7 @@ namespace Core.Systems
                 var position = (Vector2)_pools.Position.Get(i).transform.position;
                 var line = dest.position - position;
 
-                var rigidbody = _pools.Rigidbody.Get(i).rigidbody;
+                var rigidbody = _pools.Rigidbody2D.Get(i).rigidbody;
                 rigidbody.rotation = Mathf.MoveTowardsAngle(rigidbody.rotation,
                     Vector2.SignedAngle(Vector2.right, _pools.MoveDirection.Get(i).direction = line.normalized),
                     _pools.AngularSpeed.Get(i).value * Time.deltaTime * _pools.Animator.Get(i).animancer.Graph.Speed);

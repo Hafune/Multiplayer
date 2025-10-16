@@ -7,6 +7,6 @@ namespace Core
     {
         [SerializeField] private MultiplayerManager _manager;
 
-        private void Awake() => _manager.SetContext(context);
+        private void Awake() => _manager.SetupContext(context);
     }
 }

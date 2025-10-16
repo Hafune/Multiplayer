@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Core.Components
@@ -6,6 +6,6 @@ namespace Core.Components
     [Serializable]
     public struct RigidbodyComponent
     {
-        public Rigidbody2D rigidbody;
+        public Rigidbody rigidbody;
     }
 }

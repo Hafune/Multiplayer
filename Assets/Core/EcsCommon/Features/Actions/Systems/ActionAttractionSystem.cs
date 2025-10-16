@@ -13,7 +13,7 @@ namespace Core.Systems
                 ActionAttractionComponent,
                 EventAttraction,
                 ActionCurrentComponent,
-                RigidbodyComponent
+                Rigidbody2DComponent
             >,
             Exc<
                 InProgressTag<ActionDeathComponent>,
@@ -25,7 +25,7 @@ namespace Core.Systems
             Inc<
                 ActionAttractionComponent,
                 InProgressTag<ActionAttractionComponent>,
-                RigidbodyComponent
+                Rigidbody2DComponent
             >> _progressFilter;
 
         public void Run(IEcsSystems systems)
@@ -35,7 +35,7 @@ namespace Core.Systems
                 ref var action = ref _actionPool.Value.Get(i);
                 BeginActionProgress(i, action.logic);
                 var body = _pools.Rigidbody.Get(i).rigidbody;
-                body.mass = ActionMoveSystem.ActiveMass;
+                body.mass = ActionMove2DSystem.ActiveMass;
                 action.startPosition = body.position;
                 action.endPosition = _pools.EventAttraction.Get(i).position;
                 action.startTime = Time.time;
@@ -71,7 +71,7 @@ namespace Core.Systems
             ref var action = ref _actionPool.Value.Get(entity);
             var body = _pools.Rigidbody.Get(entity).rigidbody;
             body.linearVelocity = Vector2.zero;
-            body.mass = ActionMoveSystem.PassiveMass;
+            body.mass = ActionMove2DSystem.PassiveMass;
             action.model.localPosition = Vector3.zero;
         }
     }

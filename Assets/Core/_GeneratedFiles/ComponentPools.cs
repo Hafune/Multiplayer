@@ -183,6 +183,7 @@ namespace Core.Generated
         public readonly EcsPool<Button2Tag> Button2;
         public readonly EcsPool<Button3Tag> Button3;
         public readonly EcsPool<Button4Tag> Button4;
+        public readonly EcsPool<ButtonMoveTag> ButtonMove;
         public readonly EcsPool<ButtonTeleport> ButtonTeleport;
         public readonly EcsPool<ButtonUseHealing> ButtonUseHealing;
         public readonly EcsPool<CalculateMoveDestinationTag> CalculateMoveDestination;
@@ -269,6 +270,7 @@ namespace Core.Generated
         public readonly EcsPool<EventAttraction> EventAttraction;
         public readonly EcsPool<EventBehaviorTreeActivate> EventBehaviorTreeActivate;
         public readonly EcsPool<EventBehaviorTreeDeactivate> EventBehaviorTreeDeactivate;
+        public readonly EcsPool<EventButtonCanceled<ButtonMoveTag>> EventButtonCanceledButtonMove;
         public readonly EcsPool<EventCameraShakeComponent> EventCameraShake;
         public readonly EcsPool<EventCausedDamage> EventCausedDamage;
         public readonly EcsPool<EventCheckMerges> EventCheckMerges;
@@ -458,10 +460,6 @@ namespace Core.Generated
         public readonly EcsPool<InProgressTag<ActionDefaultComponent>> InProgressActionDefault;
         public readonly EcsPool<InProgressTag<ActionDizzyComponent>> InProgressActionDizzy;
         public readonly EcsPool<InProgressTag<ActionMoveComponent>> InProgressActionMove;
-        public readonly EcsPool<InProgressTag<ActionPressedComponent>> InProgressActionPressed;
-        public readonly EcsPool<InProgressTag<ActionPressedOnEnvironmentTag>> InProgressActionPressedOnEnvironment;
-        public readonly EcsPool<InProgressTag<ActionPressedOnGroundTag>> InProgressActionPressedOnGround;
-        public readonly EcsPool<InProgressTag<ActionPressedOnUnitTag>> InProgressActionPressedOnUnit;
         public readonly EcsPool<InProgressTag<ActionReviveComponent>> InProgressActionRevive;
         public readonly EcsPool<InProgressTag<CooldownValueComponent<HealingPotionValueComponent>>> InProgressCooldownValueHealingPotionValue;
         public readonly EcsPool<InProgressTag<MagnetTag>> InProgressMagnet;
@@ -488,7 +486,8 @@ namespace Core.Generated
         public readonly EcsPool<MoveDirectionComponent> MoveDirection;
         public readonly EcsPool<MoveSpeedPercentValueComponent> MoveSpeedPercentValue;
         public readonly EcsPool<MoveSpeedValueComponent> MoveSpeedValue;
-        public readonly EcsPool<MoveUpdateComponent> MoveUpdate;
+        public readonly EcsPool<MoveUpdate2DComponent> MoveUpdate2D;
+        public readonly EcsPool<MoveUpdateTag> MoveUpdate;
         public readonly EcsPool<MultiplayerDataComponent> MultiplayerData;
         public readonly EcsPool<NodeComponent> Node;
         public readonly EcsPool<NpcActionComponent> NpcAction;
@@ -529,6 +528,7 @@ namespace Core.Generated
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>> ResourceRecoveryPerUsingValueActionLinkMouseLeft;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>> ResourceRecoveryPerUsingValueActionLinkMouseRight;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>> ResourceRecoveryPerUsingValueHealingPotionValue;
+        public readonly EcsPool<Rigidbody2DComponent> Rigidbody2D;
         public readonly EcsPool<RigidbodyComponent> Rigidbody;
         public readonly EcsPool<ScaledByExplosionScaleValue> ScaledByExplosionScaleValue;
         public readonly EcsPool<ScaleEffectControllerComponent> ScaleEffectController;
@@ -731,6 +731,7 @@ namespace Core.Generated
             Button2 = world.GetPool<Button2Tag>();
             Button3 = world.GetPool<Button3Tag>();
             Button4 = world.GetPool<Button4Tag>();
+            ButtonMove = world.GetPool<ButtonMoveTag>();
             ButtonTeleport = world.GetPool<ButtonTeleport>();
             ButtonUseHealing = world.GetPool<ButtonUseHealing>();
             CalculateMoveDestination = world.GetPool<CalculateMoveDestinationTag>();
@@ -817,6 +818,7 @@ namespace Core.Generated
             EventAttraction = world.GetPool<EventAttraction>();
             EventBehaviorTreeActivate = world.GetPool<EventBehaviorTreeActivate>();
             EventBehaviorTreeDeactivate = world.GetPool<EventBehaviorTreeDeactivate>();
+            EventButtonCanceledButtonMove = world.GetPool<EventButtonCanceled<ButtonMoveTag>>();
             EventCameraShake = world.GetPool<EventCameraShakeComponent>();
             EventCausedDamage = world.GetPool<EventCausedDamage>();
             EventCheckMerges = world.GetPool<EventCheckMerges>();
@@ -1006,10 +1008,6 @@ namespace Core.Generated
             InProgressActionDefault = world.GetPool<InProgressTag<ActionDefaultComponent>>();
             InProgressActionDizzy = world.GetPool<InProgressTag<ActionDizzyComponent>>();
             InProgressActionMove = world.GetPool<InProgressTag<ActionMoveComponent>>();
-            InProgressActionPressed = world.GetPool<InProgressTag<ActionPressedComponent>>();
-            InProgressActionPressedOnEnvironment = world.GetPool<InProgressTag<ActionPressedOnEnvironmentTag>>();
-            InProgressActionPressedOnGround = world.GetPool<InProgressTag<ActionPressedOnGroundTag>>();
-            InProgressActionPressedOnUnit = world.GetPool<InProgressTag<ActionPressedOnUnitTag>>();
             InProgressActionRevive = world.GetPool<InProgressTag<ActionReviveComponent>>();
             InProgressCooldownValueHealingPotionValue = world.GetPool<InProgressTag<CooldownValueComponent<HealingPotionValueComponent>>>();
             InProgressMagnet = world.GetPool<InProgressTag<MagnetTag>>();
@@ -1036,7 +1034,8 @@ namespace Core.Generated
             MoveDirection = world.GetPool<MoveDirectionComponent>();
             MoveSpeedPercentValue = world.GetPool<MoveSpeedPercentValueComponent>();
             MoveSpeedValue = world.GetPool<MoveSpeedValueComponent>();
-            MoveUpdate = world.GetPool<MoveUpdateComponent>();
+            MoveUpdate2D = world.GetPool<MoveUpdate2DComponent>();
+            MoveUpdate = world.GetPool<MoveUpdateTag>();
             MultiplayerData = world.GetPool<MultiplayerDataComponent>();
             Node = world.GetPool<NodeComponent>();
             NpcAction = world.GetPool<NpcActionComponent>();
@@ -1077,6 +1076,7 @@ namespace Core.Generated
             ResourceRecoveryPerUsingValueActionLinkMouseLeft = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>();
             ResourceRecoveryPerUsingValueActionLinkMouseRight = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>();
             ResourceRecoveryPerUsingValueHealingPotionValue = world.GetPool<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>();
+            Rigidbody2D = world.GetPool<Rigidbody2DComponent>();
             Rigidbody = world.GetPool<RigidbodyComponent>();
             ScaledByExplosionScaleValue = world.GetPool<ScaledByExplosionScaleValue>();
             ScaleEffectController = world.GetPool<ScaleEffectControllerComponent>();

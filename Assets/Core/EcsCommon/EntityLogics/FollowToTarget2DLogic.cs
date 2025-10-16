@@ -9,7 +9,7 @@ namespace Core.ExternalEntityLogics
     {
         [SerializeField] private float _smooth = .5f;
         private EcsPool<TargetComponent> _targets;
-        private EcsPool<RigidbodyComponent> _rigidbodies;
+        private EcsPool<Rigidbody2DComponent> _rigidbodies;
         private EcsPool<PositionComponent> _positions;
         private EcsPool<MoveSpeedValueComponent> _moveSpeed;
 
@@ -18,7 +18,7 @@ namespace Core.ExternalEntityLogics
             var pools = context.Resolve<ComponentPools>();
             _targets = pools.Target;
             _positions = pools.Position;
-            _rigidbodies = pools.Rigidbody;
+            _rigidbodies = pools.Rigidbody2D;
             _moveSpeed = pools.MoveSpeedValue;
         }
 
