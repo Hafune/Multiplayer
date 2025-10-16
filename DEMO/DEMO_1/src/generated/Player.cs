@@ -12,6 +12,12 @@ public partial class Player : Schema {
 	public float x = default(float);
 
 	[Type(1, "number")]
-	public float y = default(float);
+	public float z = default(float);
+
+	[Type(2, "number")]
+	public float velocityX = default(float);
+
+	[Type(3, "number")]
+	public float velocityZ = default(float);
 }
 

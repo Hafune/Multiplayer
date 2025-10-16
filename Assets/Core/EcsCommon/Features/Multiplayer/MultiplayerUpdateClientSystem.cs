@@ -28,7 +28,8 @@ namespace Core
             >> _otherFilter;
 
         private readonly ComponentPools _pools;
-        private const float _serverFps = 1 / 20f;
+        private const float SERVER_TICK_RATE = .02f;
+        private const int MAX_FRAME_DELAY = 4;
 
         public void Run(IEcsSystems systems)
         {
@@ -38,14 +39,15 @@ namespace Core
                 _pools.EventMultiplayerDataUpdated.Del(i);
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var position = body.position;
+                var velocity = body.linearVelocity;
+                var speed = velocity.magnitude * SERVER_TICK_RATE;
 
-                UpdatePosition(ref position, changes);
+                UpdatePosition(ref position, ref velocity, changes);
 
                 var distance = Vector3.Distance(position, body.position);
-                var speed = _pools.MoveSpeedValue.Get(i).value;
 
-                if (distance > speed * _serverFps)
-                    Debug.LogWarning(distance);
+                if (distance > speed * MAX_FRAME_DELAY)
+                    Debug.LogWarning(distance);//сделать с игроком... что то )
             }
 
             foreach (var i in _otherFilter.Value)
@@ -54,41 +56,42 @@ namespace Core
                 _pools.EventMultiplayerDataUpdated.Del(i);
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var position = body.position;
+                var velocity = body.linearVelocity;
+                var speed = velocity.magnitude * SERVER_TICK_RATE;
 
-                UpdatePosition(ref position, changes);
-                
-                body.MovePosition(position);
+                UpdatePosition(ref position, ref velocity, changes);
+
+                body.position = velocity == Vector3.zero || Vector3.Distance(body.position, position) > speed * MAX_FRAME_DELAY
+                    ? position
+                    : Vector3.Lerp(body.position, position, .5f);
+
+                body.linearVelocity = velocity;
             }
         }
 
-        private void UpdatePosition(ref Vector3 position, List<DataChange> changes)
+        private static void UpdatePosition(ref Vector3 position, ref Vector3 velocity, List<DataChange> changes)
         {
             foreach (var dataChange in changes)
             {
                 switch (dataChange.Field)
                 {
                     case "x":
-                        SetOffset(ref position.x, dataChange);
+                        position.x = (float)dataChange.Value;
                         break;
                     case "z":
-                        SetOffset(ref position.z, dataChange);
+                        position.z = (float)dataChange.Value;
+                        break;
+                    case "velocityX":
+                        velocity.x = (float)dataChange.Value;
+                        break;
+                    case "velocityZ":
+                        velocity.z = (float)dataChange.Value;
                         break;
                     default:
                         Debug.LogWarning($"Поле {dataChange.Field} не обработанно");
                         break;
                 }
             }
-        }
-
-        private void SetOffset(ref float value, DataChange dataChange)
-        {
-            var current = (float)dataChange.Value;
-            var previous = (float)dataChange.PreviousValue;
-            var extrude = current - previous;
-            value = current + extrude;
-            
-            if (extrude == 0)
-                Debug.Log("0");
         }
     }
 }

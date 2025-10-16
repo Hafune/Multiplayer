@@ -7,6 +7,12 @@ export class Player extends Schema {
 
     @type("number")
     z = Math.floor(Math.random() * 40) - 20;
+
+    @type("number")
+    velocityX = 0;
+
+    @type("number")
+    velocityZ = 0;
 }
 
 export class State extends Schema {
@@ -39,7 +45,7 @@ export class StateHandlerRoom extends Room<State> {
         console.log("StateHandlerRoom created!", options);
 
         this.setState(new State());
-        // this.setPatchRate(10);
+        this.setPatchRate(20);
 
         this.onMessage("move", (client, data) => {
             //console.log("StateHandlerRoom received message from", client.sessionId, ":", data);

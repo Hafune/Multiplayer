@@ -10,7 +10,7 @@ namespace Core
         private readonly EcsFilterInject<
             Inc<
                 Player1UniqueTag,
-                PositionComponent
+                RigidbodyComponent
             >> _filter;
 
         private readonly ComponentPools _pools;
@@ -19,12 +19,16 @@ namespace Core
         {
             foreach (var i in _filter.Value)
             {
-                var position = _pools.Position.Get(i).transform.position;
+                var body = _pools.Rigidbody.Get(i).rigidbody;
+                var position = body.position;
+                var velocity = body.linearVelocity;
             
                 MultiplayerManager.Instance.SendData("move", new()
                 {
                     { "x", position.x },
                     { "z", position.z },
+                    { "velocityX", velocity.x },
+                    { "velocityZ", velocity.z },
                 });
             }
         }
