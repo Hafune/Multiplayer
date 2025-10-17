@@ -18,6 +18,7 @@ export class Player extends Schema {
 export class State extends Schema {
     @type({ map: Player })
     players = new MapSchema<Player>();
+    playerKeys = new Set(Object.keys(new Player()));
 
     something = "This attribute won't be sent to the client-side";
 
@@ -30,11 +31,11 @@ export class State extends Schema {
     }
 
     movePlayer(sessionId: string, movement: any) {
-        if (movement.x)
-            this.players.get(sessionId).x = movement.x;
-
-        if (movement.z)
-            this.players.get(sessionId).z = movement.z;
+        for (const key in movement) {
+            if (this.playerKeys.has(key)) {
+                this.players.get(sessionId)[key] = movement[key];
+            }
+        }
     }
 }
 

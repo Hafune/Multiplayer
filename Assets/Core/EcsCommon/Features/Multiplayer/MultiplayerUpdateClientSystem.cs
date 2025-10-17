@@ -38,16 +38,15 @@ namespace Core
                 var changes = _pools.EventMultiplayerDataUpdated.Get(i).changes;
                 _pools.EventMultiplayerDataUpdated.Del(i);
                 var body = _pools.Rigidbody.Get(i).rigidbody;
-                var position = body.position;
-                var velocity = body.linearVelocity;
-                var speed = velocity.magnitude * SERVER_TICK_RATE;
+                var nextPosition = body.position;
+                var nextVelocity = body.linearVelocity;
 
-                UpdatePosition(ref position, ref velocity, changes);
-
-                var distance = Vector3.Distance(position, body.position);
+                AssignValues(ref nextPosition, ref nextVelocity, changes);
+                var speed = nextVelocity.magnitude * SERVER_TICK_RATE;
+                var distance = Vector3.Distance(nextPosition, body.position);
 
                 if (distance > speed * MAX_FRAME_DELAY)
-                    Debug.LogWarning(distance);//сделать с игроком... что то )
+                    Debug.LogWarning(distance); //сделать с игроком... что то )
             }
 
             foreach (var i in _otherFilter.Value)
@@ -55,21 +54,22 @@ namespace Core
                 var changes = _pools.EventMultiplayerDataUpdated.Get(i).changes;
                 _pools.EventMultiplayerDataUpdated.Del(i);
                 var body = _pools.Rigidbody.Get(i).rigidbody;
-                var position = body.position;
-                var velocity = body.linearVelocity;
-                var speed = velocity.magnitude * SERVER_TICK_RATE;
+                var nextPosition = body.position;
+                var nextVelocity = body.linearVelocity;
 
-                UpdatePosition(ref position, ref velocity, changes);
+                AssignValues(ref nextPosition, ref nextVelocity, changes);
+                var speed = nextVelocity.magnitude * SERVER_TICK_RATE;
 
-                body.position = velocity == Vector3.zero || Vector3.Distance(body.position, position) > speed * MAX_FRAME_DELAY
-                    ? position
-                    : Vector3.Lerp(body.position, position, .5f);
+                var currentPosition = body.position;
+                body.position = Vector3.Distance(currentPosition, nextPosition) > speed * MAX_FRAME_DELAY
+                    ? nextPosition
+                    : Vector3.Lerp(currentPosition, nextPosition, .5f);
 
-                body.linearVelocity = velocity;
+                body.linearVelocity = nextVelocity;
             }
         }
 
-        private static void UpdatePosition(ref Vector3 position, ref Vector3 velocity, List<DataChange> changes)
+        private static void AssignValues(ref Vector3 position, ref Vector3 velocity, List<DataChange> changes)
         {
             foreach (var dataChange in changes)
             {
