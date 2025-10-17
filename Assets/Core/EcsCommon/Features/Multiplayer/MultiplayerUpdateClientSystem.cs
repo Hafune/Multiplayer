@@ -47,6 +47,7 @@ namespace Core
 
                 if (distance > speed * MAX_FRAME_DELAY)
                     Debug.LogWarning(distance); //сделать с игроком... что то )
+                //этот блок пока не корректен т.к. я ещё не понимаю что делать игроку с его данными пришедшими с сервера )
             }
 
             foreach (var i in _otherFilter.Value)
