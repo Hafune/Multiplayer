@@ -883,6 +883,7 @@ MonoBehaviour:
   - {fileID: 25798769393666020}
   - {fileID: 7943085570038155572}
   - {fileID: 8335221090014701793}
+  - {fileID: 6045875949950420753}
   - {fileID: 1366764752889626671}
   - {fileID: 2070692773757699912}
   - {fileID: 852902906975014533}
@@ -3512,6 +3513,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4325902021400772972}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6045875949950420753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8065934687239112317, guid: 7703869f94894674f81d87bcd8808ae6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4325902021400772972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!20 &7597564198485204141 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6153967244475063745, guid: 7703869f94894674f81d87bcd8808ae6,

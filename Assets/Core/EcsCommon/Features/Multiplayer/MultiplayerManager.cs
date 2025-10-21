@@ -4,6 +4,7 @@ using Core.Generated;
 using Core.Lib;
 using Lib;
 using Reflex;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Core
@@ -16,6 +17,12 @@ namespace Core
         private Context _context;
         private ComponentPools _pools;
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
+
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            Cursor.visible = !hasFocus;
+            _context.Resolve<CinemachineCamera>().GetComponent<CinemachineInputAxisController>().enabled = hasFocus;
+        }
 
         public void SetupContext(Context context)
         {
@@ -34,6 +41,10 @@ namespace Core
         {
             _room = await Instance.client.JoinOrCreate<State>("state_handler");
             _room.OnStateChange += OnChange;
+            _room.OnMessage<string>("projectile", data =>
+            {
+                
+            });
         }
 
         private void OnChange(State state, bool isFirstState)
@@ -56,6 +67,16 @@ namespace Core
             multiplayerData.SetupData(data);
             _pools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
             _storages[key] = convertToEntity;
+            
+            if (key != _room.SessionId)
+                return;
+
+            var camera = _context.Resolve<CinemachineCamera>();
+            camera.Follow = convertToEntity.transform;
+            var follow = camera.GetComponent<CinemachineOrbitalFollow>();
+            follow.HorizontalAxis.Value = 0;
+            follow.VerticalAxis.Value = 20;
+            follow.RadialAxis.Value = follow.RadialAxis.Range.y;
         }
 
         private void RemovePlayer(string key, Player data)

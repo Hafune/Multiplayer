@@ -70,7 +70,7 @@ namespace Core.Services
         public IEnumerable<IEcsSystem> PlayerControllerSystems(Context context) =>
             new IEcsSystem[]
             {
-                new PlayerControllerSystem<T>(_context, _context.Resolve<InputService>().GetInputs(_index)),
+                new PlayerInputsSystem<T>(_context, _context.Resolve<InputService>().GetInputs(_index)),
                 new PlayerButtonsSystem<T>(_context, _context.Resolve<InputService>().GetInputs(_index)),
                 //инпут обрабатывается в апдейте до этой системы и потому ивент съедается в ней до прочтения 
             };

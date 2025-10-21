@@ -49,8 +49,11 @@ export class StateHandlerRoom extends Room<State> {
         this.setPatchRate(20);
 
         this.onMessage("move", (client, data) => {
-            //console.log("StateHandlerRoom received message from", client.sessionId, ":", data);
             this.state.movePlayer(client.sessionId, data);
+        });
+
+        this.onMessage("projectile", (client, data) => {
+            this.broadcast("projectile", data, { except: client });
         });
     }
 

@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Core.Systems
 {
-    public class PlayerControllerSystem<T> : IEcsRunSystem
+    public class PlayerInputsSystem<T> : IEcsRunSystem
         where T : struct
     {
         private readonly EcsFilterInject<
@@ -40,18 +40,29 @@ namespace Core.Systems
 
         private readonly ComponentPools _pools;
         private int a;
+        private readonly Transform _cameraTransform;
 
-        public PlayerControllerSystem(Context context, PlayerInputs.PlayerActions playerActions)
+        public PlayerInputsSystem(Context context, PlayerInputs.PlayerActions playerActions)
         {
             _playerActions = playerActions;
+            _cameraTransform = context.Resolve<Camera>().transform;
         }
 
         public void Run(IEcsSystems systems)
         {
             foreach (var i in _moveStreamingFilter.Value)
             {
+                var cameraForward = _cameraTransform.forward;
+                var cameraRight = _cameraTransform.right;
+                cameraForward.y = 0f;
+                cameraRight.y = 0f;
+                cameraForward.Normalize();
+                cameraRight.Normalize();
+
                 ref var move = ref _pools.MoveDirection.Get(i);
-                move.direction = _playerActions.Move.ReadValue<Vector2>();
+                var direction = _playerActions.Move.ReadValue<Vector2>();
+                var direction3D = (cameraForward * direction.y + cameraRight * direction.x).normalized;
+                move.direction = new Vector2(direction3D.x, direction3D.z);
 
                 if (!_pools.InProgressActionMove.Has(i))
                     _pools.EventStartActionMove.Add(i);

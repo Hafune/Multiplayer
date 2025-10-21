@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Core.Components;
 using Core.Generated;
 using Leopotam.EcsLite;
@@ -14,6 +15,7 @@ namespace Core
             >> _filter;
 
         private readonly ComponentPools _pools;
+        private readonly Dictionary<string, object> _message = new();
 
         public void Run(IEcsSystems systems)
         {
@@ -22,14 +24,13 @@ namespace Core
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var position = body.position;
                 var velocity = body.linearVelocity;
-            
-                MultiplayerManager.Instance.SendData("move", new()
-                {
-                    { "x", position.x },
-                    { "z", position.z },
-                    { "velocityX", velocity.x },
-                    { "velocityZ", velocity.z },
-                });
+                _message.Clear();
+                _message["x"] = position.x;
+                _message["z"] = position.z;
+                _message["velocityX"] = velocity.x;
+                _message["velocityZ"] = velocity.z;
+
+                MultiplayerManager.Instance.SendData("move", _message);
             }
         }
     }
