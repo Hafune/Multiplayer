@@ -10,6 +10,8 @@ namespace Core
 {
     public class MultiplayerUpdateServerSystem : IEcsRunSystem
     {
+        public const float WEIGHT_SCALE = 1000f;
+
         private readonly EcsFilterInject<
             Inc<
                 Player1UniqueTag,
@@ -25,8 +27,6 @@ namespace Core
 
         private readonly ComponentPools _pools;
         private readonly Dictionary<string, object> _message = new();
-        private readonly List<AnimationClip> _clips = new();
-        private readonly List<float> _weights = new();
         private readonly Dictionary<AnimationClip, int> _stateIds;
         private readonly List<int> _states = new();
 
@@ -38,19 +38,34 @@ namespace Core
             {
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var bodyAngle = body.transform.eulerAngles.y;
-                _clips.Clear();
-                foreach (var layer in _pools.Animator.Get(i).animancer.Layers)
-                {
-                    if (layer.CurrentState.IsPlaying)
-                    {
-                        layer.CurrentState.GatherAnimationClips(_clips);
-                        _weights.Add(layer.CurrentState.Weight);
-                    }
-                }
 
                 _states.Clear();
-                foreach (var clip in _clips)
-                    _states.Add(_stateIds[clip]);
+                var animancer = _pools.Animator.Get(i).animancer;
+                foreach (var layer in animancer.Layers)
+                foreach (var state in layer.ActiveStates)
+                {
+                    if (state.IsPlaying && state.EffectiveWeight > 0)
+                    {
+                        var clip = state.Clip;
+
+                        if (clip)
+                        {
+                            _states.Add(_stateIds[clip]);
+                            _states.Add((int)(state.EffectiveWeight * WEIGHT_SCALE));
+                        }
+                        else
+                        {
+                            foreach (var childState in state)
+                            {
+                                if (!childState.Clip)
+                                    continue;
+
+                                _states.Add(_stateIds[childState.Clip]);
+                                _states.Add((int)(childState.EffectiveWeight * WEIGHT_SCALE));
+                            }
+                        }
+                    }
+                }
 
                 var position = body.position;
                 var velocity = body.linearVelocity;

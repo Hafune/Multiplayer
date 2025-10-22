@@ -76,23 +76,29 @@ namespace Core
                 body.transform.eulerAngles = euler;
 
                 var currentPosition = body.position;
-                body.position = Vector3.Distance(currentPosition, nextPosition) > speed * MAX_FRAME_DELAY
+                var pos = Vector3.Distance(currentPosition, nextPosition) > speed * MAX_FRAME_DELAY
                     ? nextPosition
                     : Vector3.Lerp(currentPosition, nextPosition, .5f);
 
-                body.linearVelocity = nextVelocity;
-
+                body.MovePosition(pos + nextVelocity * SERVER_TICK_RATE);
+                
                 if (!stateWasChanged)
                     continue;
 
+                var animancer = _pools.Animator.Get(i).animancer;
+                var layers = animancer.Layers;
                 int index = 0;
-                var layers = _pools.Animator.Get(i).animancer.Layers;
-                foreach (var id in _states) 
-                    layers[index++].Play(_clips[id]);
+                int lIndex = 0;
+                for (; index < _states.Count; index += 2)
+                {
+                    var id = _states[index];
+                    var layer = layers[lIndex++];
+                    layer.Play(_clips[id]);
+                    layer.Weight = _states[index + 1] / MultiplayerUpdateServerSystem.WEIGHT_SCALE;
+                }
 
-                index++;
-                for (; index < layers.Count; index++)
-                    layers[index].Stop();
+                for (; lIndex < layers.Count; lIndex++)
+                    layers[lIndex].Stop();
             }
         }
 

@@ -30,6 +30,7 @@ namespace Core.Systems
 
             _releasedFilter = world
                 .Filter<EventButtonCanceled<B>>()
+                .Inc<ActionPressedComponent>()
                 .End();
 
             _completeStreamingFilter = world.Filter<EventButtonCanceled<B>>().Inc<WaitStreamingCancel<B>>().End();
