@@ -3163,7 +3163,10 @@ MonoBehaviour:
   _views:
   - key: {fileID: 3100406230861038418, guid: 731467665ed064046a9ac76ffeb9ef22, type: 3}
     view: {fileID: 866235176156947101, guid: e3e1b4cf07f96a849aff82b319659dc4, type: 3}
-  _states: []
+  _states:
+  - {fileID: 7400000, guid: 461a947845ddfaa41b35511274f0c594, type: 2}
+  - {fileID: 7400000, guid: 87f7a930287f2a6409df28a1a6dfa7b6, type: 2}
+  - {fileID: 7400000, guid: 01610ef83ceb3e14e85130248b997467, type: 2}
   _player: {fileID: 6910321022448170990, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
   _enemy: {fileID: 698035324902573401, guid: 882b21a8888d0464ea7de2750de26dc3, type: 3}
 --- !u!114 &1493487485174667320

@@ -100,6 +100,7 @@ namespace Core.Systems
                 ref var move = ref _pools.MoveDirection.Get(i);
                 var direction = _playerActions.Move.ReadValue<Vector2>();
                 var direction3D = (cameraForward * direction.y + cameraRight * direction.x).normalized;
+                move.inputDirection = direction;
                 move.direction = new Vector2(direction3D.x, direction3D.z);
 
                 if (!_pools.InProgressActionMove.Has(i))

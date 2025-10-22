@@ -26,6 +26,7 @@ namespace Core
         private readonly ComponentPools _pools;
         private readonly Dictionary<string, object> _message = new();
         private readonly List<AnimationClip> _clips = new();
+        private readonly List<float> _weights = new();
         private readonly Dictionary<AnimationClip, int> _stateIds;
         private readonly List<int> _states = new();
 
@@ -37,9 +38,17 @@ namespace Core
             {
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var bodyAngle = body.transform.eulerAngles.y;
-                _pools.Animator.Get(i).animancer.Layers.GatherAnimationClips(_clips);
-                _states.Clear();
+                _clips.Clear();
+                foreach (var layer in _pools.Animator.Get(i).animancer.Layers)
+                {
+                    if (layer.CurrentState.IsPlaying)
+                    {
+                        layer.CurrentState.GatherAnimationClips(_clips);
+                        _weights.Add(layer.CurrentState.Weight);
+                    }
+                }
 
+                _states.Clear();
                 foreach (var clip in _clips)
                     _states.Add(_stateIds[clip]);
 

@@ -87,9 +87,10 @@ namespace Core
 
                 int index = 0;
                 var layers = _pools.Animator.Get(i).animancer.Layers;
-                foreach (var id in _states)
+                foreach (var id in _states) 
                     layers[index++].Play(_clips[id]);
 
+                index++;
                 for (; index < layers.Count; index++)
                     layers[index].Stop();
             }
@@ -130,7 +131,7 @@ namespace Core
                         break;
                     case nameof(Player.state):
                         states.Clear();
-                        states.AddRange((int[])dataChange.Value);
+                        ((ArraySchema<int>)dataChange.Value).ForEach(states.Add);
                         stateWasChanged = true;
                         break;
                     default:

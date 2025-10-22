@@ -15,10 +15,8 @@ namespace Core.ExternalEntityLogics
         private void Awake()
         {
             _animancer = GetComponentInParent<AnimancerComponent>();
-#if UNITY_EDITOR
             Assert.IsNotNull(_clip);
             Assert.IsNotNull(_animancer);
-#endif
         }
 
         public override void Run(int entity)

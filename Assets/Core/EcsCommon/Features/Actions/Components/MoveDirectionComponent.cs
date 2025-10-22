@@ -5,5 +5,6 @@ namespace Core.Components
     public struct MoveDirectionComponent
     {
        public Vector2 direction;
+       public Vector2 inputDirection;
     }
 }
