@@ -10,8 +10,8 @@ namespace Core.Lib
 {
     public class AreaEntityTriggersListener
     {
-        private static readonly MyList<MyList<Collider2D>> SetPool = new();
-        public readonly Dictionary<ConvertToEntity, MyList<Collider2D>> entities = new();
+        private static readonly MyList<MyList<Component>> SetPool = new();
+        public readonly Dictionary<ConvertToEntity, MyList<Component>> entities = new();
 
         private IEcsPool _pool;
         [CanBeNull] private ConvertToEntity _entityRef;
@@ -40,7 +40,7 @@ namespace Core.Lib
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Add(ConvertToEntity entityRef, Collider2D col)
+        public void Add(ConvertToEntity entityRef, Component col)
         {
             if (entities.TryGetValue(entityRef, out var set))
             {
@@ -76,7 +76,7 @@ namespace Core.Lib
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool Del(ConvertToEntity entityRef, Collider2D col)
+        public bool Del(ConvertToEntity entityRef, Component col)
         {
             if (!entities.TryGetValue(entityRef, out var set))
                 return false;

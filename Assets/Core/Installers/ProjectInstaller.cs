@@ -38,6 +38,7 @@ namespace Core
 
             foreach (var service in new IInitializableService[]
                      {
+                         new ActionBarService(),
                          new GoldService(),
                          new PatchNotesService(),
                          new PlayersService(),

@@ -3,6 +3,7 @@ using Core.ExternalEntityLogics;
 using Core.Generated;
 using Leopotam.EcsLite;
 using Lib;
+using Reflex;
 
 namespace Core.Systems
 {
@@ -15,10 +16,11 @@ namespace Core.Systems
         private readonly EcsPool<A> _actionPool;
         private readonly ComponentPools _pools;
 
-        public SimpleActionControls(EcsWorld world, ComponentPools pools)
+        public SimpleActionControls(Context context)
         {
+            var world = context.Resolve<EcsWorld>();
+            _pools = context.Resolve<ComponentPools>();
             _pressedFilter = world.Filter<B>().Inc<A>().Inc<ActionAttackComponent>().End();
-            _pools = pools;
             _actionPool = world.GetPool<A>();
         }
 

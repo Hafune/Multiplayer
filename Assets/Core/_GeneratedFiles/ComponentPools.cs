@@ -271,6 +271,7 @@ namespace Core.Generated
         public readonly EcsPool<EventBehaviorTreeActivate> EventBehaviorTreeActivate;
         public readonly EcsPool<EventBehaviorTreeDeactivate> EventBehaviorTreeDeactivate;
         public readonly EcsPool<EventButtonCanceled<ButtonMoveTag>> EventButtonCanceledButtonMove;
+        public readonly EcsPool<EventButtonCanceled<MouseLeftTag>> EventButtonCanceledMouseLeft;
         public readonly EcsPool<EventCameraShakeComponent> EventCameraShake;
         public readonly EcsPool<EventCausedDamage> EventCausedDamage;
         public readonly EcsPool<EventCheckMerges> EventCheckMerges;
@@ -295,6 +296,7 @@ namespace Core.Generated
         public readonly EcsPool<EventMagnetAreaTouch> EventMagnetAreaTouch;
         public readonly EcsPool<EventMoveComplete> EventMoveComplete;
         public readonly EcsPool<EventMultiplayerDataUpdated> EventMultiplayerDataUpdated;
+        public readonly EcsPool<EventMultiplayerEntityCreated> EventMultiplayerEntityCreated;
         public readonly EcsPool<EventRemoveEntity> EventRemoveEntity;
         public readonly EcsPool<EventRemoveTimer> EventRemoveTimer;
         public readonly EcsPool<EventResourceGenerated> EventResourceGenerated;
@@ -819,6 +821,7 @@ namespace Core.Generated
             EventBehaviorTreeActivate = world.GetPool<EventBehaviorTreeActivate>();
             EventBehaviorTreeDeactivate = world.GetPool<EventBehaviorTreeDeactivate>();
             EventButtonCanceledButtonMove = world.GetPool<EventButtonCanceled<ButtonMoveTag>>();
+            EventButtonCanceledMouseLeft = world.GetPool<EventButtonCanceled<MouseLeftTag>>();
             EventCameraShake = world.GetPool<EventCameraShakeComponent>();
             EventCausedDamage = world.GetPool<EventCausedDamage>();
             EventCheckMerges = world.GetPool<EventCheckMerges>();
@@ -843,6 +846,7 @@ namespace Core.Generated
             EventMagnetAreaTouch = world.GetPool<EventMagnetAreaTouch>();
             EventMoveComplete = world.GetPool<EventMoveComplete>();
             EventMultiplayerDataUpdated = world.GetPool<EventMultiplayerDataUpdated>();
+            EventMultiplayerEntityCreated = world.GetPool<EventMultiplayerEntityCreated>();
             EventRemoveEntity = world.GetPool<EventRemoveEntity>();
             EventRemoveTimer = world.GetPool<EventRemoveTimer>();
             EventResourceGenerated = world.GetPool<EventResourceGenerated>();

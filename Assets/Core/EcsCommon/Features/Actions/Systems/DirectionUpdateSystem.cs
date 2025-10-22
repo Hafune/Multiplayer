@@ -2,38 +2,32 @@ using Core.Components;
 using Core.Generated;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
+using Reflex;
 using UnityEngine;
 
 namespace Core.Systems
 {
-    public class DirectionUpdate2DSystem : IEcsRunSystem
+    public class DirectionUpdateSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<
             Inc<
-                AngularSpeedComponent,
-                AnimatorComponent,
                 DirectionUpdateTag,
-                MoveDestinationComponent,
-                PositionComponent,
-                MoveDirectionComponent,
-                Rigidbody2DComponent
+                RigidbodyComponent
             >> _filter;
 
         private readonly ComponentPools _pools;
+        private readonly Transform _cameraTransform;
+
+        public DirectionUpdateSystem(Context context) => _cameraTransform = context.Resolve<Camera>().transform;
 
         public void Run(IEcsSystems systems)
         {
             foreach (var i in _filter.Value)
             {
-                var dest = _pools.MoveDestination.Get(i);
-                var position = (Vector2)_pools.Position.Get(i).transform.position;
-                var line = dest.position - position;
+                var euler = new Vector3(0, _cameraTransform.eulerAngles.y, 0);
 
-                var rigidbody = _pools.Rigidbody2D.Get(i).rigidbody;
-                rigidbody.rotation = Mathf.MoveTowardsAngle(rigidbody.rotation,
-                    Vector2.SignedAngle(Vector2.right, _pools.MoveDirection.Get(i).direction = line.normalized),
-                    _pools.AngularSpeed.Get(i).value * Time.deltaTime * _pools.Animator.Get(i).animancer.Graph.Speed);
-                // Vector2.SignedAngle(Vector2.right, _pools.MoveDirection.Get(i).direction = line.normalized);
+                var rigidbody = _pools.Rigidbody.Get(i).rigidbody;
+                rigidbody.rotation = Quaternion.Euler(euler);
             }
         }
     }

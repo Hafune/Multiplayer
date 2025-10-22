@@ -54,7 +54,7 @@ namespace Core.Lib
             _inProgress = true;
             var totalScale = _damageScale * _elementalDamage.GetScale();
             for (int i = 0; i < _count; i++)
-                _area.OnTriggerEnter2DWithDamageScale(_results[i], totalScale, _priority);
+                _area.TriggerEnter(_results[i], totalScale, _priority);
 
             _endFrameCall.GetOrInitialize(entity).call += _dropTargets;
         }
@@ -62,7 +62,7 @@ namespace Core.Lib
         private void DropTargets(int _)
         {
             for (int i = 0; i < _count; i++)
-                _area.OnTriggerExit2D(_results[i]);
+                _area.TriggerExit(_results[i]);
 
             _inProgress = false;
         }

@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using Colyseus;
 using Core.Generated;
 using Core.Lib;
+using Core.Lib.Services;
 using Lib;
 using Reflex;
 using Unity.Cinemachine;
@@ -11,39 +13,84 @@ namespace Core
 {
     public class MultiplayerManager : ColyseusManager<MultiplayerManager>
     {
+        [SerializeField] private MultiplayerView[] _views;
+        [SerializeField] private AnimationClip[] _states;
         [SerializeField] private ConvertToEntity _player;
         [SerializeField] private ConvertToEntity _enemy;
         private ColyseusRoom<State> _room;
         private Context _context;
-        private ComponentPools _pools;
+        private ComponentPools _componentPools;
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
+        private MyPool _pool;
+        private readonly Dictionary<AnimationClip, int> _stateIds = new();
+
+        protected override void Start()
+        {
+            base.Start();
+
+            int index = 0;
+            foreach (var clip in _states)
+                _stateIds[clip] = index++;
+
+            Instance.InitializeClient();
+            Connect();
+        }
 
         private void OnApplicationFocus(bool hasFocus)
         {
             Cursor.visible = !hasFocus;
+            Cursor.lockState = Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
             _context.Resolve<CinemachineCamera>().GetComponent<CinemachineInputAxisController>().enabled = hasFocus;
         }
 
         public void SetupContext(Context context)
         {
             _context = context;
-            _pools = context.Resolve<ComponentPools>();
+            _componentPools = context.Resolve<ComponentPools>();
+            _pool = context.Resolve<PoolService>().DontDisposablePool;
         }
 
-        protected override void Start()
-        {
-            base.Start();
-            Instance.InitializeClient();
-            Connect();
-        }
+        public string GetClientId() => _room.Id;
+
+        public (Dictionary<AnimationClip, int>, AnimationClip[]) GetStates() => (_stateIds, _states);
+
+        public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
+
+        public void SendMessage(string key, string data) => _room.Send(key, data);
 
         private async void Connect()
         {
             _room = await Instance.client.JoinOrCreate<State>("state_handler");
             _room.OnStateChange += OnChange;
-            _room.OnMessage<string>("projectile", data =>
+            _room.OnMessage<string>("shoot", data =>
             {
-                
+                var info = JsonUtility.FromJson<SpawnInfo>(data);
+
+                foreach (var set in _views)
+                {
+                    if (set.key.TemplateId != info.templateId)
+                        continue;
+
+                    var position = new Vector3(info.x, info.y, info.z);
+                    var velocity = new Vector3(info.velocityX, info.velocityY, info.velocityZ);
+                    var convertToEntity = _pool.GetInstanceByPrefab(set.view, position, Quaternion.identity);
+                    var body = convertToEntity.GetComponent<Rigidbody>();
+                    body.linearVelocity = velocity;
+
+                    if (velocity == Vector3.zero)
+                        return;
+
+                    var forward = velocity.normalized;
+                    var up = Math.Abs(forward.y) > 0.99f ? new Vector3(0, 0, 1) : new Vector3(0, 1, 0);
+                    var rotation = Quaternion.LookRotation(forward, up);
+                    body.rotation = rotation;
+                    // var multiplayerData = convertToEntity.GetComponent<MultiplayerData>();
+                    // multiplayerData.SetupData(data);
+                    // _pools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
+                    // _storages[key] = convertToEntity;
+
+                    return;
+                }
             });
         }
 
@@ -51,7 +98,7 @@ namespace Core
         {
             if (!isFirstState)
                 return;
-            
+
             state.players.ForEach(AddPlayer);
             _room.State.players.OnAdd += AddPlayer;
             _room.State.players.OnRemove += RemovePlayer;
@@ -65,9 +112,9 @@ namespace Core
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
             var multiplayerData = convertToEntity.GetComponent<MultiplayerData>();
             multiplayerData.SetupData(data);
-            _pools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
+            _componentPools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
             _storages[key] = convertToEntity;
-            
+
             if (key != _room.SessionId)
                 return;
 
@@ -82,7 +129,7 @@ namespace Core
         private void RemovePlayer(string key, Player data)
         {
             var entity = _storages[key].RawEntity;
-            _pools.EventRemoveEntity.AddIfNotExist(entity);
+            _componentPools.EventRemoveEntity.AddIfNotExist(entity);
         }
 
         protected override void OnDestroy()
@@ -91,6 +138,11 @@ namespace Core
             _room.Leave();
         }
 
-        public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
+        [Serializable]
+        private struct MultiplayerView
+        {
+            public ConvertToEntity key;
+            public ConvertToEntity view;
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace Core.Systems
             _buttons = new IButtonHandler[]
             {
                 new ButtonHandler<ButtonMoveTag>(world, actions.Move),
+                new ButtonHandler<MouseLeftTag>(world, actions.Shoot),
                 // new ButtonHandler<Button1Tag>(world, actions.Button1),
                 // new ButtonHandler<Button2Tag>(world, actions.Button2),
                 // new ButtonHandler<Button3Tag>(world, actions.Button3),

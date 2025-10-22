@@ -11,8 +11,8 @@ namespace Core.Lib
         [SerializeField] [CanBeNull] private ElementalDamageContainer _elementalDamage;
 
         public void OnTriggerEnter2D(Collider2D col) =>
-            _target.OnTriggerEnter2DWithDamageScale(col, _damageScale * (_elementalDamage?.GetScale() ?? 1), _priority);
+            _target.TriggerEnter(col, _damageScale * (_elementalDamage?.GetScale() ?? 1), _priority);
 
-        public void OnTriggerExit2D(Collider2D col) => _target.OnTriggerExit2D(col);
+        public void OnTriggerExit2D(Collider2D col) => _target.TriggerExit(col);
     }
 }

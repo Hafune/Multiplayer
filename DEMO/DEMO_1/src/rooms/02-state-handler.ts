@@ -6,13 +6,25 @@ export class Player extends Schema {
     x = Math.floor(Math.random() * 40) - 20;
 
     @type("number")
+    y = 0;
+
+    @type("number")
     z = Math.floor(Math.random() * 40) - 20;
 
     @type("number")
     velocityX = 0;
 
     @type("number")
+    velocityY = 0;
+
+    @type("number")
     velocityZ = 0;
+
+    @type("number")
+    bodyAngle = 0;
+
+    @type(["int32"])
+    state = [];
 }
 
 export class State extends Schema {
@@ -52,8 +64,8 @@ export class StateHandlerRoom extends Room<State> {
             this.state.movePlayer(client.sessionId, data);
         });
 
-        this.onMessage("projectile", (client, data) => {
-            this.broadcast("projectile", data, { except: client });
+        this.onMessage("shoot", (client, data) => {
+            this.broadcast("shoot", data, { except: client });
         });
     }
 

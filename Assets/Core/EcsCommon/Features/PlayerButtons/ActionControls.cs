@@ -1,9 +1,9 @@
-using System;
 using Core.Components;
 using Core.ExternalEntityLogics;
 using Core.Generated;
 using Leopotam.EcsLite;
 using Lib;
+using Reflex;
 
 namespace Core.Systems
 {
@@ -11,37 +11,21 @@ namespace Core.Systems
         where B : struct, IButtonComponent
         where A : struct, IEntityActionComponent
     {
-        private readonly EcsFilter _actionPressedFilter;
-        private readonly EcsFilter _prepareOnMoveCompleteFilter;
         private readonly EcsFilter _eventButtonPerformedFilter;
         private readonly EcsFilter _releasedFilter;
         private readonly EcsFilter _completeStreamingFilter;
         private readonly EcsPool<A> _actionPool;
 
-        private readonly EcsPool<ActionAttrControlLockOnTargetTag<A>> _actionAttrControlLockOnTargetPool;
-        private readonly EcsPool<ActionAttrTargetDistanceComponent<A>> _actionAttrTargetDistancePool;
-
         private readonly ComponentPools _pools;
-        private readonly RelationFunctions<AimComponent, TargetComponent> _relationFunctions;
-        private readonly Action<int> _prepareActionAndSendStartEvent;
 
-        public ActionControls(EcsWorld world, ComponentPools pools, RelationFunctions<AimComponent, TargetComponent> relationFunctions)
+        public ActionControls(Context context)
         {
-            _actionPressedFilter = world
-                .Filter<B>()
-                .Inc<A>()
-                .Inc<ActionAttackComponent>()
-                .End();
-
-            _prepareOnMoveCompleteFilter = world
-                .Filter<B>()
-                .Inc<A>()
-                .Inc<ActionAttackComponent>()
-                .Inc<ActionAttrTargetDistanceComponent<A>>()
-                .End();
-
+            var world = context.Resolve<EcsWorld>();
+            _pools = context.Resolve<ComponentPools>();
+            
             _eventButtonPerformedFilter = world
                 .Filter<EventButtonPerformed<B>>()
+                .Inc<ActionAttackComponent>()
                 .End();
 
             _releasedFilter = world
@@ -49,64 +33,23 @@ namespace Core.Systems
                 .End();
 
             _completeStreamingFilter = world.Filter<EventButtonCanceled<B>>().Inc<WaitStreamingCancel<B>>().End();
-            _pools = pools;
-
             _actionPool = world.GetPool<A>();
-            _actionAttrControlLockOnTargetPool = world.GetPool<ActionAttrControlLockOnTargetTag<A>>();
-            _actionAttrTargetDistancePool = world.GetPool<ActionAttrTargetDistanceComponent<A>>();
-            _relationFunctions = relationFunctions;
-
-            _prepareActionAndSendStartEvent = PrepareActionAndSendStartEvent;
         }
 
         public void Run()
         {
             foreach (var i in _eventButtonPerformedFilter)
+            {
                 _pools.ActionPressed.GetOrInitialize(i).pressedCount++;
+                PrepareActionAndSendStartEvent(i);
+            }
 
             foreach (var i in _releasedFilter)
                 if (--_pools.ActionPressed.Get(i).pressedCount == 0)
                     _pools.ActionPressed.Del(i);
 
-            foreach (var i in _actionPressedFilter)
-            {
-                var actionLogic = _actionPool.Get(i).logic;
-
-                if (!actionLogic)
-                    continue;
-
-                if (actionLogic is EntityActionInstant)
-                    continue;
-
-                if (_actionAttrControlLockOnTargetPool.Has(i))
-                {
-                    _pools.ControlLockOnTarget.AddIfNotExist(i);
-                }
-                else
-                {
-                    _pools.ControlLockOnTarget.DelIfExist(i);
-                    _relationFunctions.DisconnectChild(i);
-                }
-            }
-
             foreach (var i in _completeStreamingFilter)
                 _pools.EventActionCompleteStreaming.AddIfNotExist(i);
-        }
-
-        public void SendStartEvent()
-        {
-            foreach (var i in _actionPressedFilter)
-                PrepareActionAndSendStartEvent(i);
-        }
-
-        public void PrepareOnMoveCompleteAttack()
-        {
-            foreach (var i in _prepareOnMoveCompleteFilter)
-            {
-                 ref var value = ref _pools.ActionOnMoveComplete.GetOrInitialize(i);
-                 value.action = _prepareActionAndSendStartEvent;
-                 value.actionDistance = _actionAttrTargetDistancePool.Get(i).value;
-            }
         }
 
         private void PrepareActionAndSendStartEvent(int i)

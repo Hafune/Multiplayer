@@ -44,13 +44,12 @@ namespace Core.Systems
                 new ActionDashSystem(),
                 new ActionMoveSystem(),
                 new ActionDefaultSystem(),
-                //Подготовка данных к апдейту
                 //Update-----------
-                new CalculateMoveDestinationSystem(),
-                // new DirectionUpdate2DSystem(),
+                // new CalculateMoveDestinationSystem(),
+                new DirectionUpdateSystem(context),
                 new MoveUpdateSystem(),
                 new CompleteIfResourceIsOverSystem(),
-                //
+                // уникальные апдейты реализованные внутри конкретных экшенов
                 new ActionUpdateSystem(),
                 //-----------
                 //Система BTree проверяющая что нужный экшен не начался

@@ -27,6 +27,20 @@ namespace Core.Systems
                 EventButtonCanceled<ButtonMoveTag>,
                 T
             >> _moveCompleteFilter;
+        
+        private readonly EcsFilterInject<
+            Inc<
+                ActionAttackComponent,
+                MouseLeftTag,
+                T
+            >> _mouseLeftStreamingFilter;
+
+        private readonly EcsFilterInject<
+            Inc<
+                InProgressTag<ActionAttackComponent>,
+                EventButtonCanceled<MouseLeftTag>,
+                T
+            >> _mouseLeftCompleteFilter;
 
         private readonly EcsFilterInject<
             Inc<
@@ -39,17 +53,41 @@ namespace Core.Systems
         private const float InputMemoryTime = .3f;
 
         private readonly ComponentPools _pools;
-        private int a;
         private readonly Transform _cameraTransform;
+
+        private readonly ActionControls<MouseLeftTag, ActionLinkMouseLeftComponent> _mouseLeftHandler;
+        private readonly ActionControls<MouseRightTag, ActionLinkMouseRightComponent> _mouseRightHandler;
+        private readonly ActionControls<Button1Tag, ActionLinkButton1Component> _button1Handler;
+        private readonly ActionControls<Button2Tag, ActionLinkButton2Component> _button2Handler;
+        private readonly ActionControls<Button3Tag, ActionLinkButton3Component> _button3Handler;
+        private readonly ActionControls<Button4Tag, ActionLinkButton4Component> _button4Handler;
+        private readonly SimpleActionControls<ButtonTeleport, ActionLinkTeleportToHubComponent> _buttonTeleportHandler;
+
 
         public PlayerInputsSystem(Context context, PlayerInputs.PlayerActions playerActions)
         {
             _playerActions = playerActions;
             _cameraTransform = context.Resolve<Camera>().transform;
+            
+            _mouseLeftHandler = new(context);
+            _mouseRightHandler = new(context);
+            _button1Handler = new(context);
+            _button2Handler = new(context);
+            _button3Handler = new(context);
+            _button4Handler = new(context);
+            _buttonTeleportHandler = new(context);
+
         }
 
         public void Run(IEcsSystems systems)
         {
+            _mouseLeftHandler.Run();
+            _mouseRightHandler.Run();
+            _button1Handler.Run();
+            _button2Handler.Run();
+            _button3Handler.Run();
+            _button4Handler.Run();
+            
             foreach (var i in _moveStreamingFilter.Value)
             {
                 var cameraForward = _cameraTransform.forward;

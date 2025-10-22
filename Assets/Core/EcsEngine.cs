@@ -73,7 +73,7 @@ namespace Core
                 .AddMany(EventSetupParentComponentSystemsNode.BuildSystems(context))
                 //-------------------
                 //Приминение данных с сервера
-                .Add(new MultiplayerUpdateClientSystem())
+                .Add(new MultiplayerUpdateClientSystem(context))
                 //
                 .AddMany(RestoreByCheckpointNode.BuildSystems())
                 //
@@ -164,7 +164,7 @@ namespace Core
                 .Add(new DeathCallbackSystem())
                 .Add(new EventEndFrameCallSystem())
                 //
-                .Add(new MultiplayerUpdateServerSystem())
+                .Add(new MultiplayerUpdateServerSystem(context))
                 // .AddMany(ModuleSystemsNode.ModuleBindSystems(Context))
                 //==>
 #if UNITY_EDITOR

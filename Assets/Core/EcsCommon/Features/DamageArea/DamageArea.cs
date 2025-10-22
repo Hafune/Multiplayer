@@ -7,7 +7,6 @@ namespace Core.Lib
 {
     public class DamageArea : MonoConstruct
     {
-        [SerializeField] private float _damageScale = 1;
         [SerializeField] private bool _autoClearHitOnExit;
         private AreaBase _areaLogic;
         private Action<ConvertToEntity> _onEntityDeleted;
@@ -34,9 +33,7 @@ namespace Core.Lib
 
         public void ReceiversClear() => _areaLogic.ReceiversClear();
 
-        public void OnTriggerEnter2D(Collider2D col) => OnTriggerEnter2DWithDamageScale(col, _damageScale, 0);
-
-        public void OnTriggerEnter2DWithDamageScale(Collider2D col, float damageScale, int priority)
+        public void TriggerEnter(Component col, float damageScale, int priority)
         {
             if (!_areaLogic.TryGetEntityTriggerEnter(col, out var entityRef))
                 return;
@@ -61,7 +58,7 @@ namespace Core.Lib
             entityRef.BeforeEntityDeleted += _onEntityDeleted;
         }
 
-        public void OnTriggerExit2D(Collider2D col)
+        public void TriggerExit(Component col)
         {
             if (!_areaLogic.TryGetEntityTriggerExit(col, out var entityRef))
                 return;

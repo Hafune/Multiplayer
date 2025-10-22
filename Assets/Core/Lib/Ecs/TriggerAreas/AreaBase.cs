@@ -64,7 +64,7 @@ namespace Core.Lib
             ReceiversClearCount++;
         }
 
-        public bool TryGetEntityTriggerEnter(Collider2D col, out ConvertToEntity entityRef)
+        public bool TryGetEntityTriggerEnter(Component col, out ConvertToEntity entityRef)
         {
             entityRef = TriggerCache.ExtractEntity(col);
 
@@ -80,7 +80,7 @@ namespace Core.Lib
             return true;
         }
 
-        public bool TryGetEntityTriggerExit(Collider2D col, out ConvertToEntity entityRef)
+        public bool TryGetEntityTriggerExit(Component col, out ConvertToEntity entityRef)
         {
             entityRef = TriggerCache.ExtractEntity(col);
 
