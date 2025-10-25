@@ -3,7 +3,7 @@
     "com.agava.webutility": "https://github.com/forcepusher/com.agava.webutility.git#2.1.0",
     "com.leopotam.ecslite": "https://github.com/Hafune/ecslite.git",
     "com.leopotam.ecslite.di": "https://github.com/Leopotam/ecslite-di.git",
-    "com.leopotam.ecslite.unityeditor": "https://github.com/Leopotam/ecslite-unityeditor.git",
+    "com.leopotam.ecslite.unityeditor": "https://github.com/Hafune/ecslite-unityeditor.git",
     "com.quickeye.ui-toolkit-plus": "https://github.com/Hafune/UI-Toolkit-Plus-public-field.git",
     "com.unity.cinemachine": "3.1.5",
     "com.unity.collab-proxy": "2.10.0",

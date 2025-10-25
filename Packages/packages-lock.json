@@ -30,11 +30,11 @@
       "hash": "482b14e87c09cd1bf3f8f3dffc5c0099f00a693a"
     },
     "com.leopotam.ecslite.unityeditor": {
-      "version": "https://github.com/Leopotam/ecslite-unityeditor.git",
+      "version": "https://github.com/Hafune/ecslite-unityeditor.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "aecbac1b9ec48575f2c7f14f3e707eb1d6ad9180"
+      "hash": "0db9d85cb7707bd278920eff45cba93d139aefbd"
     },
     "com.quickeye.ui-toolkit-plus": {
       "version": "https://github.com/Hafune/UI-Toolkit-Plus-public-field.git",

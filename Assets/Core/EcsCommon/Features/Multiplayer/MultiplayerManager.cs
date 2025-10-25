@@ -14,7 +14,6 @@ namespace Core
     public class MultiplayerManager : ColyseusManager<MultiplayerManager>
     {
         [SerializeField] private MultiplayerView[] _views;
-        [SerializeField] private AnimationClip[] _states;
         [SerializeField] private ConvertToEntity _player;
         [SerializeField] private ConvertToEntity _enemy;
         private ColyseusRoom<State> _room;
@@ -22,16 +21,10 @@ namespace Core
         private ComponentPools _componentPools;
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
         private MyPool _pool;
-        private readonly Dictionary<AnimationClip, int> _stateIds = new();
 
         protected override void Start()
         {
             base.Start();
-
-            int index = 0;
-            foreach (var clip in _states)
-                _stateIds[clip] = index++;
-
             Instance.InitializeClient();
             Connect();
         }
@@ -51,9 +44,6 @@ namespace Core
         }
 
         public string GetClientId() => _room.Id;
-
-        public AnimationClip[] GetStates() => _states;
-        public Dictionary<AnimationClip, int> GetStateIds() => _stateIds;
 
         public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
 

@@ -30,7 +30,7 @@ namespace Core
         private void Start()
         {
             _updateSystems
-                .Add(new MultiplayerUpdateClientSystem(context))
+                .Add(new MultiplayerUpdateClientSystem())
                 .Add(new EventTimeDilationSystem(context));
             // .Add(new EventCameraShakeSystem(Context));
 
@@ -165,7 +165,7 @@ namespace Core
                 .Add(new DeathCallbackSystem())
                 .Add(new EventEndFrameCallSystem())
                 //
-                .Add(new MultiplayerUpdateServerSystem(context))
+                .Add(new MultiplayerUpdateServerSystem())
                 // .AddMany(ModuleSystemsNode.ModuleBindSystems(Context))
                 //==>
 #if UNITY_EDITOR

@@ -5,6 +5,7 @@
 using Animancer.TransitionLibraries;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Animancer;
 using UnityEngine;
 
@@ -83,7 +84,7 @@ namespace Core
                     }
                 }
             }
-            
+
             float totalWeight = 0f;
             for (int i = _States.Count - 1; i >= 0; i--)
                 totalWeight += _States[i].weight;
@@ -130,7 +131,7 @@ namespace Core
             {
                 index = index,
                 time = state.Time,
-                weight = state.Weight,
+                weight = state.EffectiveWeight,
                 fade = state.FadeGroup?.RemainingFadeDuration ?? 0f,
             });
 
@@ -174,6 +175,20 @@ namespace Core
                             animancer);
                         continue;
                     }
+                    
+                    // Проверяем, проигрывается ли сейчас анимация с таким же клипом
+                    float time = stateData.time;
+                    float weight = stateData.weight;
+                    var activeStates = layer.ActiveStates;
+                    for (int j = 0; j < activeStates.Count; j++)
+                    {
+                        if (weight > 0 && ReferenceEquals(activeStates[j].Clip, transition.Transition.Key) && activeStates[j].IsPlaying)
+                        {
+                            time = activeStates[j].Time;
+                            weight = activeStates[j].Weight;
+                            break;
+                        }
+                    }
 
                     AnimancerState state = layer.GetOrCreateState(transition.Transition);
 
@@ -181,8 +196,8 @@ namespace Core
                         state = layer.GetOrCreateWeightlessState(state);
 
                     state.IsPlaying = true;
-                    state.Time = stateData.time;
-                    state.SetWeight(stateData.weight);
+                    state.Time = time;
+                    state.SetWeight(weight);
 
                     if (i != 0)
                         continue;

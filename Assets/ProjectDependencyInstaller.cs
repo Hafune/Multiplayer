@@ -16,7 +16,7 @@ public static class ProjectDependencyInstaller
         // "sc.utilities.selectionhistory", - найти адреса
         // "https://github.com/GucioDevs/SimpleMinMaxSlider.git#upm",
         "https://github.com/Leopotam/ecslite-di.git",
-        "https://github.com/Leopotam/ecslite-unityeditor.git",
+        "https://github.com/Hafune/ecslite-unityeditor.git",
         "https://github.com/Hafune/ecslite.git",
         "https://github.com/Hafune/UI-Toolkit-Plus-public-field.git",
         // "com.unity.cinemachine",

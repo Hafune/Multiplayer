@@ -6,7 +6,9 @@ namespace Core.Components
     {
         public Quaternion rotation;
         public Vector3 position;
-        public float speed;
+        public Vector3 velocity;
+        public Vector3 prediction;
+        public float distance;
         public float delay;
     }
 }

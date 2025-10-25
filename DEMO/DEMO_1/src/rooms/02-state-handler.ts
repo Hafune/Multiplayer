@@ -3,13 +3,13 @@ import { Schema, type, MapSchema } from "@colyseus/schema";
 
 export class Player extends Schema {
     @type("number")
-    x = Math.floor(Math.random() * 40) - 20;
+    x = Math.floor(Math.random() * 5) - 10;
 
     @type("number")
     y = 0;
 
     @type("number")
-    z = Math.floor(Math.random() * 40) - 20;
+    z = Math.floor(Math.random() * 5) - 10;
 
     @type("number")
     velocityX = 0;

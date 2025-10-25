@@ -10,8 +10,6 @@ namespace Core
 {
     public class MultiplayerUpdateServerSystem : IEcsRunSystem
     {
-        public const float LAYER_WEIGHT_SCALE = 1000f;
-
         private readonly EcsFilterInject<
             Inc<
                 Player1UniqueTag,
@@ -27,11 +25,7 @@ namespace Core
 
         private readonly ComponentPools _pools;
         private readonly Dictionary<string, object> _message = new();
-        private readonly Dictionary<AnimationClip, int> _stateIds;
-        private readonly List<int> _states = new();
         private readonly MySerializablePose _pose = new();
-
-        public MultiplayerUpdateServerSystem(Context context) => _stateIds = context.Resolve<MultiplayerManager>().GetStateIds();
 
         public void Run(IEcsSystems systems)
         {
@@ -40,35 +34,9 @@ namespace Core
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var bodyAngle = body.transform.eulerAngles.y;
 
-                _states.Clear();
                 var animancer = _pools.Animator.Get(i).animancer;
                 _pose.GatherFrom(animancer);
                 var state = JsonUtility.ToJson(_pose);
-                // foreach (var layer in animancer.Layers)
-                // foreach (var state in layer.ActiveStates)
-                // {
-                //     if (state.IsPlaying && state.Weight > 0)
-                //     {
-                //         var clip = state.Clip;
-                //
-                //         if (clip)
-                //         {
-                //             _states.Add(_stateIds[clip]);
-                //             _states.Add((int)(state.Weight * LAYER_WEIGHT_SCALE));
-                //         }
-                //         else
-                //         {
-                //             foreach (var childState in state)
-                //             {
-                //                 if (!childState.Clip)
-                //                     continue;
-                //
-                //                 _states.Add(_stateIds[childState.Clip]);
-                //                 _states.Add((int)(childState.Weight * LAYER_WEIGHT_SCALE));
-                //             }
-                //         }
-                //     }
-                // }
 
                 var position = body.position;
                 var velocity = body.linearVelocity;

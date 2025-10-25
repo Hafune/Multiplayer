@@ -3163,19 +3163,6 @@ MonoBehaviour:
   _views:
   - key: {fileID: 3100406230861038418, guid: 731467665ed064046a9ac76ffeb9ef22, type: 3}
     view: {fileID: 866235176156947101, guid: e3e1b4cf07f96a849aff82b319659dc4, type: 3}
-  _states:
-  - {fileID: 7400000, guid: 4e8ce3065ead22c47bf3599bcdc66b26, type: 2}
-  - {fileID: 7400000, guid: 9239a3f1c7566f94c90717810c55a69e, type: 2}
-  - {fileID: 7400000, guid: 47902a27ba481c948912c03d521f1a5f, type: 2}
-  - {fileID: 7400000, guid: f5bf98024b550f14c9629380798c4406, type: 2}
-  - {fileID: 7400000, guid: 36eff556fe19d5049b8db3cb2b249b21, type: 2}
-  - {fileID: 7400000, guid: 461a947845ddfaa41b35511274f0c594, type: 2}
-  - {fileID: 7400000, guid: d0abc13f94d2813479d059789a0927e6, type: 2}
-  - {fileID: 7400000, guid: b5f7ecde066b68945883a7af522a44bf, type: 2}
-  - {fileID: 7400000, guid: 78ab34d80596ae94481b4724ac37dea3, type: 2}
-  - {fileID: 7400000, guid: 87f7a930287f2a6409df28a1a6dfa7b6, type: 2}
-  - {fileID: 7400000, guid: 5d733568f768bab42b5dfa7a5797199a, type: 2}
-  - {fileID: 7400000, guid: 4bb652b58f827844fbded441990616e0, type: 2}
   _player: {fileID: 6910321022448170990, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
   _enemy: {fileID: 6471957088911178059, guid: 92280783c193af54181497e31fead715, type: 3}
 --- !u!114 &1493487485174667320
