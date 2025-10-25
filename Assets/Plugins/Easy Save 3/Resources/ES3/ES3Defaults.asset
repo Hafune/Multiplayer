@@ -39,6 +39,8 @@ MonoBehaviour:
     - Leopotam.EcsLite
     - Leopotam.EcsLite.Di
     - LucidSight.Runtime.ColyseusSDK
+    - MagicaCloth2Example
+    - MagicaClothV2
     - QuickEye.UIToolkit
     - sc.utilities.selectionhistory.editor
     - Tayx.Graphy

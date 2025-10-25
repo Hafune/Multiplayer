@@ -143,7 +143,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 8a0fe46d1fd1ae74381b1b79dd906267, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -844,7 +845,7 @@ PlayerSettings:
     QNX: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI;TextMeshPro
     ReservedCFE: TextMeshPro
     Server: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI
-    Standalone: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI;TextMeshPro
+    Standalone: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI;TextMeshPro;MAGICACLOTH2
     VisionOS: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI;TextMeshPro
     WebGL: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI;TextMeshPro
     Windows Store Apps: UNITY_VISUAL_SCRIPTING;ES3_TMPRO;ES3_UGUI

@@ -6,9 +6,8 @@ namespace Core.ExternalEntityLogics
 {
     public class PlayTransitionsLogic : AbstractEntityLogic
     {
-        [SerializeField] private int _layer = 0;
         [SerializeField] private float _speed = 1;
-        [SerializeField] private ClipTransition _clip;
+        [SerializeField] private TransitionAsset _clip;
         
         private AnimancerComponent _animancer;
 
@@ -21,7 +20,7 @@ namespace Core.ExternalEntityLogics
 
         public override void Run(int entity)
         {
-            var state = _animancer.Layers[_layer].Play(_clip);
+            var state = _animancer.Play(_clip);
             state.Time = 0;
             state.Speed = _speed;
         }

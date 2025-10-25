@@ -1,34 +1,29 @@
+using Core.Lib;
 using UnityEngine;
 
 namespace Core
 {
     public class TestTrigger : MonoBehaviour
     {
-        private int _count; 
-        
-        private void OnEnable()
+        private int _count;
+        private Collider _coll;
+
+        private void Awake()
         {
-            Debug.Log("e ");
             _count = 0;
-            GetComponent<Rigidbody2D>().simulated = false;
+            _coll = GetComponent<Collider>();
         }
 
-        private void FixedUpdate()
+        private void OnTriggerEnter(Collider col)
         {
-            Debug.Log("F " + _count++);
-            if (_count > 1)
-                GetComponent<Rigidbody2D>().simulated = true;
-        }
-
-        private void OnTriggerEnter2D(Collider2D col)
-        {
-            Debug.Log("ENTER " + _count++);
-            enabled = false;
+            TriggerCallbacksCache.RegisterTrigger(this, col);
+            Debug.Log(name + " ENTER " + _count++);
         }
         
-        private void OnTriggerExit2D(Collider2D col)
+        private void OnTriggerExit(Collider col)
         {
-            enabled = true;
+            TriggerCallbacksCache.UnRegisterTrigger(this, col);
+            Debug.Log(name + " exit " + _count--);
         }
     }
 }

@@ -23,19 +23,29 @@ export class Player extends Schema {
     @type("number")
     bodyAngle = 0;
 
-    @type(["int32"])
-    state = [];
+    @type("string")
+    state = "";
+
+    @type("int8")
+    patchRate;
 }
 
 export class State extends Schema {
     @type({ map: Player })
     players = new MapSchema<Player>();
-    playerKeys = new Set(Object.keys(new Player()));
 
-    something = "This attribute won't be sent to the client-side";
+    playerKeys = new Set(Object.keys(new Player()));
+    patchRate: number;
+
+    constructor(patchRate: number) {
+        super();
+        this.patchRate = patchRate;
+    }
 
     createPlayer(sessionId: string) {
-        this.players.set(sessionId, new Player());
+        var player = new Player();
+        player.patchRate = this.patchRate;
+        this.players.set(sessionId, player);
     }
 
     removePlayer(sessionId: string) {
@@ -57,8 +67,8 @@ export class StateHandlerRoom extends Room<State> {
     onCreate(options) {
         console.log("StateHandlerRoom created!", options);
 
-        this.setState(new State());
-        this.setPatchRate(20);
+        this.setState(new State(this.patchRate));
+        // this.setPatchRate(20);
 
         this.onMessage("move", (client, data) => {
             this.state.movePlayer(client.sessionId, data);

@@ -30,6 +30,7 @@ namespace Core
         private void Start()
         {
             _updateSystems
+                .Add(new MultiplayerUpdateClientSystem(context))
                 .Add(new EventTimeDilationSystem(context));
             // .Add(new EventCameraShakeSystem(Context));
 
@@ -73,7 +74,7 @@ namespace Core
                 .AddMany(EventSetupParentComponentSystemsNode.BuildSystems(context))
                 //-------------------
                 //Приминение данных с сервера
-                .Add(new MultiplayerUpdateClientSystem(context))
+                //.Add(new MultiplayerUpdateClientSystem(context))
                 //
                 .AddMany(RestoreByCheckpointNode.BuildSystems())
                 //

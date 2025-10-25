@@ -29,7 +29,10 @@ public partial class Player : Schema {
 	[Type(6, "number")]
 	public float bodyAngle = default(float);
 
-	[Type(7, "array", typeof(ArraySchema<int>), "int32")]
-	public ArraySchema<int> state = new ArraySchema<int>();
+	[Type(7, "string")]
+	public string state = default(string);
+
+	[Type(8, "int8")]
+	public sbyte patchRate = default(sbyte);
 }
 

@@ -52,7 +52,8 @@ namespace Core
 
         public string GetClientId() => _room.Id;
 
-        public (Dictionary<AnimationClip, int>, AnimationClip[]) GetStates() => (_stateIds, _states);
+        public AnimationClip[] GetStates() => _states;
+        public Dictionary<AnimationClip, int> GetStateIds() => _stateIds;
 
         public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
 
@@ -106,13 +107,14 @@ namespace Core
 
         private void AddPlayer(string key, Player data)
         {
-            var position = new Vector3(data.x, 0, data.z);
+            var position = new Vector3(data.x, data.y, data.z);
             var prefab = key == _room.SessionId ? _player : _enemy;
 
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
-            var multiplayerData = convertToEntity.GetComponent<MultiplayerData>();
+            var multiplayerData = convertToEntity.GetComponent<MultiplayerChanges>();
             multiplayerData.SetupData(data);
-            _componentPools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
+            _componentPools.MultiplayerChanges.Add(convertToEntity.RawEntity).data = multiplayerData;
+            _componentPools.MultiplayerPosition.Add(convertToEntity.RawEntity).position = position;
             _storages[key] = convertToEntity;
 
             if (key != _room.SessionId)

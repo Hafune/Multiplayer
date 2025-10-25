@@ -10,7 +10,7 @@ namespace Core
 {
     public class MultiplayerUpdateServerSystem : IEcsRunSystem
     {
-        public const float WEIGHT_SCALE = 1000f;
+        public const float LAYER_WEIGHT_SCALE = 1000f;
 
         private readonly EcsFilterInject<
             Inc<
@@ -29,8 +29,9 @@ namespace Core
         private readonly Dictionary<string, object> _message = new();
         private readonly Dictionary<AnimationClip, int> _stateIds;
         private readonly List<int> _states = new();
+        private readonly MySerializablePose _pose = new();
 
-        public MultiplayerUpdateServerSystem(Context context) => (_stateIds, _) = context.Resolve<MultiplayerManager>().GetStates();
+        public MultiplayerUpdateServerSystem(Context context) => _stateIds = context.Resolve<MultiplayerManager>().GetStateIds();
 
         public void Run(IEcsSystems systems)
         {
@@ -41,41 +42,45 @@ namespace Core
 
                 _states.Clear();
                 var animancer = _pools.Animator.Get(i).animancer;
-                foreach (var layer in animancer.Layers)
-                foreach (var state in layer.ActiveStates)
-                {
-                    if (state.IsPlaying && state.EffectiveWeight > 0)
-                    {
-                        var clip = state.Clip;
-
-                        if (clip)
-                        {
-                            _states.Add(_stateIds[clip]);
-                            _states.Add((int)(state.EffectiveWeight * WEIGHT_SCALE));
-                        }
-                        else
-                        {
-                            foreach (var childState in state)
-                            {
-                                if (!childState.Clip)
-                                    continue;
-
-                                _states.Add(_stateIds[childState.Clip]);
-                                _states.Add((int)(childState.EffectiveWeight * WEIGHT_SCALE));
-                            }
-                        }
-                    }
-                }
+                _pose.GatherFrom(animancer);
+                var state = JsonUtility.ToJson(_pose);
+                // foreach (var layer in animancer.Layers)
+                // foreach (var state in layer.ActiveStates)
+                // {
+                //     if (state.IsPlaying && state.Weight > 0)
+                //     {
+                //         var clip = state.Clip;
+                //
+                //         if (clip)
+                //         {
+                //             _states.Add(_stateIds[clip]);
+                //             _states.Add((int)(state.Weight * LAYER_WEIGHT_SCALE));
+                //         }
+                //         else
+                //         {
+                //             foreach (var childState in state)
+                //             {
+                //                 if (!childState.Clip)
+                //                     continue;
+                //
+                //                 _states.Add(_stateIds[childState.Clip]);
+                //                 _states.Add((int)(childState.Weight * LAYER_WEIGHT_SCALE));
+                //             }
+                //         }
+                //     }
+                // }
 
                 var position = body.position;
                 var velocity = body.linearVelocity;
                 _message.Clear();
                 _message["x"] = position.x;
+                _message["y"] = position.y;
                 _message["z"] = position.z;
                 _message["velocityX"] = velocity.x;
+                _message["velocityY"] = velocity.y;
                 _message["velocityZ"] = velocity.z;
                 _message["bodyAngle"] = bodyAngle;
-                _message["state"] = _states;
+                _message["state"] = state;
 
                 MultiplayerManager.Instance.SendData("move", _message);
             }

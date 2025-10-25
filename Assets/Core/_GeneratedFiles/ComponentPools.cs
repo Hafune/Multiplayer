@@ -465,6 +465,7 @@ namespace Core.Generated
         public readonly EcsPool<InProgressTag<ActionReviveComponent>> InProgressActionRevive;
         public readonly EcsPool<InProgressTag<CooldownValueComponent<HealingPotionValueComponent>>> InProgressCooldownValueHealingPotionValue;
         public readonly EcsPool<InProgressTag<MagnetTag>> InProgressMagnet;
+        public readonly EcsPool<InProgressTag<MultiplayerPositionComponent>> InProgressMultiplayerPosition;
         public readonly EcsPool<InProgressTag<PlayerInputMemoryComponent>> InProgressPlayerInputMemory;
         public readonly EcsPool<IntelligenceValueComponent> IntelligenceValue;
         public readonly EcsPool<InvulnerabilityLifetimeComponent> InvulnerabilityLifetime;
@@ -490,7 +491,8 @@ namespace Core.Generated
         public readonly EcsPool<MoveSpeedValueComponent> MoveSpeedValue;
         public readonly EcsPool<MoveUpdate2DComponent> MoveUpdate2D;
         public readonly EcsPool<MoveUpdateTag> MoveUpdate;
-        public readonly EcsPool<MultiplayerDataComponent> MultiplayerData;
+        public readonly EcsPool<MultiplayerChangesComponent> MultiplayerChanges;
+        public readonly EcsPool<MultiplayerPositionComponent> MultiplayerPosition;
         public readonly EcsPool<NodeComponent> Node;
         public readonly EcsPool<NpcActionComponent> NpcAction;
         public readonly EcsPool<OnGroundTag> OnGround;
@@ -1015,6 +1017,7 @@ namespace Core.Generated
             InProgressActionRevive = world.GetPool<InProgressTag<ActionReviveComponent>>();
             InProgressCooldownValueHealingPotionValue = world.GetPool<InProgressTag<CooldownValueComponent<HealingPotionValueComponent>>>();
             InProgressMagnet = world.GetPool<InProgressTag<MagnetTag>>();
+            InProgressMultiplayerPosition = world.GetPool<InProgressTag<MultiplayerPositionComponent>>();
             InProgressPlayerInputMemory = world.GetPool<InProgressTag<PlayerInputMemoryComponent>>();
             IntelligenceValue = world.GetPool<IntelligenceValueComponent>();
             InvulnerabilityLifetime = world.GetPool<InvulnerabilityLifetimeComponent>();
@@ -1040,7 +1043,8 @@ namespace Core.Generated
             MoveSpeedValue = world.GetPool<MoveSpeedValueComponent>();
             MoveUpdate2D = world.GetPool<MoveUpdate2DComponent>();
             MoveUpdate = world.GetPool<MoveUpdateTag>();
-            MultiplayerData = world.GetPool<MultiplayerDataComponent>();
+            MultiplayerChanges = world.GetPool<MultiplayerChangesComponent>();
+            MultiplayerPosition = world.GetPool<MultiplayerPositionComponent>();
             Node = world.GetPool<NodeComponent>();
             NpcAction = world.GetPool<NpcActionComponent>();
             OnGround = world.GetPool<OnGroundTag>();
