@@ -3,6 +3,7 @@ using Colyseus.Schema;
 using Core.Generated;
 using Core.Lib;
 using Lib;
+using UnityEngine;
 
 namespace Core
 {

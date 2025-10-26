@@ -32,6 +32,6 @@ public partial class Player : Schema {
     [Type(7, "string")]
     public string state = default(string);
 
-    [Type(8, "int8")]
-    public sbyte patchRate = default(sbyte);
+    [Type(8, "int16")]
+    public short patchRate = default(short);
 }

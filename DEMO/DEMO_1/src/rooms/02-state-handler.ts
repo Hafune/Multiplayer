@@ -26,7 +26,7 @@ export class Player extends Schema {
     @type("string")
     state = "";
 
-    @type("int8")
+    @type("int16")
     patchRate;
 }
 
@@ -67,8 +67,8 @@ export class StateHandlerRoom extends Room<State> {
     onCreate(options) {
         console.log("StateHandlerRoom created!", options);
 
+        this.setPatchRate(20);
         this.setState(new State(this.patchRate));
-        // this.setPatchRate(20);
 
         this.onMessage("move", (client, data) => {
             this.state.movePlayer(client.sessionId, data);
