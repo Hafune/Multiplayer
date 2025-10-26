@@ -19,24 +19,18 @@ namespace Core.Lib
             _world = context.Resolve<EcsWorld>();
         }
 
-        public void OnTriggerEnter(Collider _)
+        public void OnTriggerEnter(Collider col)
         {
+            TriggerDisableHandler.RegisterTrigger(this, col);
             if (++_contactCount == 1 && _entityRef.RawEntity != -1)
                 _monoProvider.Attach(_entityRef.RawEntity, _world);
         }
 
-        public void OnTriggerExit(Collider _)
+        public void OnTriggerExit(Collider col)
         {
+            TriggerDisableHandler.UnRegisterTrigger(this, col);
             if (--_contactCount == 0 && _removeWithExit && _entityRef.RawEntity != -1)
                 _monoProvider.Del(_entityRef.RawEntity, _world);
-        }
-
-        private void OnDisable()
-        {
-            if (_contactCount > 0 && _removeWithExit && _entityRef.RawEntity != -1)
-                _monoProvider.Del(_entityRef.RawEntity, _world);
-
-            _contactCount = 0;
         }
 
     }

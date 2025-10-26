@@ -46,7 +46,11 @@ namespace Core.Lib
 
         private void SetTargets(int entity)
         {
-            _count = Physics2D.OverlapCircleNonAlloc(transform.position, _radius, _results, _mask);
+            _count = Physics2D.OverlapCircle(transform.position, _radius, new ContactFilter2D
+            {
+                layerMask = _mask,
+                useLayerMask = true
+            }, _results);
 
             if (_count == 0)
                 return;

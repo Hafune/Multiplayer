@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class TestTrigger : MonoBehaviour
+    public class TestTrigger : MonoBehaviour, ITriggerDispatcherTarget
     {
         private int _count;
         private Collider _coll;
@@ -14,15 +14,15 @@ namespace Core
             _coll = GetComponent<Collider>();
         }
 
-        private void OnTriggerEnter(Collider col)
+        public void OnTriggerEnter(Collider col)
         {
-            TriggerCallbacksCache.RegisterTrigger(this, col);
+            TriggerDisableHandler.RegisterTrigger(this, col);
             Debug.Log(name + " ENTER " + _count++);
         }
         
-        private void OnTriggerExit(Collider col)
+        public void OnTriggerExit(Collider col)
         {
-            TriggerCallbacksCache.UnRegisterTrigger(this, col);
+            TriggerDisableHandler.UnRegisterTrigger(this, col);
             Debug.Log(name + " exit " + _count--);
         }
     }

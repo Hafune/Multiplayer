@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Core.Lib.Utils;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,75 +20,76 @@ namespace Core.Lib
         }
     }
 
-    [Obsolete("Не доделанно")]
-    public static class TriggerCallbacksCache
+    public static class TriggerDisableHandler
     {
-        private static Dictionary<Collider, List<MonoBehaviour>> _relations = new();
-        private static Dictionary<MonoBehaviour, List<Collider>> _relations1 = new();
+        private static readonly Glossary<OwnerDisableHandler> _owners = new();
+        private static readonly Glossary<ColliderDisableHandler> _colliders = new();
 
-        public static void RegisterTrigger(MonoBehaviour owner, Collider col)
+        public static void RegisterTrigger(ITriggerDispatcherTarget owner, Collider col)
         {
-            var colDispatcher = col.GetComponent<ColliderTriggerDispatcher>();
-            if (!colDispatcher)
+            if (!_owners.TryGetValue(owner.GetInstanceID(), out var ownerHandler))
             {
-                colDispatcher = col.AddComponent<ColliderTriggerDispatcher>();
-                colDispatcher.hideFlags = HideFlags.DontSave;
-                colDispatcher.col = col;
+                _owners.Add(owner.GetInstanceID(), ownerHandler = ((Component)owner).AddComponent<OwnerDisableHandler>());
+                ownerHandler.hideFlags = HideFlags.DontSave;
+                ownerHandler.owner = owner;
             }
 
-            if (!_relations.TryGetValue(col, out var list))
-                _relations[col] = list = new();
+            ownerHandler.Add(col);
 
-            list.Add(owner);
-            
-            var ownerDispatcher = owner.GetComponent<OwnerTriggerDispatcher>();
-            if (!ownerDispatcher)
+            if (!_colliders.TryGetValue(col.GetInstanceID(), out var colliderHandler))
             {
-                ownerDispatcher = owner.AddComponent<OwnerTriggerDispatcher>();
-                ownerDispatcher.hideFlags = HideFlags.DontSave;
-                ownerDispatcher.owner = owner;
+                _colliders.Add(col.GetInstanceID(), colliderHandler = col.AddComponent<ColliderDisableHandler>());
+                colliderHandler.hideFlags = HideFlags.DontSave;
+                colliderHandler.col = col;
             }
 
-            if (!_relations1.TryGetValue(owner, out var list2))
-                _relations1[owner] = list2 = new();
-
-            list2.Add(col);
+            colliderHandler.Add(owner);
         }
 
-        public static void UnRegisterTrigger(MonoBehaviour owner, Collider col)
+        public static void UnRegisterTrigger(ITriggerDispatcherTarget owner, Collider col)
         {
-            var list = _relations[col];
-            list.RemoveAll(p => p == owner);
+            ((Component)owner).GetComponent<OwnerDisableHandler>().Remove(col);
+            col.GetComponent<ColliderDisableHandler>().Remove(owner);
         }
 
-        private static void OnDisableCollider(Collider col)
-        {
-            var list = _relations[col];
-
-            foreach (var t1 in list.ToArray())
-                t1.SendMessage("OnTriggerExit", col, SendMessageOptions.DontRequireReceiver);
-        }
-
-        private static void OnDisableOwner(MonoBehaviour owner)
-        {
-            foreach (var (key, list) in _relations)
-            foreach (var t2 in list.ToArray())
-                if (t2 == owner)
-                    owner.SendMessage("OnTriggerExit", key, SendMessageOptions.DontRequireReceiver);
-        }
-
-        private class ColliderTriggerDispatcher : MonoBehaviour
+        private class ColliderDisableHandler : MonoBehaviour
         {
             [NonSerialized] public Collider col;
+            private ITriggerDispatcherTarget[] list = Array.Empty<ITriggerDispatcherTarget>();
+            private int count;
 
-            private void OnDisable() => OnDisableCollider(col);
+            public void Add(ITriggerDispatcherTarget value) => MyArrayUtility.Add(ref list, ref count, value);
+
+            public void Remove(ITriggerDispatcherTarget value) => MyArrayUtility.Remove(ref list, ref count, value);
+
+            private void OnDisable()
+            {
+                for (var i = count - 1; i >= 0; i--)
+                {
+                    var behaviour = list[i];
+                    behaviour.OnTriggerExit(col);
+                }
+            }
         }
 
-        private class OwnerTriggerDispatcher : MonoBehaviour
+        private class OwnerDisableHandler : MonoBehaviour
         {
-            [NonSerialized] public MonoBehaviour owner;
+            [NonSerialized] public ITriggerDispatcherTarget owner;
+            private Collider[] list = Array.Empty<Collider>();
+            private int count;
 
-            private void OnDisable() => OnDisableOwner(owner);
+            public void Add(Collider value) => MyArrayUtility.Add(ref list, ref count, value);
+
+            public void Remove(Collider value) => MyArrayUtility.Remove(ref list, ref count, value);
+
+            private void OnDisable()
+            {
+                for (var i = count - 1; i >= 0; i--)
+                {
+                    var col = list[i];
+                    owner.OnTriggerExit(col);
+                }
+            }
         }
     }
 }
