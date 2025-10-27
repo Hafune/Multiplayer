@@ -3,7 +3,6 @@ using Colyseus.Schema;
 using Core.Generated;
 using Core.Lib;
 using Lib;
-using UnityEngine;
 
 namespace Core
 {
@@ -18,6 +17,7 @@ namespace Core
         {
             _pools = context.Resolve<ComponentPools>();
             _convertToEntity = GetComponent<ConvertToEntity>();
+            _convertToEntity.BeforeEntityDeleted += OnRemove;
         }
 
         public void SetupData(Player data)
@@ -26,10 +26,12 @@ namespace Core
             _data.OnChange += OnChange;
         }
 
-        public void OnDisable()
+        private void OnRemove(ConvertToEntity _)
         {
             if (_data != null)
                 _data.OnChange -= OnChange;
+
+            _data = null;
         }
 
         private void OnChange(List<DataChange> changes)

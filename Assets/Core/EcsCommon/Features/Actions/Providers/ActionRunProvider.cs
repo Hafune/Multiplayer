@@ -3,7 +3,6 @@ using Core.Lib;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class MoveUpdateProvider : MonoProvider<MoveUpdateComponent>
+public class ActionRunProvider : MonoProvider<ActionRunComponent>
 {
-
 }

@@ -1,7 +1,10 @@
+using System;
 using Core.Components;
 using Core.Generated;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
+using Lib;
+using UnityEngine;
 
 namespace Core.Systems
 {
@@ -9,7 +12,7 @@ namespace Core.Systems
     {
         private readonly EcsFilterInject<
             Inc<
-                MoveUpdateTag,
+                MoveUpdateComponent,
                 PositionComponent,
                 MoveDirectionComponent,
                 MoveSpeedValueComponent,
@@ -23,12 +26,17 @@ namespace Core.Systems
         {
             foreach (var i in _filter.Value)
             {
-                var rb = _pools.Rigidbody.Get(i).rigidbody;
-                var dir = _pools.MoveDirection.Get(i).direction * _pools.MoveSpeedValue.Get(i).value;
-                var velocity = rb.linearVelocity;
-                velocity.x = dir.x;
-                velocity.z = dir.y;
-                rb.linearVelocity = velocity;
+                var body = _pools.Rigidbody.Get(i).rigidbody;
+                var scales = _pools.MoveUpdate.Get(i);
+                var velocity = _pools.MoveDirection.Get(i).direction.ToVector3XZ();
+                velocity.y = body.linearVelocity.y;
+
+                var direction = Quaternion.Inverse(body.rotation) * velocity;
+                var scale = Math.Abs(direction.z) < 0.1f ? scales.sidewaysSpeed :
+                    direction.z > 0 ? scales.forwardSpeed :
+                    scales.backwardSpeed;
+
+                body.linearVelocity = velocity * _pools.MoveSpeedValue.Get(i).value * scale;
             }
         }
     }

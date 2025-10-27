@@ -3,7 +3,6 @@ using Core.Components;
 using Core.Generated;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using Reflex;
 using UnityEngine;
 
 namespace Core
@@ -48,7 +47,7 @@ namespace Core
                 _message["velocityY"] = velocity.y;
                 _message["velocityZ"] = velocity.z;
                 _message["bodyAngle"] = bodyAngle;
-                _message["state"] = state;
+                _message["state"] = "";
 
                 MultiplayerManager.Instance.SendData("move", _message);
             }

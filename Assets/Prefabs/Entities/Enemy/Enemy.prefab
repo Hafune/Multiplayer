@@ -77,8 +77,56 @@ PrefabInstance:
     - {fileID: -250386771771252390, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
     - {fileID: -4189458560501799543, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
     - {fileID: 6234163147342028459, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 6794511390022715116, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5658124197020847827, guid: 4f87d1e9c7f0e474fac4005619a12f24,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5428075979549920848}
   m_SourcePrefab: {fileID: 100100000, guid: 4f87d1e9c7f0e474fac4005619a12f24, type: 3}
+--- !u!114 &1697140668284587418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1277353815846683455, guid: 4f87d1e9c7f0e474fac4005619a12f24,
+    type: 3}
+  m_PrefabInstance: {fileID: 447939891287871141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111fc75ddea743a0a9490e97babd4c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.ExternalEntityLogics.PlayMixerTransitionsLogic
+--- !u!114 &3547285274838785381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3966857482639086528, guid: 4f87d1e9c7f0e474fac4005619a12f24,
+    type: 3}
+  m_PrefabInstance: {fileID: 447939891287871141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e580c45cd9ff492f88b5fbb8c2b881bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.ExternalEntityLogics.PlayTransitionsLogic
+--- !u!1 &5238485778669535350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5658124197020847827, guid: 4f87d1e9c7f0e474fac4005619a12f24,
+    type: 3}
+  m_PrefabInstance: {fileID: 447939891287871141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5428075979549920848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238485778669535350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7872315c55e4832968a52d3f4ecc7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.MultiplayerAnimationsProvider
+  value:
+    idle: {fileID: 3547285274838785381}
+    move: {fileID: 1697140668284587418}

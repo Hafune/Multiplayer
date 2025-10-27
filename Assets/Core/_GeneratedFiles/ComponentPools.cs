@@ -34,6 +34,7 @@ namespace Core.Generated
         public readonly EcsPool<ActionPressedOnGroundTag> ActionPressedOnGround;
         public readonly EcsPool<ActionPressedOnUnitTag> ActionPressedOnUnit;
         public readonly EcsPool<ActionReviveComponent> ActionRevive;
+        public readonly EcsPool<ActionRunComponent> ActionRun;
         public readonly EcsPool<ActionUpdateTag> ActionUpdate;
         public readonly EcsPool<AddScoreOnDeathValueComponent> AddScoreOnDeathValue;
         public readonly EcsPool<AimComponent> Aim;
@@ -490,8 +491,8 @@ namespace Core.Generated
         public readonly EcsPool<MoveSpeedPercentValueComponent> MoveSpeedPercentValue;
         public readonly EcsPool<MoveSpeedValueComponent> MoveSpeedValue;
         public readonly EcsPool<MoveUpdate2DComponent> MoveUpdate2D;
-        public readonly EcsPool<MoveUpdateTag> MoveUpdate;
-        public readonly EcsPool<MultiplayerChangesComponent> MultiplayerChanges;
+        public readonly EcsPool<MoveUpdateComponent> MoveUpdate;
+        public readonly EcsPool<MultiplayerAnimationsComponent> MultiplayerAnimations;
         public readonly EcsPool<MultiplayerPositionComponent> MultiplayerPosition;
         public readonly EcsPool<NodeComponent> Node;
         public readonly EcsPool<NpcActionComponent> NpcAction;
@@ -586,6 +587,7 @@ namespace Core.Generated
             ActionPressedOnGround = world.GetPool<ActionPressedOnGroundTag>();
             ActionPressedOnUnit = world.GetPool<ActionPressedOnUnitTag>();
             ActionRevive = world.GetPool<ActionReviveComponent>();
+            ActionRun = world.GetPool<ActionRunComponent>();
             ActionUpdate = world.GetPool<ActionUpdateTag>();
             AddScoreOnDeathValue = world.GetPool<AddScoreOnDeathValueComponent>();
             Aim = world.GetPool<AimComponent>();
@@ -1042,8 +1044,8 @@ namespace Core.Generated
             MoveSpeedPercentValue = world.GetPool<MoveSpeedPercentValueComponent>();
             MoveSpeedValue = world.GetPool<MoveSpeedValueComponent>();
             MoveUpdate2D = world.GetPool<MoveUpdate2DComponent>();
-            MoveUpdate = world.GetPool<MoveUpdateTag>();
-            MultiplayerChanges = world.GetPool<MultiplayerChangesComponent>();
+            MoveUpdate = world.GetPool<MoveUpdateComponent>();
+            MultiplayerAnimations = world.GetPool<MultiplayerAnimationsComponent>();
             MultiplayerPosition = world.GetPool<MultiplayerPositionComponent>();
             Node = world.GetPool<NodeComponent>();
             NpcAction = world.GetPool<NpcActionComponent>();

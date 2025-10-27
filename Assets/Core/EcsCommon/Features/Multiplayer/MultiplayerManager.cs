@@ -97,13 +97,15 @@ namespace Core
 
         private void AddPlayer(string key, Player data)
         {
+            if (!Application.isPlaying)
+                return;
+            
             var position = new Vector3(data.x, data.y, data.z);
             var prefab = key == _room.SessionId ? _player : _enemy;
 
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
             var multiplayerData = convertToEntity.GetComponent<MultiplayerChanges>();
             multiplayerData.SetupData(data);
-            _componentPools.MultiplayerChanges.Add(convertToEntity.RawEntity).data = multiplayerData;
             _componentPools.MultiplayerPosition.Add(convertToEntity.RawEntity).position = position;
             _storages[key] = convertToEntity;
 
