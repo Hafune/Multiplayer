@@ -4,7 +4,7 @@ using UnityEngine.Assertions;
 
 namespace Core.ExternalEntityLogics
 {
-    public class PlayTransitionsLogic : AbstractEntityLogic
+    public class PlayTransitionLogic : AbstractEntityLogic
     {
         [SerializeField] private float _speed = 1;
         [SerializeField] private TransitionAsset _clip;

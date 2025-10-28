@@ -2353,14 +2353,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4113299389590133658}
+  - component: {fileID: 302069953779613101}
   - component: {fileID: 8592331395925930665}
   m_Layer: 0
-  m_Name: Cross
+  m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4113299389590133658
 Transform:
   m_ObjectHideFlags: 0
@@ -2376,6 +2377,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1046508675999952742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302069953779613101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5740517405803535714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e920ab22ea704a648d85f00671a31bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.AimView
+  _document: {fileID: 8592331395925930665}
 --- !u!114 &8592331395925930665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,7 +2404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 366e8a2c293708c40b9f90cdca294cbd, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 7ad8f8d9ed9eb644c996b5f69942903f,
+  sourceAsset: {fileID: 9197481963319205126, guid: 3d3b63e052a948f4aa843b37357ed902,
     type: 3}
   m_SortingOrder: 1
   m_Position: 0
@@ -3006,10 +3020,10 @@ Transform:
   - {fileID: 8744234551342839329}
   - {fileID: 7382672137192326355}
   - {fileID: 5782203673230826671}
+  - {fileID: 4113299389590133658}
   - {fileID: 8518044322183651772}
   - {fileID: 1620500115594883992}
   - {fileID: 103307229623682608}
-  - {fileID: 4113299389590133658}
   - {fileID: 5323148931282523775}
   - {fileID: 6298862583590438461}
   m_Father: {fileID: 5871763654232800071}

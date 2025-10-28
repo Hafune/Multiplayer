@@ -171,6 +171,19 @@ namespace Lib
             return camera.ScreenToWorldPoint(new Vector3(screenPoint.x, screenPoint.y, zDistance));
         }
 
+        public static Ray CalculateRay(
+            this VisualElement ele,
+            Camera camera,
+            float offsetX = .5f,
+            float offsetY = .5f
+        )
+        {
+            var screenPoint = ele.worldBound.min + ele.worldBound.size * new Vector2(offsetX, offsetY);
+            screenPoint.y = ele.panel.visualTree.worldBound.height - screenPoint.y;
+            
+            return camera.ScreenPointToRay(new Vector3(screenPoint.x, screenPoint.y, 0));
+        }
+
         public static void StyleTranslate(this VisualElement ele, Vector2 position) =>
             ele.style.translate = new() { value = new(position.x, position.y) };
 

@@ -6,7 +6,7 @@ namespace Core.Components
     [Serializable]
     public struct ViewAnimationsComponent
     {
-        public PlayTransitionsLogic idle;
+        public PlayTransitionLogic idle;
         public PlayMixerTransition2DLogic move;
         public SmoothedVector2ParameterContainer moveDirection;
     }

@@ -1,5 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="justify-content: center; align-items: center; flex-grow: 1;">
-        <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/DNP_Crosshair.png?fileID=2800000&amp;guid=803d6520aaf486d4f9bbcd52b6802844&amp;type=3#DNP_Crosshair&quot;); width: 50px; height: 50px;" />
-    </ui:VisualElement>
-</ui:UXML>

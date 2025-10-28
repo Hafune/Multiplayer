@@ -1,6 +1,7 @@
 using Core.Components;
 using Core.Generated;
 using Core.Lib;
+using Core.Services;
 using Leopotam.EcsLite;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -18,12 +19,14 @@ namespace Core.ExternalEntityLogics
         
         private Vector3 _gizmoStartPoint;
         private Vector3 _gizmoTargetPoint;
+        private AimService _aimService;
 
         private void Awake()
         {
             _eventWaitInitPool = context.Resolve<ComponentPools>().EventWaitInit;
             _entityBuilder = new EntityBuilder(context);
             _cameraTransform = context.Resolve<Camera>().transform;
+            _aimService = context.Resolve<AimService>();
             Assert.IsNotNull(_prefab);
         }
 
@@ -33,12 +36,7 @@ namespace Core.ExternalEntityLogics
             var child = _entityBuilder.Build(_prefab, position, rotation, null, entity);
             if (_force != 0)
             {
-                const float MAX_CAST_DISTANCE = 50;
-                var targetPoint = _cameraTransform.position + _cameraTransform.forward * MAX_CAST_DISTANCE;
-                
-                if (Physics.Raycast(_cameraTransform.position, _cameraTransform.forward, out var hit, MAX_CAST_DISTANCE)) 
-                    targetPoint = hit.point;
-
+                var targetPoint = _aimService.GetAimPosition();
                 var direction = (targetPoint - position).normalized;
                 var body = _eventWaitInitPool.Get(child).convertToEntity.GetComponent<Rigidbody>();
                 body.linearVelocity = direction * _force;

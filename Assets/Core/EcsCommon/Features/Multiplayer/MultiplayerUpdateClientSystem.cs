@@ -82,6 +82,7 @@ namespace Core
                     if (!wasRun)
                         animations.move.Run(i);
 
+                    dir.Normalize();
                     animations.moveDirection.SmoothedParameter.TargetValue = new(dir.x, dir.z);
                 }
 
@@ -108,6 +109,9 @@ namespace Core
                 {
                     hitPoint.value = hp;
                     _pools.EventUpdatedHitPointValue.AddIfNotExist(i);
+                    
+                    if (hitPoint.value <= 0) 
+                        _pools.EventStartActionDeath.AddIfNotExist(i);
                 }
                 
                 if ((int)hitPointMax.value != hp)

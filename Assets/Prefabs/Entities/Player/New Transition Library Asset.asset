@@ -210,6 +210,34 @@ MonoBehaviour:
           _Names: []
         _Clip: {fileID: 7400000, guid: 47902a27ba481c948912c03d521f1a5f, type: 2}
         _NormalizedStartTime: NaN
+--- !u!114 &-2797997466678301274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a8877f26e7a6a43aaf06fade1a064a, type: 3}
+  m_Name: Hit_Death
+  m_EditorClassIdentifier: Kybernetik.Animancer::Animancer.TransitionAsset
+  _Transition:
+    rid: 5087782888879686082
+  references:
+    version: 2
+    RefIds:
+    - rid: 5087782888879686082
+      type: {class: ClipTransition, ns: Animancer, asm: Kybernetik.Animancer}
+      data:
+        _FadeDuration: 0.25
+        _Speed: 1
+        _Events:
+          _NormalizedTimes: []
+          _Callbacks: []
+          _Names: []
+        _Clip: {fileID: 7400000, guid: 6076b38e947de454da24d46c47a0626c, type: 2}
+        _NormalizedStartTime: NaN
 --- !u!114 &-2191691564105448359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +325,7 @@ MonoBehaviour:
     - {fileID: 104552062971977551}
     - {fileID: -5561781540673189372}
     - {fileID: 8096268401421839864}
+    - {fileID: -2797997466678301274}
     _Modifiers: []
     _Aliases: []
     _AliasAllTransitions: 0

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Animancer;
 using Colyseus;
 using Core.Generated;
 using Core.Lib;

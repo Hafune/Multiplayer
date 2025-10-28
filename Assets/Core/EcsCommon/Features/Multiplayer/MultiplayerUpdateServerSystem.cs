@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using Core.Components;
 using Core.Generated;
-using Core.Lib.Utils;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
-using Lib;
 using UnityEngine;
 
 namespace Core

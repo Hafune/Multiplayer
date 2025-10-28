@@ -11,6 +11,7 @@ namespace Core.Systems
     {
         private readonly EcsFilterInject<
             Inc<
+                AngularSpeedComponent,
                 DirectionUpdateTag,
                 RigidbodyComponent
             >> _filter;
@@ -25,9 +26,10 @@ namespace Core.Systems
             foreach (var i in _filter.Value)
             {
                 var euler = new Vector3(0, _cameraTransform.eulerAngles.y, 0);
-
+                var angularSpeed = _pools.AngularSpeed.Get(i).value;
                 var rigidbody = _pools.Rigidbody.Get(i).rigidbody;
-                rigidbody.MoveRotation(Quaternion.Euler(euler));
+                rigidbody.MoveRotation(Quaternion.RotateTowards(rigidbody.rotation, Quaternion.Euler(euler),
+                    angularSpeed * Time.deltaTime));
             }
         }
     }
