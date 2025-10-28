@@ -170,6 +170,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8083511946322395780}
+  - {fileID: 2556358706659527514}
   m_Father: {fileID: 7754516881252280574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6127001028055706385
@@ -594,6 +595,96 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3151301254836845231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2556358706659527514}
+  - component: {fileID: 7131485190944366221}
+  m_Layer: 0
+  m_Name: Multiplayer_Send_Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2556358706659527514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3151301254836845231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 478303170623845135}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7131485190944366221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3151301254836845231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2a20169ab43d8869b147d07124355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.MultiplayerSendDataLogic
+  _logic: {fileID: 3966857482639086528}
+--- !u!1 &3804091752587384151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8755066171084825165}
+  - component: {fileID: 4246464085526404849}
+  m_Layer: 0
+  m_Name: Multiplayer_Send_Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8755066171084825165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804091752587384151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 641966669617415731}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4246464085526404849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3804091752587384151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2a20169ab43d8869b147d07124355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.MultiplayerSendDataLogic
+  _logic: {fileID: 1321822038666807000}
 --- !u!1 &3856291306033894115
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +837,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28615ce6b1a54bb69c39b6233bd2854e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.ExternalEntityLogics.EntityLogicNode
+--- !u!1 &4552590640373876658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966148823875658317}
+  - component: {fileID: 5209804065359315677}
+  m_Layer: 0
+  m_Name: Multiplayer_Send_Logic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966148823875658317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552590640373876658}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8853474377115088504}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5209804065359315677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552590640373876658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf2a20169ab43d8869b147d07124355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.MultiplayerSendDataLogic
+  _logic: {fileID: 4021200485975871088}
 --- !u!1 &4733516966780531584
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +1101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2864331086390335109}
+  - component: {fileID: 2387013622626283375}
   - component: {fileID: 1872433241048231095}
   - component: {fileID: 8015666007651235147}
   - component: {fileID: 6234163147342028459}
@@ -975,6 +1112,7 @@ GameObject:
   - component: {fileID: -8168844493951385815}
   - component: {fileID: 3886662502187016067}
   - component: {fileID: -5902542504442907320}
+  - component: {fileID: 3908767944188042988}
   - component: {fileID: 5150072211604679381}
   - component: {fileID: 1014095271700937415}
   - component: {fileID: 1481910208008276301}
@@ -1005,6 +1143,21 @@ Transform:
   - {fileID: 5405207328974201763}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2387013622626283375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658124197020847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1e11be4c4642b3b963c4528eb82552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.MultiplayerActions
+  _idle: {fileID: 7131485190944366221}
+  _move: {fileID: 5209804065359315677}
+  _moveDirection: {fileID: 1421416144645608174}
 --- !u!114 &1872433241048231095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1310,20 @@ MonoBehaviour:
   value:
     animator: {fileID: 1361838075708520353}
     animancer: {fileID: 5359895180285130521}
+--- !u!114 &3908767944188042988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658124197020847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7872315c55e4832968a52d3f4ecc7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.MultiplayerLogicsProvider
+  value:
+    logics: {fileID: 2387013622626283375}
 --- !u!114 &5150072211604679381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,6 +2141,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7979117011405903693}
+  - {fileID: 966148823875658317}
   m_Father: {fileID: 6424973055377707857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &475258460621321690
@@ -2200,6 +2368,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6293605137054342589}
+  - {fileID: 8755066171084825165}
   m_Father: {fileID: 5551012217280770882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7780365986312758544

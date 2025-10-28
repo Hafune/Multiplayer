@@ -72,7 +72,7 @@ namespace Core
                 var position = body.position;
                 var velocity = body.linearVelocity;
 
-                var info = new SpawnInfo
+                var info = new MultiplayerSpawnInfo
                 {
                     x = position.x,
                     y = position.y,
@@ -81,7 +81,7 @@ namespace Core
                     velocityY = velocity.y,
                     velocityZ = velocity.z,
                     templateId = templateId,
-                    ownerClientId = MultiplayerManager.Instance.GetClientId()
+                    key = MultiplayerManager.Instance.GetClientId()
                 };
 
                 MultiplayerManager.Instance.SendData("shoot", JsonUtility.ToJson(info));

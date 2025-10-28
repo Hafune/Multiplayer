@@ -16,7 +16,7 @@ namespace Core
                 EventMultiplayerDataUpdated,
                 AnimatorComponent,
                 PositionComponent,
-                ViewAnimationsComponent
+                MultiplayerLogicsComponent
             >,
             Exc<
                 Player1UniqueTag
@@ -55,9 +55,6 @@ namespace Core
                 var euler = transform.eulerAngles;
                 var bodyAngle = euler.y;
 
-                bool wasIdle = target.velocity == Vector3.zero && target.delay != 0;
-                bool wasRun = target.velocity != Vector3.zero && target.delay != 0;
-
                 AssignValues(ref target.position, ref target.velocity, ref bodyAngle, out var state, update.changes);
 
                 euler.y = bodyAngle;
@@ -68,23 +65,7 @@ namespace Core
                 target.delay = update.delay;
                 _pools.InProgressMultiplayerData.AddIfNotExist(i);
 
-                var animations = _pools.ViewAnimations.Get(i);
-
-                var dir = Quaternion.Inverse(target.rotation) * target.velocity;
-
-                if (target.velocity == Vector3.zero)
-                {
-                    if (!wasIdle)
-                        animations.idle.Run(i);
-                }
-                else
-                {
-                    if (!wasRun)
-                        animations.move.Run(i);
-
-                    dir.Normalize();
-                    animations.moveDirection.SmoothedParameter.TargetValue = new(dir.x, dir.z);
-                }
+                _pools.MultiplayerLogics.Get(i).logics.SetParameters(i, Quaternion.Inverse(target.rotation) * target.velocity);
 
                 if (string.IsNullOrEmpty(state))
                     continue;
@@ -109,11 +90,11 @@ namespace Core
                 {
                     hitPoint.value = hp;
                     _pools.EventUpdatedHitPointValue.AddIfNotExist(i);
-                    
-                    if (hitPoint.value <= 0) 
+
+                    if (hitPoint.value <= 0)
                         _pools.EventStartActionDeath.AddIfNotExist(i);
                 }
-                
+
                 if ((int)hitPointMax.value != hp)
                 {
                     hitPointMax.value = hpMax;

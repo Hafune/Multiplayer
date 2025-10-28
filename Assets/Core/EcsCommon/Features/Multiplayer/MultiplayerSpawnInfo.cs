@@ -3,7 +3,7 @@ using System;
 namespace Core
 {
     [Serializable]
-    public struct SpawnInfo
+    public struct MultiplayerSpawnInfo
     {
         public float x;
         public float y;
@@ -12,6 +12,6 @@ namespace Core
         public float velocityY;
         public float velocityZ;
         public int templateId;
-        public string ownerClientId;
+        public string key;
     }
 }

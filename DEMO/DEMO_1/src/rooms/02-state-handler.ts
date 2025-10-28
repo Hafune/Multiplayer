@@ -82,10 +82,6 @@ export class StateHandlerRoom extends Room<State> {
             this.state.movePlayer(client.sessionId, data);
         });
 
-        this.onMessage("shoot", (client, data) => {
-            this.broadcast("shoot", data, { except: client });
-        });
-
         this.onMessage("damage", (client, data) => {
             for (let i = 0; i < data.ids.length; i++) {
                 var id = data.ids[i];
@@ -93,6 +89,15 @@ export class StateHandlerRoom extends Room<State> {
                 var player = this.state.players.get(id);
                 player.currentHp = Math.max(0, player.currentHp - damage);
             }
+        });
+
+        this.onMessage("logics", (client, data) => {
+            this.broadcast("logics", data, { except: client });
+        });
+
+        //спавн сущности, переделать
+        this.onMessage("shoot", (client, data) => {
+            this.broadcast("shoot", data, { except: client });
         });
     }
 

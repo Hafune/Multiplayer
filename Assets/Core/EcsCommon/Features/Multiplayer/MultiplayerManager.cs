@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using Animancer;
 using Colyseus;
+using Core.Components;
 using Core.Generated;
 using Core.Lib;
 using Core.Lib.Services;
+using Leopotam.EcsLite;
 using Lib;
 using Reflex;
 using Unity.Cinemachine;
@@ -19,9 +21,10 @@ namespace Core
         [SerializeField] private ConvertToEntity _enemy;
         private ColyseusRoom<State> _room;
         private Context _context;
-        private ComponentPools _componentPools;
+        private ComponentPools _pools;
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
-        private MyPool _pool;
+        private MyPool _objectPool;
+        private EcsFilter _filter;
 
         protected override void Start()
         {
@@ -40,8 +43,9 @@ namespace Core
         public void SetupContext(Context context)
         {
             _context = context;
-            _componentPools = context.Resolve<ComponentPools>();
-            _pool = context.Resolve<PoolService>().DontDisposablePool;
+            _pools = context.Resolve<ComponentPools>();
+            _objectPool = context.Resolve<PoolService>().DontDisposablePool;
+            _filter = context.Resolve<EcsWorld>().Filter<MultiplayerDataComponent>().Inc<MultiplayerLogicsComponent>().End();
         }
 
         public string GetClientId() => _room.Id;
@@ -49,6 +53,7 @@ namespace Core
         public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
 
         public void SendData(string key, string data) => _room.Send(key, data);
+        public void SendData(string key, int data) => _room.Send(key, data);
 
         private async void Connect()
         {
@@ -57,12 +62,11 @@ namespace Core
                 { "hp", 100 }
             };
 
-
             _room = await Instance.client.JoinOrCreate<State>("state_handler", options);
             _room.OnStateChange += OnChange;
             _room.OnMessage<string>("shoot", data =>
             {
-                var info = JsonUtility.FromJson<SpawnInfo>(data);
+                var info = JsonUtility.FromJson<MultiplayerSpawnInfo>(data);
 
                 foreach (var set in _views)
                 {
@@ -71,7 +75,7 @@ namespace Core
 
                     var position = new Vector3(info.x, info.y, info.z);
                     var velocity = new Vector3(info.velocityX, info.velocityY, info.velocityZ);
-                    var convertToEntity = _pool.GetInstanceByPrefab(set.view, position, Quaternion.identity);
+                    var convertToEntity = _objectPool.GetInstanceByPrefab(set.view, position, Quaternion.identity);
                     var body = convertToEntity.GetComponent<Rigidbody>();
                     body.linearVelocity = velocity;
 
@@ -88,6 +92,19 @@ namespace Core
                     // _storages[key] = convertToEntity;
 
                     return;
+                }
+            });
+
+            _room.OnMessage<string>("logics", data =>
+            {
+                var info = JsonUtility.FromJson<MultiplayerActionInfo>(data);
+
+                foreach (var i in _filter)
+                {
+                    if (info.key != _pools.MultiplayerData.Get(i).data.SessionId)
+                        continue;
+                    
+                    _pools.MultiplayerLogics.Get(i).logics.RunMultiplayerLogic(i, info.index);
                 }
             });
         }
@@ -113,7 +130,7 @@ namespace Core
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
             var multiplayerData = convertToEntity.GetComponent<MultiplayerChanges>();
             multiplayerData.SetupData(key, data);
-            ref var dataComponent = ref _componentPools.MultiplayerData.Add(convertToEntity.RawEntity);
+            ref var dataComponent = ref _pools.MultiplayerData.Add(convertToEntity.RawEntity);
             dataComponent.data = multiplayerData;
             dataComponent.position = position;
             _storages[key] = convertToEntity;
@@ -132,7 +149,7 @@ namespace Core
         private void RemovePlayer(string key, Player data)
         {
             var entity = _storages[key].RawEntity;
-            _componentPools.EventRemoveEntity.AddIfNotExist(entity);
+            _pools.EventRemoveEntity.AddIfNotExist(entity);
         }
 
         protected override void OnDestroy()

@@ -499,6 +499,7 @@ namespace Core.Generated
         public readonly EcsPool<MoveUpdate2DComponent> MoveUpdate2D;
         public readonly EcsPool<MoveUpdateComponent> MoveUpdate;
         public readonly EcsPool<MultiplayerDataComponent> MultiplayerData;
+        public readonly EcsPool<MultiplayerLogicsComponent> MultiplayerLogics;
         public readonly EcsPool<NodeComponent> Node;
         public readonly EcsPool<NpcActionComponent> NpcAction;
         public readonly EcsPool<OnGroundTag> OnGround;
@@ -557,7 +558,6 @@ namespace Core.Generated
         public readonly EcsPool<ThroughProjectileComponent> ThroughProjectile;
         public readonly EcsPool<ThroughProjectileSlotTag> ThroughProjectileSlotTag;
         public readonly EcsPool<TouchWallTag> TouchWall;
-        public readonly EcsPool<ViewAnimationsComponent> ViewAnimations;
         public readonly EcsPool<VitalityPercentValueComponent> VitalityPercentValue;
         public readonly EcsPool<VitalityValueComponent> VitalityValue;
         public readonly EcsPool<VulnerabilityCriticalChanceValueComponent> VulnerabilityCriticalChanceValue;
@@ -1058,6 +1058,7 @@ namespace Core.Generated
             MoveUpdate2D = world.GetPool<MoveUpdate2DComponent>();
             MoveUpdate = world.GetPool<MoveUpdateComponent>();
             MultiplayerData = world.GetPool<MultiplayerDataComponent>();
+            MultiplayerLogics = world.GetPool<MultiplayerLogicsComponent>();
             Node = world.GetPool<NodeComponent>();
             NpcAction = world.GetPool<NpcActionComponent>();
             OnGround = world.GetPool<OnGroundTag>();
@@ -1116,7 +1117,6 @@ namespace Core.Generated
             ThroughProjectile = world.GetPool<ThroughProjectileComponent>();
             ThroughProjectileSlotTag = world.GetPool<ThroughProjectileSlotTag>();
             TouchWall = world.GetPool<TouchWallTag>();
-            ViewAnimations = world.GetPool<ViewAnimationsComponent>();
             VitalityPercentValue = world.GetPool<VitalityPercentValueComponent>();
             VitalityValue = world.GetPool<VitalityValueComponent>();
             VulnerabilityCriticalChanceValue = world.GetPool<VulnerabilityCriticalChanceValueComponent>();
