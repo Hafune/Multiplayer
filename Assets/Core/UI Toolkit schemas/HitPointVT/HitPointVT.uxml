@@ -1,4 +1,4 @@
-﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="34f884ab4164b184d8e2fa939b0f05df">
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False" gen-cs-file="34f884ab4164b184d8e2fa939b0f05df">
     <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/HitPointVT/HitPointVT.uss?fileID=7433441132597879392&amp;guid=86ca63fae64f8ea40a83e6c45daaeeda&amp;type=3#HitPointVT" />
     <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextColorBase.uss?fileID=7433441132597879392&amp;guid=f5a2fd541c0c679418222f1986708dd1&amp;type=3#TextColorBase" />
     <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
@@ -9,7 +9,7 @@
                     <ui:ProgressBar value="0.5" title="100/100" name="HpBar" high-value="1" class="bar" style="width: 100%; position: absolute; top: 2px; left: 46px;" />
                     <ui:ProgressBar value="0.5" title="100/100" name="ResourceBar" high-value="1" class="bar resource_bar" style="width: 90%; position: absolute; top: 43px; left: 53px; height: 40px;" />
                     <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Nameplate_LevelFrame.png?fileID=21300000&amp;guid=d0da035a4bade1a489a6754d2828bb01&amp;type=3#Nameplate_LevelFrame&quot;); width: 98px; height: 99px; position: absolute;">
-                        <ui:Label text="111" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level" class="text-font-base text-color-base" style="flex-grow: 1; -unity-text-align: middle-center; font-size: 24px; -unity-font-style: bold;" />
+                        <ui:Label parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level" class="text-font-base text-color-base" style="flex-grow: 1; -unity-text-align: middle-center; font-size: 24px; -unity-font-style: bold;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
