@@ -168,6 +168,11 @@ namespace Lib
         {
             var screenPoint = ele.worldBound.min + ele.worldBound.size * new Vector2(offsetX, offsetY);
             screenPoint.y = ele.panel.visualTree.worldBound.height - screenPoint.y;
+            
+            //не проверено
+            //var scaleFactor = ele.panel.scaledPixelsPerPoint;
+            //screenPoint *= scaleFactor;
+            
             return camera.ScreenToWorldPoint(new Vector3(screenPoint.x, screenPoint.y, zDistance));
         }
 
@@ -180,7 +185,12 @@ namespace Lib
         {
             var screenPoint = ele.worldBound.min + ele.worldBound.size * new Vector2(offsetX, offsetY);
             screenPoint.y = ele.panel.visualTree.worldBound.height - screenPoint.y;
-            
+    
+            var panel = ele.panel;
+            var scaleFactor = panel.scaledPixelsPerPoint;
+    
+            screenPoint *= scaleFactor;
+    
             return camera.ScreenPointToRay(new Vector3(screenPoint.x, screenPoint.y, 0));
         }
 

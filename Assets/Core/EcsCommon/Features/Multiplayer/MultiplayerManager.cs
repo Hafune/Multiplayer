@@ -117,6 +117,7 @@ namespace Core
             state.players.ForEach(AddPlayer);
             _room.State.players.OnAdd += AddPlayer;
             _room.State.players.OnRemove += RemovePlayer;
+            _room.OnStateChange -= OnChange;
         }
 
         private void AddPlayer(string key, Player data)

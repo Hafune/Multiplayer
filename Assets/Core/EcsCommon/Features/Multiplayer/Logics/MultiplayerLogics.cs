@@ -32,13 +32,13 @@ namespace Core
 
         public void SetParameters(int i, Vector3 forwardVelocity)
         {
-            _lastVelocity = forwardVelocity;
-            _moveDirection.SmoothedParameter.TargetValue = new(forwardVelocity.x, forwardVelocity.z);
+            _lastVelocity = forwardVelocity.normalized;
+            _moveDirection.SmoothedParameter.TargetValue = new(_lastVelocity.x, _lastVelocity.z);
 
             if (_totalActions[_applyIndex] != _idle && _totalActions[_applyIndex] != _move)
                 return;
 
-            if (forwardVelocity == Vector3.zero)
+            if (_lastVelocity == Vector3.zero)
             {
                 if (!_wasIdle)
                     _idle.RunMultiplayerLogic(i);
@@ -47,8 +47,6 @@ namespace Core
             {
                 if (!_wasRun)
                     _move.RunMultiplayerLogic(i);
-
-                forwardVelocity.Normalize();
             }
         }
 

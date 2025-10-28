@@ -15,7 +15,6 @@ namespace Core.ExternalEntityLogics
         [SerializeField] private AbstractEntityLogic _childPostProcessing;
         private EcsPool<EventWaitInit> _eventWaitInitPool;
         private EntityBuilder _entityBuilder;
-        private Transform _cameraTransform;
         
         private Vector3 _gizmoStartPoint;
         private Vector3 _gizmoTargetPoint;
@@ -25,7 +24,6 @@ namespace Core.ExternalEntityLogics
         {
             _eventWaitInitPool = context.Resolve<ComponentPools>().EventWaitInit;
             _entityBuilder = new EntityBuilder(context);
-            _cameraTransform = context.Resolve<Camera>().transform;
             _aimService = context.Resolve<AimService>();
             Assert.IsNotNull(_prefab);
         }
