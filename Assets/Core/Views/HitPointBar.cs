@@ -19,7 +19,7 @@ namespace Core
         private ValueListener<HitPointMaxValueComponent> _uiHitPointMaxValuePool;
         private bool _fadeIsActive;
         private bool _isDead;
-        private Quaternion _cameraRotation;
+        private Transform _cameraTransform;
 
         private void Awake()
         {
@@ -32,7 +32,7 @@ namespace Core
                 _isDead = true;
             });
             _container.SetActive(false);
-            _cameraRotation = context.Resolve<Camera>().transform.rotation;
+            _cameraTransform = context.Resolve<Camera>().transform;
         }
         
         private void OnEnable() => _isDead = false;
@@ -43,7 +43,7 @@ namespace Core
             _container.SetActive(false);
         }
 
-        private void FixedUpdate() => transform.rotation = _cameraRotation;
+        private void FixedUpdate() => transform.rotation = _cameraTransform.rotation;
 
         private void Change()
         {

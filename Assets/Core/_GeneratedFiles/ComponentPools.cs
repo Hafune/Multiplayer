@@ -318,6 +318,12 @@ namespace Core.Generated
         public readonly EcsPool<EventTimelineAction> EventTimelineAction;
         public readonly EcsPool<EventTouch> EventTouch;
         public readonly EcsPool<EventValueUpdated<ActionCostPerSecondValueComponent>> EventUpdatedActionCostPerSecondValue;
+        public readonly EcsPool<EventValueUpdated<ActionLinkButton1Component>> EventUpdatedActionLinkButton1;
+        public readonly EcsPool<EventValueUpdated<ActionLinkButton2Component>> EventUpdatedActionLinkButton2;
+        public readonly EcsPool<EventValueUpdated<ActionLinkButton3Component>> EventUpdatedActionLinkButton3;
+        public readonly EcsPool<EventValueUpdated<ActionLinkButton4Component>> EventUpdatedActionLinkButton4;
+        public readonly EcsPool<EventValueUpdated<ActionLinkMouseLeftComponent>> EventUpdatedActionLinkMouseLeft;
+        public readonly EcsPool<EventValueUpdated<ActionLinkMouseRightComponent>> EventUpdatedActionLinkMouseRight;
         public readonly EcsPool<EventValueUpdated<AddScoreOnDeathValueComponent>> EventUpdatedAddScoreOnDeathValue;
         public readonly EcsPool<EventValueUpdated<ArmorPercentValueComponent>> EventUpdatedArmorPercentValue;
         public readonly EcsPool<EventValueUpdated<ArmorPropertyValueComponent>> EventUpdatedArmorPropertyValue;
@@ -871,6 +877,12 @@ namespace Core.Generated
             EventTimelineAction = world.GetPool<EventTimelineAction>();
             EventTouch = world.GetPool<EventTouch>();
             EventUpdatedActionCostPerSecondValue = world.GetPool<EventValueUpdated<ActionCostPerSecondValueComponent>>();
+            EventUpdatedActionLinkButton1 = world.GetPool<EventValueUpdated<ActionLinkButton1Component>>();
+            EventUpdatedActionLinkButton2 = world.GetPool<EventValueUpdated<ActionLinkButton2Component>>();
+            EventUpdatedActionLinkButton3 = world.GetPool<EventValueUpdated<ActionLinkButton3Component>>();
+            EventUpdatedActionLinkButton4 = world.GetPool<EventValueUpdated<ActionLinkButton4Component>>();
+            EventUpdatedActionLinkMouseLeft = world.GetPool<EventValueUpdated<ActionLinkMouseLeftComponent>>();
+            EventUpdatedActionLinkMouseRight = world.GetPool<EventValueUpdated<ActionLinkMouseRightComponent>>();
             EventUpdatedAddScoreOnDeathValue = world.GetPool<EventValueUpdated<AddScoreOnDeathValueComponent>>();
             EventUpdatedArmorPercentValue = world.GetPool<EventValueUpdated<ArmorPercentValueComponent>>();
             EventUpdatedArmorPropertyValue = world.GetPool<EventValueUpdated<ArmorPropertyValueComponent>>();

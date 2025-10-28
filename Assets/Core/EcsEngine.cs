@@ -38,6 +38,10 @@ namespace Core
 #if UNITY_EDITOR
                 // .Add(new DebugEnemySystem())
 #endif
+                //=============================================================================================
+                //Обновление UI
+                .AddMany(UiSystemsNode.BuildSystems(_globalUiSystems))
+                //----------------
                 .Add(new ActionCancelBeforeRemoveEntitySystem())
                 //
                 //Добавление обязательных компонентов. 
@@ -103,9 +107,9 @@ namespace Core
                 .Add(new DamageAreaSystem(context))
                 .Add(new DamagePerSecondSystem(context))
                 //
-                .Add(new DamageReflectionSystem(context))
+                // .Add(new DamageReflectionSystem(context))
                 //
-                .Add(new EventResourceGeneratedSystem<ManaPointValueComponent, ManaPointMaxValueComponent>())
+                // .Add(new EventResourceGeneratedSystem<ManaPointValueComponent, ManaPointMaxValueComponent>())
 
                 //Удаление нанесенного урона
                 .Add(new DelHere<EventCausedDamage>())
@@ -114,15 +118,15 @@ namespace Core
                 .Add(new DelHere<EventDamageTaken>())
 
                 //Применение защиты
-                .Add(new EventIncomingDamageFilterSystem(context))
-                .Add(new HealthPerHitSystem())
-                .Add(new EventHealingPercentSystem())
+                // .Add(new EventIncomingDamageFilterSystem(context))
+                // .Add(new HealthPerHitSystem())
+                // .Add(new EventHealingPercentSystem())
 
                 //Нанесение урона
                 .Add(new EventIncomingDamageApplySystem())
                 //
-                .Add(new ResourceRecoveryPerDamageTakenSystem())
-                .Add(new ResourceRecoveryPerHitSystem())
+                // .Add(new ResourceRecoveryPerDamageTakenSystem())
+                // .Add(new ResourceRecoveryPerHitSystem())
                 //
                 .Add(new EventDeathByDealDamageSystem())
 
@@ -130,7 +134,7 @@ namespace Core
                 .AddMany(SlotTagSystemsNode.BuildSystems(context))
 
                 //запуск регенерации если значение было изменено
-                .AddMany(ValuePerSecondSystemsNode.BuildSystems())
+                // .AddMany(ValuePerSecondSystemsNode.BuildSystems())
 
                 //Срабатывание экшена смерти сущностей с истекшим сроком жизни
                 .Add(new LifetimeSystem())
@@ -149,18 +153,7 @@ namespace Core
                 .Add(new DamageAreaReceiversClearSystem())
                 // .Add(new DamageAreaAutoResetSystem())
 
-                //=============================================================================================
-                //Обновление UI
-                .AddMany(_globalUiSystems)
-                .AddMany(LocalUiSystemsNode.BuildSystems())
-                .Add(new DelHere<
-                    EventValueUpdated<ActionLinkButton1Component>,
-                    EventValueUpdated<ActionLinkButton2Component>,
-                    EventValueUpdated<ActionLinkButton3Component>,
-                    EventValueUpdated<ActionLinkButton4Component>,
-                    EventValueUpdated<ActionLinkMouseLeftComponent>,
-                    EventValueUpdated<ActionLinkMouseRightComponent>
-                >())
+                
                 //
                 .Add(new DeathCallbackSystem())
                 .Add(new EventEndFrameCallSystem())

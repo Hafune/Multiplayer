@@ -14,31 +14,41 @@ namespace Core
         private readonly EcsFilterInject<
             Inc<
                 EventMultiplayerDataUpdated,
-                MultiplayerDataComponent,
                 AnimatorComponent,
                 PositionComponent,
                 ViewAnimationsComponent
             >,
             Exc<
                 Player1UniqueTag
-            >> _otherFilter;
+            >> _readPositionFilter;
+
+        private readonly EcsFilterInject<
+            Inc<
+                EventMultiplayerDataUpdated,
+                HitPointValueComponent,
+                HitPointMaxValueComponent
+            >> _readHitPointFilter;
+
+        private readonly EcsFilterInject<
+            Inc<
+                EventMultiplayerDataUpdated
+            >> _eventFilter;
 
         private readonly EcsFilterInject<
             Inc<
                 InProgressTag<MultiplayerDataComponent>,
                 MultiplayerDataComponent,
                 PositionComponent
-            >> _positionFilter;
+            >> _movePositionFilter;
 
         private readonly ComponentPools _pools;
         private readonly MySerializablePose _pose = new();
 
         public void Run(IEcsSystems systems)
         {
-            foreach (var i in _otherFilter.Value)
+            foreach (var i in _readPositionFilter.Value)
             {
                 var update = _pools.EventMultiplayerDataUpdated.Get(i);
-                _pools.EventMultiplayerDataUpdated.Del(i);
                 var transform = _pools.Position.Get(i).transform;
 
                 ref var target = ref _pools.MultiplayerData.Get(i);
@@ -83,7 +93,34 @@ namespace Core
                 _pose.ApplyTo(animancer);
             }
 
-            foreach (var i in _positionFilter.Value)
+            foreach (var i in _readHitPointFilter.Value)
+            {
+                var update = _pools.EventMultiplayerDataUpdated.Get(i);
+
+                ref var hitPoint = ref _pools.HitPointValue.Get(i);
+                ref var hitPointMax = ref _pools.HitPointMaxValue.Get(i);
+                int hp = (int)hitPoint.value;
+                int hpMax = (int)hitPointMax.value;
+
+                AssignHitPointValues(ref hp, ref hpMax, update.changes);
+
+                if ((int)hitPoint.value != hp)
+                {
+                    hitPoint.value = hp;
+                    _pools.EventUpdatedHitPointValue.AddIfNotExist(i);
+                }
+                
+                if ((int)hitPointMax.value != hp)
+                {
+                    hitPointMax.value = hpMax;
+                    _pools.EventUpdatedHitPointMaxValue.AddIfNotExist(i);
+                }
+            }
+
+            foreach (var i in _eventFilter.Value)
+                _pools.EventMultiplayerDataUpdated.Del(i);
+
+            foreach (var i in _movePositionFilter.Value)
             {
                 var target = _pools.MultiplayerData.Get(i);
                 var transform = _pools.Position.Get(i).transform;
@@ -150,11 +187,24 @@ namespace Core
                     case nameof(Player.state):
                         states = (string)dataChange.Value;
                         break;
-                    case nameof(Player.patchRate):
-                        Debug.Log(nameof(Player.patchRate) + " " + dataChange.Value);
+                }
+            }
+        }
+
+        private static void AssignHitPointValues(
+            ref int currentHp,
+            ref int maxHp,
+            List<DataChange> changes)
+        {
+            foreach (var dataChange in changes)
+            {
+                switch (dataChange.Field)
+                {
+                    case nameof(Player.currentHp):
+                        currentHp = (short)dataChange.Value;
                         break;
-                    default:
-                        Debug.LogWarning($"Поле {dataChange.Field} не обработанно");
+                    case nameof(Player.maxHp):
+                        maxHp = (short)dataChange.Value;
                         break;
                 }
             }

@@ -13,6 +13,7 @@ namespace Core
         private int _index;
 
         public Player Player { get; private set; }
+        public string SessionId { get; private set; }
 
         private void Awake()
         {
@@ -21,10 +22,11 @@ namespace Core
             _convertToEntity.BeforeEntityDeleted += OnRemove;
         }
 
-        public void SetupData(Player data)
+        public void SetupData(string sessionId, Player data)
         {
             Player = data;
             Player.OnChange += OnChange;
+            SessionId = sessionId;
         }
 
         private void OnRemove(ConvertToEntity _)

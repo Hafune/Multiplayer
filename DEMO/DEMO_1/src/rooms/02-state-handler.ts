@@ -85,6 +85,15 @@ export class StateHandlerRoom extends Room<State> {
         this.onMessage("shoot", (client, data) => {
             this.broadcast("shoot", data, { except: client });
         });
+
+        this.onMessage("damage", (client, data) => {
+            for (let i = 0; i < data.ids.length; i++) {
+                var id = data.ids[i];
+                var damage = data.damages[i];
+                var player = this.state.players.get(id);
+                player.currentHp = Math.max(0, player.currentHp - damage);
+            }
+        });
     }
 
     onAuth(client, options, req) {

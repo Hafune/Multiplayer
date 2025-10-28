@@ -25,6 +25,8 @@ namespace Core.Views
                 .ValueUpdated<HitPointValueComponent>((i, _) => RefreshHpBar(i))
                 .ValueUpdated<ManaPointMaxValueComponent>((i, _) => RefreshMpBar(i))
                 .ValueUpdated<ManaPointValueComponent>((i, _) => RefreshMpBar(i));
+            
+            DisplayFlex();
         }
 
         private void RefreshHpBar(int i)

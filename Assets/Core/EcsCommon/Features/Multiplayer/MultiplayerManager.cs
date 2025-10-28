@@ -111,7 +111,7 @@ namespace Core
 
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
             var multiplayerData = convertToEntity.GetComponent<MultiplayerChanges>();
-            multiplayerData.SetupData(data);
+            multiplayerData.SetupData(key, data);
             ref var dataComponent = ref _componentPools.MultiplayerData.Add(convertToEntity.RawEntity);
             dataComponent.data = multiplayerData;
             dataComponent.position = position;

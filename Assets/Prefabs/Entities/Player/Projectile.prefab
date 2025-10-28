@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 1272444721441906500}
   - component: {fileID: 591892178138878262}
   - component: {fileID: 3100406230861038418}
+  - component: {fileID: 8023217090608046296}
   - component: {fileID: 3841236574827558105}
   - component: {fileID: 1693557171532904418}
+  - component: {fileID: 4989812079317947636}
   - component: {fileID: 3572454640979153701}
   - component: {fileID: 2102025319122093681}
   - component: {fileID: 407641952342572714}
-  - component: {fileID: 4989812079317947636}
   - component: {fileID: 8066949648925719268}
-  - component: {fileID: 8023217090608046296}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -87,6 +87,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dontDisableGameObject: 0
   <TemplateId>k__BackingField: 601581731
+--- !u!114 &8023217090608046296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897899900747904142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f12e9383d2b402bb3aefd782aef5554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.EventMultiplayerEntityCreatedProvider
 --- !u!114 &3841236574827558105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +125,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fea617e4b2e4545b2e418f1c889c4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4989812079317947636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897899900747904142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e6197ed3a14eafb45a3ee2077e7d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    <maxTime>k__BackingField: 2
 --- !u!114 &3572454640979153701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,20 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     transform: {fileID: 1272444721441906500}
---- !u!114 &4989812079317947636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897899900747904142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e6197ed3a14eafb45a3ee2077e7d1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    <maxTime>k__BackingField: 2
 --- !u!114 &8066949648925719268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,18 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RigidbodyProvider
   value:
     rigidbody: {fileID: 591892178138878262}
---- !u!114 &8023217090608046296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897899900747904142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f12e9383d2b402bb3aefd782aef5554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.EventMultiplayerEntityCreatedProvider
 --- !u!1 &2948523707861321633
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,9 +513,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9087897248066525648}
-  - component: {fileID: 3113089323786787598}
   - component: {fileID: 4380707397785646940}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: DamageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,16 +533,63 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1166562136333398854}
   m_Father: {fileID: 8512015876810421133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3113089323786787598
-SphereCollider:
+--- !u!114 &4380707397785646940
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5914313662614264077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae31e8c834d468899f0d6a2e2df0656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoClearHitOnExit: 1
+--- !u!1 &6163938008080169151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166562136333398854}
+  - component: {fileID: 1206824778165330517}
+  - component: {fileID: 4731247883933701955}
+  m_Layer: 18
+  m_Name: Damage_Area_Trigger_Dispatcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166562136333398854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163938008080169151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9087897248066525648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1206824778165330517
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163938008080169151}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -558,19 +604,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4380707397785646940
+--- !u!114 &4731247883933701955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5914313662614264077}
+  m_GameObject: {fileID: 6163938008080169151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae31e8c834d468899f0d6a2e2df0656, type: 3}
+  m_Script: {fileID: 11500000, guid: 49047be7e4964c6e9e419490f535c0f9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  _autoClearHitOnExit: 1
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Lib.DamageAreaTriggerDispatcher
+  _target: {fileID: 4380707397785646940}
+  _damageScale: 1
+  _priority: -1
+  _elementalDamage: {fileID: 0}
 --- !u!1 &7084661745210594943
 GameObject:
   m_ObjectHideFlags: 0

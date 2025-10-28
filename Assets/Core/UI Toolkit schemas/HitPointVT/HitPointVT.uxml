@@ -4,10 +4,10 @@
     <Style src="project://database/Assets/Core/UI%20Toolkit%20schemas/CommonStyles/TextFontBase.uss?fileID=7433441132597879392&amp;guid=38a94273c510b1447bb6532a65e8d29a&amp;type=3#TextFontBase" />
     <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: flex-end;">
         <ui:VisualElement name="BarArea" tabindex="-1" style="flex-direction: row;">
-            <ui:VisualElement style="flex-grow: 1; width: 820px; height: 240px;">
+            <ui:VisualElement style="flex-grow: 1; width: 820px; height: 180px;">
                 <ui:VisualElement style="height: 99px;">
-                    <ui:ProgressBar value="0.5" title="100/100" name="HpBar" high-value="1" class="bar" style="width: 100%; position: absolute; top: 2px; left: 46px;" />
-                    <ui:ProgressBar value="0.5" title="100/100" name="ResourceBar" high-value="1" class="bar resource_bar" style="width: 90%; position: absolute; top: 43px; left: 53px; height: 40px;" />
+                    <ui:ProgressBar name="HpBar" class="bar" style="width: 100%; position: absolute; top: 2px; left: 46px;" />
+                    <ui:ProgressBar name="ResourceBar" class="bar resource_bar" style="width: 90%; position: absolute; top: 43px; left: 53px; height: 40px;" />
                     <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Core/UI%20Toolkit%20schemas/CommonSprites/Nameplate_LevelFrame.png?fileID=21300000&amp;guid=d0da035a4bade1a489a6754d2828bb01&amp;type=3#Nameplate_LevelFrame&quot;); width: 98px; height: 99px; position: absolute;">
                         <ui:Label parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level" class="text-font-base text-color-base" style="flex-grow: 1; -unity-text-align: middle-center; font-size: 24px; -unity-font-style: bold;" />
                     </ui:VisualElement>
