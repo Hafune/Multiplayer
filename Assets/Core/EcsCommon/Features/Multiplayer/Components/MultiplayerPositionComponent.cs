@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Core.Components
 {
-    public struct MultiplayerPositionComponent
+    public struct MultiplayerDataComponent
     {
         public Quaternion rotation;
         public Vector3 position;
@@ -10,5 +10,6 @@ namespace Core.Components
         public Vector3 prediction;
         public float distance;
         public float delay;
+        public MultiplayerChanges data;
     }
 }

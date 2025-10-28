@@ -47,11 +47,17 @@ namespace Core
 
         public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
 
-        public void SendMessage(string key, string data) => _room.Send(key, data);
+        public void SendData(string key, string data) => _room.Send(key, data);
 
         private async void Connect()
         {
-            _room = await Instance.client.JoinOrCreate<State>("state_handler");
+            var options = new Dictionary<string, object>
+            {
+                { "hp", 100 }
+            };
+
+
+            _room = await Instance.client.JoinOrCreate<State>("state_handler", options);
             _room.OnStateChange += OnChange;
             _room.OnMessage<string>("shoot", data =>
             {
@@ -99,14 +105,16 @@ namespace Core
         {
             if (!Application.isPlaying)
                 return;
-            
+
             var position = new Vector3(data.x, data.y, data.z);
             var prefab = key == _room.SessionId ? _player : _enemy;
 
             var convertToEntity = _context.Instantiate(prefab, position, Quaternion.identity);
             var multiplayerData = convertToEntity.GetComponent<MultiplayerChanges>();
             multiplayerData.SetupData(data);
-            _componentPools.MultiplayerPosition.Add(convertToEntity.RawEntity).position = position;
+            ref var dataComponent = ref _componentPools.MultiplayerData.Add(convertToEntity.RawEntity);
+            dataComponent.data = multiplayerData;
+            dataComponent.position = position;
             _storages[key] = convertToEntity;
 
             if (key != _room.SessionId)

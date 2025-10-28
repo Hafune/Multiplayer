@@ -891,11 +891,12 @@ GameObject:
   - component: {fileID: 5879990332899949736}
   - component: {fileID: 6411273652790422844}
   - component: {fileID: -8168844493951385815}
+  - component: {fileID: -5902542504442907320}
+  - component: {fileID: 1481910208008276301}
   - component: {fileID: -216519883093473632}
   - component: {fileID: -250386771771252390}
   - component: {fileID: -3491620868571229234}
   - component: {fileID: -4189458560501799543}
-  - component: {fileID: -5902542504442907320}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1028,6 +1029,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionMoveProvider
   value:
     <logic>k__BackingField: {fileID: 4568480624477029201}
+--- !u!114 &-5902542504442907320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658124197020847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4805ff6ae6e84ec2bf392509927cc5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorProvider
+  value:
+    animator: {fileID: 1361838075708520353}
+    animancer: {fileID: 5359895180285130521}
+--- !u!114 &1481910208008276301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658124197020847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00022ae903cd40fc8740ce8644d4a789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitPointMaxBaseValueProvider
+  value:
+    <baseValue>k__BackingField: 0
 --- !u!114 &-216519883093473632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,21 +1112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RigidbodyProvider
   value:
     rigidbody: {fileID: 6234163147342028459}
---- !u!114 &-5902542504442907320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658124197020847827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4805ff6ae6e84ec2bf392509927cc5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorProvider
-  value:
-    animator: {fileID: 1361838075708520353}
-    animancer: {fileID: 5359895180285130521}
 --- !u!1 &5808602022754333477
 GameObject:
   m_ObjectHideFlags: 0

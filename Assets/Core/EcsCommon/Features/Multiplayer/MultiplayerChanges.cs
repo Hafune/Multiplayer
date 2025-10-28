@@ -8,10 +8,11 @@ namespace Core
 {
     public class MultiplayerChanges : MonoConstruct
     {
-        private Player _data;
         private ComponentPools _pools;
         private ConvertToEntity _convertToEntity;
         private int _index;
+
+        public Player Player { get; private set; }
 
         private void Awake()
         {
@@ -22,16 +23,16 @@ namespace Core
 
         public void SetupData(Player data)
         {
-            _data = data;
-            _data.OnChange += OnChange;
+            Player = data;
+            Player.OnChange += OnChange;
         }
 
         private void OnRemove(ConvertToEntity _)
         {
-            if (_data != null)
-                _data.OnChange -= OnChange;
+            if (Player != null)
+                Player.OnChange -= OnChange;
 
-            _data = null;
+            Player = null;
         }
 
         private void OnChange(List<DataChange> changes)
@@ -42,7 +43,7 @@ namespace Core
             
             ref var update = ref _pools.EventMultiplayerDataUpdated.GetOrInitialize(entity);
             update.changes = changes;
-            update.delay = _data.patchRate / 1000f;
+            update.delay = Player.patchRate / 1000f;
         }
     }
 }

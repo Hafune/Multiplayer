@@ -27,7 +27,7 @@ namespace Core.Systems
                 var euler = new Vector3(0, _cameraTransform.eulerAngles.y, 0);
 
                 var rigidbody = _pools.Rigidbody.Get(i).rigidbody;
-                rigidbody.rotation = Quaternion.Euler(euler);
+                rigidbody.MoveRotation(Quaternion.Euler(euler));
             }
         }
     }

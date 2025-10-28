@@ -41,7 +41,7 @@ namespace Core
                 .Add(new ActionCancelBeforeRemoveEntitySystem())
                 //
                 //Добавление обязательных компонентов. 
-                .Add(new InitSubComponentSystem(context))
+                .Add(new InitSubComponentSystem())
                 .Add(new EventSetupChildrenSystem(context))
                 //Удаление сущностей
                 // .AddMany(BeforeRemoveSystemsNode.BuildSystems())

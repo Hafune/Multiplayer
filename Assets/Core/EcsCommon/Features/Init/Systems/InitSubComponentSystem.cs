@@ -11,15 +11,15 @@ namespace Core.Systems
     public class InitSubComponentSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<EventWaitInit>> _hasInitFilter;
+
+        private readonly EcsFilterInject<Inc<EventInit, MultiplayerDataComponent, BaseValueComponent<HitPointMaxValueComponent>>>
+            _multiplayerFilter;
+
         private readonly EcsFilterInject<Inc<EventInit, EnemyComponent>> _enemyFilter;
         private readonly EcsFilterInject<Inc<EventInit, Player1UniqueTag>> _player1Filter;
-        private readonly EcsFilterInject<Inc<EventInit, Player2UniqueTag>> _player2Filter;
         private readonly EcsFilterInject<Inc<EventInit, ActionMoveComponent>> _actionMoveFilter;
 
         private readonly ComponentPools _pools;
-        // private readonly ExperienceService _experienceService;
-
-        public InitSubComponentSystem(Context context){}// => _experienceService = context.Resolve<ExperienceService>();
 
         public void Run(IEcsSystems systems)
         {
@@ -41,6 +41,9 @@ namespace Core.Systems
                 _pools.HitAdditionalCriticalChance.Add(i);
                 _pools.SlotTimersCooldown.Add(i);
             }
+
+            foreach (var i in _multiplayerFilter.Value)
+                _pools.BaseHitPointMaxValue.Get(i).baseValue = _pools.MultiplayerData.Get(i).data.Player.maxHp;
 
             foreach (var i in _actionMoveFilter.Value)
             {
@@ -122,16 +125,8 @@ namespace Core.Systems
                 _pools.BaseBarbDamageSeismicSlamValue.Add(i);
                 _pools.BaseBarbDamageWeaponThrowValue.Add(i);
                 _pools.BaseBarbDamageWhirlwindValue.Add(i);
-                
-                _pools.BaseBarbFrenzyStackValue.Add(i);
-            }
 
-            //засунуть в плеерс сервис
-            foreach (var i in _player2Filter.Value)
-            {
-                _pools.PlayerInputMemory.Add(i);
-                _pools.Player2Controller.Add(i);
-                _pools.ActionAttack.Add(i);
+                _pools.BaseBarbFrenzyStackValue.Add(i);
             }
 
             foreach (var i in _enemyFilter.Value)

@@ -1,7 +1,0 @@
-.disable_color {
-    background-color: rgba(0, 0, 0, 0.85);
-}
-
-.cooldown_radial_transform {
-    scale: 2 2;
-}

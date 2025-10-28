@@ -14,10 +14,10 @@ namespace Core
         private readonly EcsFilterInject<
             Inc<
                 EventMultiplayerDataUpdated,
-                MultiplayerPositionComponent,
+                MultiplayerDataComponent,
                 AnimatorComponent,
                 PositionComponent,
-                MultiplayerAnimationsComponent
+                ViewAnimationsComponent
             >,
             Exc<
                 Player1UniqueTag
@@ -25,8 +25,8 @@ namespace Core
 
         private readonly EcsFilterInject<
             Inc<
-                InProgressTag<MultiplayerPositionComponent>,
-                MultiplayerPositionComponent,
+                InProgressTag<MultiplayerDataComponent>,
+                MultiplayerDataComponent,
                 PositionComponent
             >> _positionFilter;
 
@@ -41,7 +41,7 @@ namespace Core
                 _pools.EventMultiplayerDataUpdated.Del(i);
                 var transform = _pools.Position.Get(i).transform;
 
-                ref var target = ref _pools.MultiplayerPosition.Get(i);
+                ref var target = ref _pools.MultiplayerData.Get(i);
                 var euler = transform.eulerAngles;
                 var bodyAngle = euler.y;
 
@@ -56,9 +56,9 @@ namespace Core
                 target.prediction = target.position + target.velocity * update.delay;
                 target.distance = (target.position - transform.position).magnitude;
                 target.delay = update.delay;
-                _pools.InProgressMultiplayerPosition.AddIfNotExist(i);
+                _pools.InProgressMultiplayerData.AddIfNotExist(i);
 
-                var animations = _pools.MultiplayerAnimations.Get(i);
+                var animations = _pools.ViewAnimations.Get(i);
 
                 var dir = Quaternion.Inverse(target.rotation) * target.velocity;
 
@@ -85,12 +85,12 @@ namespace Core
 
             foreach (var i in _positionFilter.Value)
             {
-                var target = _pools.MultiplayerPosition.Get(i);
+                var target = _pools.MultiplayerData.Get(i);
                 var transform = _pools.Position.Get(i).transform;
 
                 if (transform.position == target.prediction && transform.rotation == target.rotation)
                 {
-                    _pools.InProgressMultiplayerPosition.Del(i);
+                    _pools.InProgressMultiplayerData.Del(i);
                     continue;
                 }
 

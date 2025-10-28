@@ -72,7 +72,7 @@ namespace Core
                     ownerClientId = MultiplayerManager.Instance.GetClientId()
                 };
 
-                MultiplayerManager.Instance.SendMessage("shoot", JsonUtility.ToJson(info));
+                MultiplayerManager.Instance.SendData("shoot", JsonUtility.ToJson(info));
             }
         }
     }
