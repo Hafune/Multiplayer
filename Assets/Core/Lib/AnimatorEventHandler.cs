@@ -21,6 +21,7 @@ namespace Core
         [SerializeField] private Transform _root;
         [SerializeField] private ConvertToEntity _convertToEntity;
         [SerializeField] private DamageArea _damageArea;
+        [SerializeField] private bool _sendOnlyEffects;
         private ComponentPools _pools;
         private KeyValueCache<ReferencePath, Action<int>> _logicCache;
         private KeyValueCache<ReferencePath, AbstractEffect> _effectCache;
@@ -82,6 +83,9 @@ namespace Core
 
         private void PutTimelineAction(ReferencePath pathRef)
         {
+            if (_sendOnlyEffects)
+                return;
+            
 #if UNITY_EDITOR
             if (!_convertToEntity)
                 return;

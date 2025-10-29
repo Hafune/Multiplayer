@@ -57,7 +57,7 @@ namespace Core.Systems
 
             foreach (var i in _enemyFilter.Value)
             {
-                var position = _pools.Rigidbody2D.Get(i).rigidbody.position;
+                var position = _pools.Rigidbody2D.Get(i).rigidbody2D.position;
                 ref var moveUpdate = ref _pools.MoveUpdate2D.Get(i);
                 var distanceSqr = (moveUpdate.lastPosition - position).sqrMagnitude;
                 moveUpdate.lastPosition = position;
@@ -84,7 +84,7 @@ namespace Core.Systems
                     moveUpdate.sideMoveStartPosition = position;
                 }
 
-                var lineToTarget = _pools.Rigidbody2D.Get(_pools.Target.Get(i).entity).rigidbody.position - position;
+                var lineToTarget = _pools.Rigidbody2D.Get(_pools.Target.Get(i).entity).rigidbody2D.position - position;
                 var side = Vector2.Perpendicular(lineToTarget);
                 moveDestination.position = position + side * moveDestination.lastSideDirection;
             }
@@ -94,7 +94,7 @@ namespace Core.Systems
         private bool ProcessMove(int i, float distance = 0f)
         {
             var dest = _pools.MoveDestination.Get(i);
-            var rb = _pools.Rigidbody2D.Get(i).rigidbody;
+            var rb = _pools.Rigidbody2D.Get(i).rigidbody2D;
             var position = rb.position;
             var line = dest.position - position;
             var moveUpdate = _pools.MoveUpdate2D.Get(i);

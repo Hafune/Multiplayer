@@ -157,6 +157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6110147744066559041, guid: 4f87d1e9c7f0e474fac4005619a12f24,
+        type: 3}
+      propertyPath: _sendOnlyEffects
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6910321022448170990, guid: 4f87d1e9c7f0e474fac4005619a12f24,
         type: 3}
       propertyPath: <TemplateId>k__BackingField

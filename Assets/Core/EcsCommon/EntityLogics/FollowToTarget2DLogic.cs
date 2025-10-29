@@ -29,7 +29,7 @@ namespace Core.ExternalEntityLogics
 
             int target = _targets.Get(entity).entity;
             var direction = _positions.Get(target).transform.position - transform.position;
-            var rigidbody = _rigidbodies.Get(entity).rigidbody;
+            var rigidbody = _rigidbodies.Get(entity).rigidbody2D;
 
             var velocity = direction.normalized * _moveSpeed.Get(entity).value;
 

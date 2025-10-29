@@ -7,7 +7,7 @@ namespace Core.ExternalEntityLogics
     public class PlayTransitionLogic : AbstractEntityLogic
     {
         [SerializeField] private float _speed = 1;
-        [SerializeField] private TransitionAsset _clip;
+        [SerializeField] private ClipTransition _clip;
         
         private AnimancerComponent _animancer;
 

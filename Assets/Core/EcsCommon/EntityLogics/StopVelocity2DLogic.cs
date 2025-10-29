@@ -9,6 +9,6 @@ namespace Core.ExternalEntityLogics
 
         private void Awake() => _pools = context.Resolve<ComponentPools>();
 
-        public override void Run(int entity) => _pools.Rigidbody2D.Get(entity).rigidbody.linearVelocity = Vector2.zero;
+        public override void Run(int entity) => _pools.Rigidbody2D.Get(entity).rigidbody2D.linearVelocity = Vector2.zero;
     }
 }

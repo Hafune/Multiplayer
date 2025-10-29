@@ -12,6 +12,14 @@ namespace Core.Components
     {
     }
     
+    public struct ButtonJumpForwardTag : IButtonComponent
+    {
+    }
+    
+    public struct ButtonJumpTag : IButtonComponent
+    {
+    }
+    
     //PC
     public struct MouseLeftTag : IButtonComponent
     {

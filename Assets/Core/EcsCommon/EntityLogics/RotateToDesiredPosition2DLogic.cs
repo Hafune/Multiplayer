@@ -16,7 +16,7 @@ namespace Core.ExternalEntityLogics
             var position = (Vector2)_pools.Position.Get(entity).transform.position;
             var line = dest.position - position;
 
-            var rb = _pools.Rigidbody2D.Get(entity).rigidbody;
+            var rb = _pools.Rigidbody2D.Get(entity).rigidbody2D;
             rb.rotation = Vector2.SignedAngle(Vector2.right, line.normalized);
         }
     }

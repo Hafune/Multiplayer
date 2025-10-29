@@ -13,8 +13,7 @@ namespace Core.Systems
                 EventActionStart<ActionMoveComponent>,
                 ActionCurrentComponent,
                 MoveSpeedValueComponent,
-                MoveDirectionComponent,
-                RigidbodyComponent
+                MoveDirectionComponent
             >,
             Exc<
                 InProgressTag<ActionMoveComponent>
@@ -26,12 +25,6 @@ namespace Core.Systems
                 EventActionCompleteStreaming
             >> _completeFilter;
 
-        public const float ActiveMass = 0.0001f;
-        public const float PassiveMass = 1f;
-        
-        private const float _activeDrag = 0f;
-        private const float _passiveDrag = 10f;
-
         public void Run(IEcsSystems systems)
         {
             foreach (var i in _activateFilter.Value)
@@ -42,23 +35,12 @@ namespace Core.Systems
 
                 BeginActionProgress(i, logic);
                 _pools.ActionCanBeCanceled.AddIfNotExist(i);
-                var rigidbody = _pools.Rigidbody.Get(i).rigidbody; 
-                rigidbody.mass = ActiveMass;
-                rigidbody.linearDamping = _activeDrag;
             }
 
             foreach (var i in _completeFilter.Value)
                 _actionPool.Value.Get(i).logic?.CompleteStreamingLogic(i);
 
             CleanEventStart();
-        }
-
-        public override void Cancel(int entity)
-        {
-            base.Cancel(entity);
-            var rigidbody = _pools.Rigidbody.Get(entity).rigidbody; 
-            rigidbody.mass = PassiveMass;
-            rigidbody.linearDamping = _passiveDrag;
         }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Core.Services
 {
-    public class ActionBarServiceClient : MonoConstruct
+    public class ActionBarClient : MonoConstruct
     {
         [field: SerializeField] public AbstractEntityAction[] DefaultLogics { get; private set; }
 

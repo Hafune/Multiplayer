@@ -5,5 +5,5 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Rigidbody2DProvider : MonoProvider<Rigidbody2DComponent>
 {
-    private void OnValidate() => value.rigidbody = value.rigidbody ? value.rigidbody : GetComponent<Rigidbody2D>();
+    private void OnValidate() => value.rigidbody2D = value.rigidbody2D ? value.rigidbody2D : GetComponent<Rigidbody2D>();
 }

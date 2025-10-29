@@ -21,7 +21,7 @@ namespace Core.ExternalEntityLogics
 
         public override void Run(int target)
         {
-            var position = _positionPool.Get(target).rigidbody.position;
+            var position = _positionPool.Get(target).rigidbody2D.position;
             var dir = (position - (Vector2)transform.position).normalized;
             _eventPool.GetOrInitialize(target).position = position + dir * _distance;
         }

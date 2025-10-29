@@ -53,7 +53,9 @@ namespace Core.Services
             }
 
             RegisterActionLink<ActionLinkMouseLeftComponent, MouseLeftTag>();
-            // RegisterActionLink<ActionLinkMouseRightComponent, MouseRightTag>();
+            RegisterActionLink<ActionLinkMouseRightComponent, MouseRightTag>();
+            RegisterActionLink<ActionLinkSpaceComponent, ButtonJumpTag>();
+            RegisterActionLink<ActionLinkSpaceForwardComponent, ButtonJumpForwardTag>();
             // RegisterActionLink<ActionLinkButton1Component, Button1Tag>();
             // RegisterActionLink<ActionLinkButton2Component, Button2Tag>();
             // RegisterActionLink<ActionLinkButton3Component, Button3Tag>();
@@ -108,7 +110,7 @@ namespace Core.Services
             _dataService.SetDirty(this);
         }
 
-        public void InitializeActionsClient(ActionBarServiceClient client, int entity)
+        public void InitializeActionsClient(ActionBarClient client, int entity)
         {
             var savedActionKeys = _serviceData.actionKeys;
 
@@ -128,8 +130,12 @@ namespace Core.Services
             foreach (var (_, action) in _defaultActionsSetup)
                 action(entity);
 
-            //***
+            //TODO определиться с инициализацией начальных скилов !!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
+            //TODO определиться с инициализацией начальных скилов !!!!!!!!!!!!!!!!!!!!!!!!-----------------------------------------
             UnlockDefaultAction<ActionLinkMouseLeftComponent>(entity);
+            UnlockDefaultAction<ActionLinkMouseRightComponent>(entity);
+            UnlockDefaultAction<ActionLinkSpaceComponent>(entity);
+            UnlockDefaultAction<ActionLinkSpaceForwardComponent>(entity);
         }
 
         public void SetupActionLogic<T>(int entity, AbstractEntityAction action)
@@ -139,8 +145,8 @@ namespace Core.Services
             _dataService.SetDirty(this);
         }
 
-        public ActionBarServiceClient GetClientForEntity(int entity) =>
-            _pools.ConvertToEntity.Get(entity).convertToEntity.GetComponent<ActionBarServiceClient>();
+        public ActionBarClient GetClientForEntity(int entity) =>
+            _pools.ConvertToEntity.Get(entity).convertToEntity.GetComponent<ActionBarClient>();
 
         public bool IsInCooldown<T>(int entity) where T : struct, IEntityActionComponent
         {

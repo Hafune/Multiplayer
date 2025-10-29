@@ -2,7 +2,6 @@
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using Lib;
-using UnityEngine;
 
 namespace Core.Systems
 {
@@ -12,7 +11,8 @@ namespace Core.Systems
             Inc<
                 ActionDefaultComponent,
                 ActionCurrentComponent,
-                ActionCompleteTag
+                ActionCompleteTag,
+                RigidbodyComponent
             >,
             Exc<
                 InProgressTag<ActionDefaultComponent>
@@ -22,7 +22,8 @@ namespace Core.Systems
             Inc<
                 ActionDefaultComponent,
                 EventActionStart<ActionDefaultComponent>,
-                ActionCurrentComponent
+                ActionCurrentComponent,
+                RigidbodyComponent
             >> _activateFilter;
 
         public void Run(IEcsSystems systems)
@@ -42,6 +43,14 @@ namespace Core.Systems
             BeginActionProgress(entity, _actionPool.Value.Get(entity).logic, false);
             _pools.ActionCanBeCanceled.AddIfNotExist(entity);
             _pools.ActionComplete.AddIfNotExist(entity);
+            _pools.Rigidbody.Get(entity).rigidbody.linearDamping = 10;
+        }
+        
+        public override void Cancel(int entity)
+        {
+            base.Cancel(entity);
+            var rigidbody = _pools.Rigidbody.Get(entity).rigidbody; 
+            rigidbody.linearDamping = 0;
         }
     }
 }

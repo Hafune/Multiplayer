@@ -56,7 +56,7 @@ namespace Core.Systems
         {
             var playerEntity = _playerFilter.Value.GetFirst();
             var transform = _transformCenterPool.Value.Get(playerEntity).transform;
-            var rigidbody = _rigidbodyPool.Value.Get(entity).rigidbody;
+            var rigidbody = _rigidbodyPool.Value.Get(entity).rigidbody2D;
 
             var position = transform.position;
             var line = (Vector2)position - rigidbody.position;

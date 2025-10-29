@@ -26,6 +26,8 @@ namespace Core.Generated
         public readonly EcsPool<ActionLinkButton4Component> ActionLinkButton4;
         public readonly EcsPool<ActionLinkMouseLeftComponent> ActionLinkMouseLeft;
         public readonly EcsPool<ActionLinkMouseRightComponent> ActionLinkMouseRight;
+        public readonly EcsPool<ActionLinkSpaceComponent> ActionLinkSpace;
+        public readonly EcsPool<ActionLinkSpaceForwardComponent> ActionLinkSpaceForward;
         public readonly EcsPool<ActionLinkTeleportToHubComponent> ActionLinkTeleportToHub;
         public readonly EcsPool<ActionMoveComponent> ActionMove;
         public readonly EcsPool<ActionOnMoveCompleteComponent> ActionOnMoveComplete;
@@ -88,6 +90,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkButton4Component>>> BaseChargeCostValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>> BaseChargeCostValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseRightComponent>>> BaseChargeCostValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceComponent>>> BaseChargeCostValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>> BaseChargeCostValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<ChargeCostValueComponent<HealingPotionValueComponent>>> BaseChargeCostValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton1Component>>> BaseChargeMaxValueActionLinkButton1;
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton2Component>>> BaseChargeMaxValueActionLinkButton2;
@@ -95,6 +99,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton4Component>>> BaseChargeMaxValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>> BaseChargeMaxValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>> BaseChargeMaxValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceComponent>>> BaseChargeMaxValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>> BaseChargeMaxValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<ChargeMaxValueComponent<HealingPotionValueComponent>>> BaseChargeMaxValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton1Component>>> BaseChargeValueActionLinkButton1;
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton2Component>>> BaseChargeValueActionLinkButton2;
@@ -102,6 +108,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton4Component>>> BaseChargeValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkMouseLeftComponent>>> BaseChargeValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkMouseRightComponent>>> BaseChargeValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceComponent>>> BaseChargeValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceForwardComponent>>> BaseChargeValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<ChargeValueComponent<HealingPotionValueComponent>>> BaseChargeValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton1Component>>> BaseCooldownValueActionLinkButton1;
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton2Component>>> BaseCooldownValueActionLinkButton2;
@@ -109,6 +117,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton4Component>>> BaseCooldownValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkMouseLeftComponent>>> BaseCooldownValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkMouseRightComponent>>> BaseCooldownValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceComponent>>> BaseCooldownValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceForwardComponent>>> BaseCooldownValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<CooldownValueComponent<HealingPotionValueComponent>>> BaseCooldownValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkButton1Component>>> BaseCostValueActionLinkButton1;
         public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkButton2Component>>> BaseCostValueActionLinkButton2;
@@ -116,6 +126,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkButton4Component>>> BaseCostValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkMouseLeftComponent>>> BaseCostValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkMouseRightComponent>>> BaseCostValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkSpaceComponent>>> BaseCostValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<CostValueComponent<ActionLinkSpaceForwardComponent>>> BaseCostValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<CriticalChanceValueComponent>> BaseCriticalChanceValue;
         public readonly EcsPool<BaseValueComponent<CriticalDamageValueComponent>> BaseCriticalDamageValue;
         public readonly EcsPool<BaseValueComponent<DamageColdValueComponent>> BaseDamageColdValue;
@@ -161,6 +173,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>> BaseResourceRecoveryPerHitValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>> BaseResourceRecoveryPerHitValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>> BaseResourceRecoveryPerHitValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>> BaseResourceRecoveryPerHitValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>> BaseResourceRecoveryPerHitValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>> BaseResourceRecoveryPerHitValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>> BaseResourceRecoveryPerUsingValueActionLinkButton1;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>> BaseResourceRecoveryPerUsingValueActionLinkButton2;
@@ -168,6 +182,8 @@ namespace Core.Generated
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>> BaseResourceRecoveryPerUsingValueActionLinkButton4;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>> BaseResourceRecoveryPerUsingValueActionLinkMouseLeft;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>> BaseResourceRecoveryPerUsingValueActionLinkMouseRight;
+        public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>> BaseResourceRecoveryPerUsingValueActionLinkSpace;
+        public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>> BaseResourceRecoveryPerUsingValueActionLinkSpaceForward;
         public readonly EcsPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>> BaseResourceRecoveryPerUsingValueHealingPotionValue;
         public readonly EcsPool<BaseValueComponent<SlowdownAnimationValueComponent>> BaseSlowdownAnimationValue;
         public readonly EcsPool<BaseValueComponent<SlowdownMoveValueComponent>> BaseSlowdownMoveValue;
@@ -184,6 +200,8 @@ namespace Core.Generated
         public readonly EcsPool<Button2Tag> Button2;
         public readonly EcsPool<Button3Tag> Button3;
         public readonly EcsPool<Button4Tag> Button4;
+        public readonly EcsPool<ButtonJumpForwardTag> ButtonJumpForward;
+        public readonly EcsPool<ButtonJumpTag> ButtonJump;
         public readonly EcsPool<ButtonMoveTag> ButtonMove;
         public readonly EcsPool<ButtonTeleport> ButtonTeleport;
         public readonly EcsPool<ButtonUseHealing> ButtonUseHealing;
@@ -194,6 +212,8 @@ namespace Core.Generated
         public readonly EcsPool<ChargeCostValueComponent<ActionLinkButton4Component>> ChargeCostValueActionLinkButton4;
         public readonly EcsPool<ChargeCostValueComponent<ActionLinkMouseLeftComponent>> ChargeCostValueActionLinkMouseLeft;
         public readonly EcsPool<ChargeCostValueComponent<ActionLinkMouseRightComponent>> ChargeCostValueActionLinkMouseRight;
+        public readonly EcsPool<ChargeCostValueComponent<ActionLinkSpaceComponent>> ChargeCostValueActionLinkSpace;
+        public readonly EcsPool<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>> ChargeCostValueActionLinkSpaceForward;
         public readonly EcsPool<ChargeCostValueComponent<HealingPotionValueComponent>> ChargeCostValueHealingPotionValue;
         public readonly EcsPool<ChargeMaxValueComponent<ActionLinkButton1Component>> ChargeMaxValueActionLinkButton1;
         public readonly EcsPool<ChargeMaxValueComponent<ActionLinkButton2Component>> ChargeMaxValueActionLinkButton2;
@@ -201,6 +221,8 @@ namespace Core.Generated
         public readonly EcsPool<ChargeMaxValueComponent<ActionLinkButton4Component>> ChargeMaxValueActionLinkButton4;
         public readonly EcsPool<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>> ChargeMaxValueActionLinkMouseLeft;
         public readonly EcsPool<ChargeMaxValueComponent<ActionLinkMouseRightComponent>> ChargeMaxValueActionLinkMouseRight;
+        public readonly EcsPool<ChargeMaxValueComponent<ActionLinkSpaceComponent>> ChargeMaxValueActionLinkSpace;
+        public readonly EcsPool<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>> ChargeMaxValueActionLinkSpaceForward;
         public readonly EcsPool<ChargeMaxValueComponent<HealingPotionValueComponent>> ChargeMaxValueHealingPotionValue;
         public readonly EcsPool<ChargeValueComponent<ActionLinkButton1Component>> ChargeValueActionLinkButton1;
         public readonly EcsPool<ChargeValueComponent<ActionLinkButton2Component>> ChargeValueActionLinkButton2;
@@ -208,6 +230,8 @@ namespace Core.Generated
         public readonly EcsPool<ChargeValueComponent<ActionLinkButton4Component>> ChargeValueActionLinkButton4;
         public readonly EcsPool<ChargeValueComponent<ActionLinkMouseLeftComponent>> ChargeValueActionLinkMouseLeft;
         public readonly EcsPool<ChargeValueComponent<ActionLinkMouseRightComponent>> ChargeValueActionLinkMouseRight;
+        public readonly EcsPool<ChargeValueComponent<ActionLinkSpaceComponent>> ChargeValueActionLinkSpace;
+        public readonly EcsPool<ChargeValueComponent<ActionLinkSpaceForwardComponent>> ChargeValueActionLinkSpaceForward;
         public readonly EcsPool<ChargeValueComponent<HealingPotionValueComponent>> ChargeValueHealingPotionValue;
         public readonly EcsPool<ControlLockOnTargetTag> ControlLockOnTarget;
         public readonly EcsPool<ConvertToEntityComponent> ConvertToEntity;
@@ -217,6 +241,8 @@ namespace Core.Generated
         public readonly EcsPool<CooldownValueComponent<ActionLinkButton4Component>> CooldownValueActionLinkButton4;
         public readonly EcsPool<CooldownValueComponent<ActionLinkMouseLeftComponent>> CooldownValueActionLinkMouseLeft;
         public readonly EcsPool<CooldownValueComponent<ActionLinkMouseRightComponent>> CooldownValueActionLinkMouseRight;
+        public readonly EcsPool<CooldownValueComponent<ActionLinkSpaceComponent>> CooldownValueActionLinkSpace;
+        public readonly EcsPool<CooldownValueComponent<ActionLinkSpaceForwardComponent>> CooldownValueActionLinkSpaceForward;
         public readonly EcsPool<CooldownValueComponent<HealingPotionValueComponent>> CooldownValueHealingPotionValue;
         public readonly EcsPool<CopyToParentTag<EventResourceGenerated>> CopyToParentEventResourceGenerated;
         public readonly EcsPool<CostValueComponent<ActionLinkButton1Component>> CostValueActionLinkButton1;
@@ -225,6 +251,8 @@ namespace Core.Generated
         public readonly EcsPool<CostValueComponent<ActionLinkButton4Component>> CostValueActionLinkButton4;
         public readonly EcsPool<CostValueComponent<ActionLinkMouseLeftComponent>> CostValueActionLinkMouseLeft;
         public readonly EcsPool<CostValueComponent<ActionLinkMouseRightComponent>> CostValueActionLinkMouseRight;
+        public readonly EcsPool<CostValueComponent<ActionLinkSpaceComponent>> CostValueActionLinkSpace;
+        public readonly EcsPool<CostValueComponent<ActionLinkSpaceForwardComponent>> CostValueActionLinkSpaceForward;
         public readonly EcsPool<CriticalChanceValueComponent> CriticalChanceValue;
         public readonly EcsPool<CriticalDamageValueComponent> CriticalDamageValue;
         public readonly EcsPool<DamageAreaAutoResetComponent> DamageAreaAutoReset;
@@ -272,7 +300,6 @@ namespace Core.Generated
         public readonly EcsPool<EventBehaviorTreeActivate> EventBehaviorTreeActivate;
         public readonly EcsPool<EventBehaviorTreeDeactivate> EventBehaviorTreeDeactivate;
         public readonly EcsPool<EventButtonCanceled<ButtonMoveTag>> EventButtonCanceledButtonMove;
-        public readonly EcsPool<EventButtonCanceled<MouseLeftTag>> EventButtonCanceledMouseLeft;
         public readonly EcsPool<EventCameraShakeComponent> EventCameraShake;
         public readonly EcsPool<EventCausedDamage> EventCausedDamage;
         public readonly EcsPool<EventCheckMerges> EventCheckMerges;
@@ -350,6 +377,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkButton4Component>>> EventUpdatedChargeCostValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedChargeCostValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedChargeCostValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkSpaceComponent>>> EventUpdatedChargeCostValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedChargeCostValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<ChargeCostValueComponent<HealingPotionValueComponent>>> EventUpdatedChargeCostValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton1Component>>> EventUpdatedChargeMaxValueActionLinkButton1;
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton2Component>>> EventUpdatedChargeMaxValueActionLinkButton2;
@@ -357,6 +386,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton4Component>>> EventUpdatedChargeMaxValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedChargeMaxValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedChargeMaxValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkSpaceComponent>>> EventUpdatedChargeMaxValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedChargeMaxValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<ChargeMaxValueComponent<HealingPotionValueComponent>>> EventUpdatedChargeMaxValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton1Component>>> EventUpdatedChargeValueActionLinkButton1;
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton2Component>>> EventUpdatedChargeValueActionLinkButton2;
@@ -364,6 +395,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton4Component>>> EventUpdatedChargeValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedChargeValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedChargeValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkSpaceComponent>>> EventUpdatedChargeValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<ChargeValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedChargeValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<ChargeValueComponent<HealingPotionValueComponent>>> EventUpdatedChargeValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton1Component>>> EventUpdatedCooldownValueActionLinkButton1;
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton2Component>>> EventUpdatedCooldownValueActionLinkButton2;
@@ -371,6 +404,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton4Component>>> EventUpdatedCooldownValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedCooldownValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedCooldownValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkSpaceComponent>>> EventUpdatedCooldownValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<CooldownValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedCooldownValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<CooldownValueComponent<HealingPotionValueComponent>>> EventUpdatedCooldownValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkButton1Component>>> EventUpdatedCostValueActionLinkButton1;
         public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkButton2Component>>> EventUpdatedCostValueActionLinkButton2;
@@ -378,6 +413,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkButton4Component>>> EventUpdatedCostValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedCostValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedCostValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkSpaceComponent>>> EventUpdatedCostValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<CostValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedCostValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<CriticalChanceValueComponent>> EventUpdatedCriticalChanceValue;
         public readonly EcsPool<EventValueUpdated<CriticalDamageValueComponent>> EventUpdatedCriticalDamageValue;
         public readonly EcsPool<EventValueUpdated<DamageColdValueComponent>> EventUpdatedDamageColdValue;
@@ -423,6 +460,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>> EventUpdatedResourceRecoveryPerHitValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedResourceRecoveryPerHitValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedResourceRecoveryPerHitValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>> EventUpdatedResourceRecoveryPerHitValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedResourceRecoveryPerHitValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>> EventUpdatedResourceRecoveryPerHitValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkButton1;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkButton2;
@@ -430,6 +469,8 @@ namespace Core.Generated
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkButton4;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseLeft;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseRight;
+        public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkSpace;
+        public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>> EventUpdatedResourceRecoveryPerUsingValueActionLinkSpaceForward;
         public readonly EcsPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>> EventUpdatedResourceRecoveryPerUsingValueHealingPotionValue;
         public readonly EcsPool<EventValueUpdated<SlowdownAnimationValueComponent>> EventUpdatedSlowdownAnimationValue;
         public readonly EcsPool<EventValueUpdated<SlowdownMoveValueComponent>> EventUpdatedSlowdownMoveValue;
@@ -531,6 +572,8 @@ namespace Core.Generated
         public readonly EcsPool<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>> ResourceRecoveryPerHitValueActionLinkButton4;
         public readonly EcsPool<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>> ResourceRecoveryPerHitValueActionLinkMouseLeft;
         public readonly EcsPool<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>> ResourceRecoveryPerHitValueActionLinkMouseRight;
+        public readonly EcsPool<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>> ResourceRecoveryPerHitValueActionLinkSpace;
+        public readonly EcsPool<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>> ResourceRecoveryPerHitValueActionLinkSpaceForward;
         public readonly EcsPool<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>> ResourceRecoveryPerHitValueHealingPotionValue;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>> ResourceRecoveryPerUsingValueActionLinkButton1;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>> ResourceRecoveryPerUsingValueActionLinkButton2;
@@ -538,6 +581,8 @@ namespace Core.Generated
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>> ResourceRecoveryPerUsingValueActionLinkButton4;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>> ResourceRecoveryPerUsingValueActionLinkMouseLeft;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>> ResourceRecoveryPerUsingValueActionLinkMouseRight;
+        public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>> ResourceRecoveryPerUsingValueActionLinkSpace;
+        public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>> ResourceRecoveryPerUsingValueActionLinkSpaceForward;
         public readonly EcsPool<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>> ResourceRecoveryPerUsingValueHealingPotionValue;
         public readonly EcsPool<Rigidbody2DComponent> Rigidbody2D;
         public readonly EcsPool<RigidbodyComponent> Rigidbody;
@@ -585,6 +630,8 @@ namespace Core.Generated
             ActionLinkButton4 = world.GetPool<ActionLinkButton4Component>();
             ActionLinkMouseLeft = world.GetPool<ActionLinkMouseLeftComponent>();
             ActionLinkMouseRight = world.GetPool<ActionLinkMouseRightComponent>();
+            ActionLinkSpace = world.GetPool<ActionLinkSpaceComponent>();
+            ActionLinkSpaceForward = world.GetPool<ActionLinkSpaceForwardComponent>();
             ActionLinkTeleportToHub = world.GetPool<ActionLinkTeleportToHubComponent>();
             ActionMove = world.GetPool<ActionMoveComponent>();
             ActionOnMoveComplete = world.GetPool<ActionOnMoveCompleteComponent>();
@@ -647,6 +694,8 @@ namespace Core.Generated
             BaseChargeCostValueActionLinkButton4 = world.GetPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkButton4Component>>>();
             BaseChargeCostValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseChargeCostValueActionLinkMouseRight = world.GetPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseChargeCostValueActionLinkSpace = world.GetPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceComponent>>>();
+            BaseChargeCostValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseChargeCostValueHealingPotionValue = world.GetPool<BaseValueComponent<ChargeCostValueComponent<HealingPotionValueComponent>>>();
             BaseChargeMaxValueActionLinkButton1 = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton1Component>>>();
             BaseChargeMaxValueActionLinkButton2 = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton2Component>>>();
@@ -654,6 +703,8 @@ namespace Core.Generated
             BaseChargeMaxValueActionLinkButton4 = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton4Component>>>();
             BaseChargeMaxValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseChargeMaxValueActionLinkMouseRight = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseChargeMaxValueActionLinkSpace = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceComponent>>>();
+            BaseChargeMaxValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseChargeMaxValueHealingPotionValue = world.GetPool<BaseValueComponent<ChargeMaxValueComponent<HealingPotionValueComponent>>>();
             BaseChargeValueActionLinkButton1 = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton1Component>>>();
             BaseChargeValueActionLinkButton2 = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton2Component>>>();
@@ -661,6 +712,8 @@ namespace Core.Generated
             BaseChargeValueActionLinkButton4 = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkButton4Component>>>();
             BaseChargeValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseChargeValueActionLinkMouseRight = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseChargeValueActionLinkSpace = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceComponent>>>();
+            BaseChargeValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseChargeValueHealingPotionValue = world.GetPool<BaseValueComponent<ChargeValueComponent<HealingPotionValueComponent>>>();
             BaseCooldownValueActionLinkButton1 = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton1Component>>>();
             BaseCooldownValueActionLinkButton2 = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton2Component>>>();
@@ -668,6 +721,8 @@ namespace Core.Generated
             BaseCooldownValueActionLinkButton4 = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkButton4Component>>>();
             BaseCooldownValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseCooldownValueActionLinkMouseRight = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseCooldownValueActionLinkSpace = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceComponent>>>();
+            BaseCooldownValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseCooldownValueHealingPotionValue = world.GetPool<BaseValueComponent<CooldownValueComponent<HealingPotionValueComponent>>>();
             BaseCostValueActionLinkButton1 = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkButton1Component>>>();
             BaseCostValueActionLinkButton2 = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkButton2Component>>>();
@@ -675,6 +730,8 @@ namespace Core.Generated
             BaseCostValueActionLinkButton4 = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkButton4Component>>>();
             BaseCostValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseCostValueActionLinkMouseRight = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseCostValueActionLinkSpace = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkSpaceComponent>>>();
+            BaseCostValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<CostValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseCriticalChanceValue = world.GetPool<BaseValueComponent<CriticalChanceValueComponent>>();
             BaseCriticalDamageValue = world.GetPool<BaseValueComponent<CriticalDamageValueComponent>>();
             BaseDamageColdValue = world.GetPool<BaseValueComponent<DamageColdValueComponent>>();
@@ -720,6 +777,8 @@ namespace Core.Generated
             BaseResourceRecoveryPerHitValueActionLinkButton4 = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>>();
             BaseResourceRecoveryPerHitValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseResourceRecoveryPerHitValueActionLinkMouseRight = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseResourceRecoveryPerHitValueActionLinkSpace = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>>();
+            BaseResourceRecoveryPerHitValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseResourceRecoveryPerHitValueHealingPotionValue = world.GetPool<BaseValueComponent<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>>();
             BaseResourceRecoveryPerUsingValueActionLinkButton1 = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>>();
             BaseResourceRecoveryPerUsingValueActionLinkButton2 = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>>();
@@ -727,6 +786,8 @@ namespace Core.Generated
             BaseResourceRecoveryPerUsingValueActionLinkButton4 = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>>();
             BaseResourceRecoveryPerUsingValueActionLinkMouseLeft = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>>();
             BaseResourceRecoveryPerUsingValueActionLinkMouseRight = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>>();
+            BaseResourceRecoveryPerUsingValueActionLinkSpace = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>>();
+            BaseResourceRecoveryPerUsingValueActionLinkSpaceForward = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>>();
             BaseResourceRecoveryPerUsingValueHealingPotionValue = world.GetPool<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>>();
             BaseSlowdownAnimationValue = world.GetPool<BaseValueComponent<SlowdownAnimationValueComponent>>();
             BaseSlowdownMoveValue = world.GetPool<BaseValueComponent<SlowdownMoveValueComponent>>();
@@ -743,6 +804,8 @@ namespace Core.Generated
             Button2 = world.GetPool<Button2Tag>();
             Button3 = world.GetPool<Button3Tag>();
             Button4 = world.GetPool<Button4Tag>();
+            ButtonJumpForward = world.GetPool<ButtonJumpForwardTag>();
+            ButtonJump = world.GetPool<ButtonJumpTag>();
             ButtonMove = world.GetPool<ButtonMoveTag>();
             ButtonTeleport = world.GetPool<ButtonTeleport>();
             ButtonUseHealing = world.GetPool<ButtonUseHealing>();
@@ -753,6 +816,8 @@ namespace Core.Generated
             ChargeCostValueActionLinkButton4 = world.GetPool<ChargeCostValueComponent<ActionLinkButton4Component>>();
             ChargeCostValueActionLinkMouseLeft = world.GetPool<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>();
             ChargeCostValueActionLinkMouseRight = world.GetPool<ChargeCostValueComponent<ActionLinkMouseRightComponent>>();
+            ChargeCostValueActionLinkSpace = world.GetPool<ChargeCostValueComponent<ActionLinkSpaceComponent>>();
+            ChargeCostValueActionLinkSpaceForward = world.GetPool<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>();
             ChargeCostValueHealingPotionValue = world.GetPool<ChargeCostValueComponent<HealingPotionValueComponent>>();
             ChargeMaxValueActionLinkButton1 = world.GetPool<ChargeMaxValueComponent<ActionLinkButton1Component>>();
             ChargeMaxValueActionLinkButton2 = world.GetPool<ChargeMaxValueComponent<ActionLinkButton2Component>>();
@@ -760,6 +825,8 @@ namespace Core.Generated
             ChargeMaxValueActionLinkButton4 = world.GetPool<ChargeMaxValueComponent<ActionLinkButton4Component>>();
             ChargeMaxValueActionLinkMouseLeft = world.GetPool<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>();
             ChargeMaxValueActionLinkMouseRight = world.GetPool<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>();
+            ChargeMaxValueActionLinkSpace = world.GetPool<ChargeMaxValueComponent<ActionLinkSpaceComponent>>();
+            ChargeMaxValueActionLinkSpaceForward = world.GetPool<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>();
             ChargeMaxValueHealingPotionValue = world.GetPool<ChargeMaxValueComponent<HealingPotionValueComponent>>();
             ChargeValueActionLinkButton1 = world.GetPool<ChargeValueComponent<ActionLinkButton1Component>>();
             ChargeValueActionLinkButton2 = world.GetPool<ChargeValueComponent<ActionLinkButton2Component>>();
@@ -767,6 +834,8 @@ namespace Core.Generated
             ChargeValueActionLinkButton4 = world.GetPool<ChargeValueComponent<ActionLinkButton4Component>>();
             ChargeValueActionLinkMouseLeft = world.GetPool<ChargeValueComponent<ActionLinkMouseLeftComponent>>();
             ChargeValueActionLinkMouseRight = world.GetPool<ChargeValueComponent<ActionLinkMouseRightComponent>>();
+            ChargeValueActionLinkSpace = world.GetPool<ChargeValueComponent<ActionLinkSpaceComponent>>();
+            ChargeValueActionLinkSpaceForward = world.GetPool<ChargeValueComponent<ActionLinkSpaceForwardComponent>>();
             ChargeValueHealingPotionValue = world.GetPool<ChargeValueComponent<HealingPotionValueComponent>>();
             ControlLockOnTarget = world.GetPool<ControlLockOnTargetTag>();
             ConvertToEntity = world.GetPool<ConvertToEntityComponent>();
@@ -776,6 +845,8 @@ namespace Core.Generated
             CooldownValueActionLinkButton4 = world.GetPool<CooldownValueComponent<ActionLinkButton4Component>>();
             CooldownValueActionLinkMouseLeft = world.GetPool<CooldownValueComponent<ActionLinkMouseLeftComponent>>();
             CooldownValueActionLinkMouseRight = world.GetPool<CooldownValueComponent<ActionLinkMouseRightComponent>>();
+            CooldownValueActionLinkSpace = world.GetPool<CooldownValueComponent<ActionLinkSpaceComponent>>();
+            CooldownValueActionLinkSpaceForward = world.GetPool<CooldownValueComponent<ActionLinkSpaceForwardComponent>>();
             CooldownValueHealingPotionValue = world.GetPool<CooldownValueComponent<HealingPotionValueComponent>>();
             CopyToParentEventResourceGenerated = world.GetPool<CopyToParentTag<EventResourceGenerated>>();
             CostValueActionLinkButton1 = world.GetPool<CostValueComponent<ActionLinkButton1Component>>();
@@ -784,6 +855,8 @@ namespace Core.Generated
             CostValueActionLinkButton4 = world.GetPool<CostValueComponent<ActionLinkButton4Component>>();
             CostValueActionLinkMouseLeft = world.GetPool<CostValueComponent<ActionLinkMouseLeftComponent>>();
             CostValueActionLinkMouseRight = world.GetPool<CostValueComponent<ActionLinkMouseRightComponent>>();
+            CostValueActionLinkSpace = world.GetPool<CostValueComponent<ActionLinkSpaceComponent>>();
+            CostValueActionLinkSpaceForward = world.GetPool<CostValueComponent<ActionLinkSpaceForwardComponent>>();
             CriticalChanceValue = world.GetPool<CriticalChanceValueComponent>();
             CriticalDamageValue = world.GetPool<CriticalDamageValueComponent>();
             DamageAreaAutoReset = world.GetPool<DamageAreaAutoResetComponent>();
@@ -831,7 +904,6 @@ namespace Core.Generated
             EventBehaviorTreeActivate = world.GetPool<EventBehaviorTreeActivate>();
             EventBehaviorTreeDeactivate = world.GetPool<EventBehaviorTreeDeactivate>();
             EventButtonCanceledButtonMove = world.GetPool<EventButtonCanceled<ButtonMoveTag>>();
-            EventButtonCanceledMouseLeft = world.GetPool<EventButtonCanceled<MouseLeftTag>>();
             EventCameraShake = world.GetPool<EventCameraShakeComponent>();
             EventCausedDamage = world.GetPool<EventCausedDamage>();
             EventCheckMerges = world.GetPool<EventCheckMerges>();
@@ -909,6 +981,8 @@ namespace Core.Generated
             EventUpdatedChargeCostValueActionLinkButton4 = world.GetPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedChargeCostValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedChargeCostValueActionLinkMouseRight = world.GetPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedChargeCostValueActionLinkSpace = world.GetPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedChargeCostValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedChargeCostValueHealingPotionValue = world.GetPool<EventValueUpdated<ChargeCostValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedChargeMaxValueActionLinkButton1 = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton1Component>>>();
             EventUpdatedChargeMaxValueActionLinkButton2 = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton2Component>>>();
@@ -916,6 +990,8 @@ namespace Core.Generated
             EventUpdatedChargeMaxValueActionLinkButton4 = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedChargeMaxValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedChargeMaxValueActionLinkMouseRight = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedChargeMaxValueActionLinkSpace = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedChargeMaxValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedChargeMaxValueHealingPotionValue = world.GetPool<EventValueUpdated<ChargeMaxValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedChargeValueActionLinkButton1 = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton1Component>>>();
             EventUpdatedChargeValueActionLinkButton2 = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton2Component>>>();
@@ -923,6 +999,8 @@ namespace Core.Generated
             EventUpdatedChargeValueActionLinkButton4 = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedChargeValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedChargeValueActionLinkMouseRight = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedChargeValueActionLinkSpace = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedChargeValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<ChargeValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedChargeValueHealingPotionValue = world.GetPool<EventValueUpdated<ChargeValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedCooldownValueActionLinkButton1 = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton1Component>>>();
             EventUpdatedCooldownValueActionLinkButton2 = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton2Component>>>();
@@ -930,6 +1008,8 @@ namespace Core.Generated
             EventUpdatedCooldownValueActionLinkButton4 = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedCooldownValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedCooldownValueActionLinkMouseRight = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedCooldownValueActionLinkSpace = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedCooldownValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<CooldownValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedCooldownValueHealingPotionValue = world.GetPool<EventValueUpdated<CooldownValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedCostValueActionLinkButton1 = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkButton1Component>>>();
             EventUpdatedCostValueActionLinkButton2 = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkButton2Component>>>();
@@ -937,6 +1017,8 @@ namespace Core.Generated
             EventUpdatedCostValueActionLinkButton4 = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedCostValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedCostValueActionLinkMouseRight = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedCostValueActionLinkSpace = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedCostValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<CostValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedCriticalChanceValue = world.GetPool<EventValueUpdated<CriticalChanceValueComponent>>();
             EventUpdatedCriticalDamageValue = world.GetPool<EventValueUpdated<CriticalDamageValueComponent>>();
             EventUpdatedDamageColdValue = world.GetPool<EventValueUpdated<DamageColdValueComponent>>();
@@ -982,6 +1064,8 @@ namespace Core.Generated
             EventUpdatedResourceRecoveryPerHitValueActionLinkButton4 = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedResourceRecoveryPerHitValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedResourceRecoveryPerHitValueActionLinkMouseRight = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedResourceRecoveryPerHitValueActionLinkSpace = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedResourceRecoveryPerHitValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedResourceRecoveryPerHitValueHealingPotionValue = world.GetPool<EventValueUpdated<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedResourceRecoveryPerUsingValueActionLinkButton1 = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>>();
             EventUpdatedResourceRecoveryPerUsingValueActionLinkButton2 = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>>();
@@ -989,6 +1073,8 @@ namespace Core.Generated
             EventUpdatedResourceRecoveryPerUsingValueActionLinkButton4 = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>>();
             EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseLeft = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>>();
             EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseRight = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>>();
+            EventUpdatedResourceRecoveryPerUsingValueActionLinkSpace = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>>();
+            EventUpdatedResourceRecoveryPerUsingValueActionLinkSpaceForward = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>>();
             EventUpdatedResourceRecoveryPerUsingValueHealingPotionValue = world.GetPool<EventValueUpdated<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>>();
             EventUpdatedSlowdownAnimationValue = world.GetPool<EventValueUpdated<SlowdownAnimationValueComponent>>();
             EventUpdatedSlowdownMoveValue = world.GetPool<EventValueUpdated<SlowdownMoveValueComponent>>();
@@ -1090,6 +1176,8 @@ namespace Core.Generated
             ResourceRecoveryPerHitValueActionLinkButton4 = world.GetPool<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>();
             ResourceRecoveryPerHitValueActionLinkMouseLeft = world.GetPool<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>();
             ResourceRecoveryPerHitValueActionLinkMouseRight = world.GetPool<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>();
+            ResourceRecoveryPerHitValueActionLinkSpace = world.GetPool<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>();
+            ResourceRecoveryPerHitValueActionLinkSpaceForward = world.GetPool<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>();
             ResourceRecoveryPerHitValueHealingPotionValue = world.GetPool<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>();
             ResourceRecoveryPerUsingValueActionLinkButton1 = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>();
             ResourceRecoveryPerUsingValueActionLinkButton2 = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>();
@@ -1097,6 +1185,8 @@ namespace Core.Generated
             ResourceRecoveryPerUsingValueActionLinkButton4 = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>();
             ResourceRecoveryPerUsingValueActionLinkMouseLeft = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>();
             ResourceRecoveryPerUsingValueActionLinkMouseRight = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>();
+            ResourceRecoveryPerUsingValueActionLinkSpace = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>();
+            ResourceRecoveryPerUsingValueActionLinkSpaceForward = world.GetPool<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>();
             ResourceRecoveryPerUsingValueHealingPotionValue = world.GetPool<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>();
             Rigidbody2D = world.GetPool<Rigidbody2DComponent>();
             Rigidbody = world.GetPool<RigidbodyComponent>();

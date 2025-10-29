@@ -29,7 +29,7 @@ namespace Core.Systems
                 var position = (Vector2)_pools.Position.Get(i).transform.position;
                 var line = dest.position - position;
 
-                var rigidbody = _pools.Rigidbody2D.Get(i).rigidbody;
+                var rigidbody = _pools.Rigidbody2D.Get(i).rigidbody2D;
                 rigidbody.rotation = Mathf.MoveTowardsAngle(rigidbody.rotation,
                     Vector2.SignedAngle(Vector2.right, _pools.MoveDirection.Get(i).direction = line.normalized),
                     _pools.AngularSpeed.Get(i).value * Time.deltaTime * _pools.Animator.Get(i).animancer.Graph.Speed);

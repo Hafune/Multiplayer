@@ -6,6 +6,6 @@ namespace Core.Components
     [Serializable]
     public struct Rigidbody2DComponent
     {
-        public Rigidbody2D rigidbody;
+        public Rigidbody2D rigidbody2D;
     }
 }

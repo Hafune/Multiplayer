@@ -83,6 +83,8 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<ActionLinkButton4Component>>>, Exc<ChargeCostValueComponent<ActionLinkButton4Component>>> _baseChargeCostValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>>, Exc<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>> _baseChargeCostValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseRightComponent>>>, Exc<ChargeCostValueComponent<ActionLinkMouseRightComponent>>> _baseChargeCostValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceComponent>>>, Exc<ChargeCostValueComponent<ActionLinkSpaceComponent>>> _baseChargeCostValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeCostValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeCostValueComponent<HealingPotionValueComponent>>>, Exc<ChargeCostValueComponent<HealingPotionValueComponent>>> _baseChargeCostValueHealingPotionValueFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton1Component>>>, Exc<ChargeMaxValueComponent<ActionLinkButton1Component>>> _baseChargeMaxValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton2Component>>>, Exc<ChargeMaxValueComponent<ActionLinkButton2Component>>> _baseChargeMaxValueActionLinkButton2Filter;
@@ -90,6 +92,8 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton4Component>>>, Exc<ChargeMaxValueComponent<ActionLinkButton4Component>>> _baseChargeMaxValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>>, Exc<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>> _baseChargeMaxValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>>, Exc<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>> _baseChargeMaxValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceComponent>>>, Exc<ChargeMaxValueComponent<ActionLinkSpaceComponent>>> _baseChargeMaxValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeMaxValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeMaxValueComponent<HealingPotionValueComponent>>>, Exc<ChargeMaxValueComponent<HealingPotionValueComponent>>> _baseChargeMaxValueHealingPotionValueFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkButton1Component>>>, Exc<ChargeValueComponent<ActionLinkButton1Component>>> _baseChargeValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkButton2Component>>>, Exc<ChargeValueComponent<ActionLinkButton2Component>>> _baseChargeValueActionLinkButton2Filter;
@@ -97,6 +101,8 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkButton4Component>>>, Exc<ChargeValueComponent<ActionLinkButton4Component>>> _baseChargeValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkMouseLeftComponent>>>, Exc<ChargeValueComponent<ActionLinkMouseLeftComponent>>> _baseChargeValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkMouseRightComponent>>>, Exc<ChargeValueComponent<ActionLinkMouseRightComponent>>> _baseChargeValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkSpaceComponent>>>, Exc<ChargeValueComponent<ActionLinkSpaceComponent>>> _baseChargeValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<ChargeValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ChargeValueComponent<HealingPotionValueComponent>>>, Exc<ChargeValueComponent<HealingPotionValueComponent>>> _baseChargeValueHealingPotionValueFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkButton1Component>>>, Exc<CooldownValueComponent<ActionLinkButton1Component>>> _baseCooldownValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkButton2Component>>>, Exc<CooldownValueComponent<ActionLinkButton2Component>>> _baseCooldownValueActionLinkButton2Filter;
@@ -104,6 +110,8 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkButton4Component>>>, Exc<CooldownValueComponent<ActionLinkButton4Component>>> _baseCooldownValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkMouseLeftComponent>>>, Exc<CooldownValueComponent<ActionLinkMouseLeftComponent>>> _baseCooldownValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkMouseRightComponent>>>, Exc<CooldownValueComponent<ActionLinkMouseRightComponent>>> _baseCooldownValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkSpaceComponent>>>, Exc<CooldownValueComponent<ActionLinkSpaceComponent>>> _baseCooldownValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<CooldownValueComponent<ActionLinkSpaceForwardComponent>>> _baseCooldownValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CooldownValueComponent<HealingPotionValueComponent>>>, Exc<CooldownValueComponent<HealingPotionValueComponent>>> _baseCooldownValueHealingPotionValueFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkButton1Component>>>, Exc<CostValueComponent<ActionLinkButton1Component>>> _baseCostValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkButton2Component>>>, Exc<CostValueComponent<ActionLinkButton2Component>>> _baseCostValueActionLinkButton2Filter;
@@ -111,12 +119,16 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkButton4Component>>>, Exc<CostValueComponent<ActionLinkButton4Component>>> _baseCostValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkMouseLeftComponent>>>, Exc<CostValueComponent<ActionLinkMouseLeftComponent>>> _baseCostValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkMouseRightComponent>>>, Exc<CostValueComponent<ActionLinkMouseRightComponent>>> _baseCostValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkSpaceComponent>>>, Exc<CostValueComponent<ActionLinkSpaceComponent>>> _baseCostValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<CostValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<CostValueComponent<ActionLinkSpaceForwardComponent>>> _baseCostValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton1Component>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkButton1Component>>> _baseResourceRecoveryPerHitValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton2Component>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkButton2Component>>> _baseResourceRecoveryPerHitValueActionLinkButton2Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton3Component>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkButton3Component>>> _baseResourceRecoveryPerHitValueActionLinkButton3Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>> _baseResourceRecoveryPerHitValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>> _baseResourceRecoveryPerHitValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>> _baseResourceRecoveryPerHitValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>> _baseResourceRecoveryPerHitValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>> _baseResourceRecoveryPerHitValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>>, Exc<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>> _baseResourceRecoveryPerHitValueHealingPotionValueFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>> _baseResourceRecoveryPerUsingValueActionLinkButton1Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>> _baseResourceRecoveryPerUsingValueActionLinkButton2Filter;
@@ -124,6 +136,8 @@ namespace Core.Generated
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>> _baseResourceRecoveryPerUsingValueActionLinkButton4Filter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>> _baseResourceRecoveryPerUsingValueActionLinkMouseLeftFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>> _baseResourceRecoveryPerUsingValueActionLinkMouseRightFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>> _baseResourceRecoveryPerUsingValueActionLinkSpaceFilter;
+        private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>>, Exc<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>> _baseResourceRecoveryPerUsingValueActionLinkSpaceForwardFilter;
         private readonly EcsFilterInject<Inc<EventInit, BaseValueComponent<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>>, Exc<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>> _baseResourceRecoveryPerUsingValueHealingPotionValueFilter;
 
         private readonly EcsPoolInject<BaseValueComponent<ActionCostPerSecondValueComponent>> _baseActionCostPerSecondValuePool;
@@ -272,6 +286,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<ChargeCostValueComponent<ActionLinkMouseLeftComponent>> _ChargeCostValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeCostValueComponent<ActionLinkMouseRightComponent>>> _baseChargeCostValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<ChargeCostValueComponent<ActionLinkMouseRightComponent>> _ChargeCostValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceComponent>>> _baseChargeCostValueActionLinkSpacePool;
+        private readonly EcsPoolInject<ChargeCostValueComponent<ActionLinkSpaceComponent>> _ChargeCostValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeCostValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<ChargeCostValueComponent<ActionLinkSpaceForwardComponent>> _ChargeCostValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeCostValueComponent<HealingPotionValueComponent>>> _baseChargeCostValueHealingPotionValuePool;
         private readonly EcsPoolInject<ChargeCostValueComponent<HealingPotionValueComponent>> _ChargeCostValueHealingPotionValuePool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeMaxValueComponent<ActionLinkButton1Component>>> _baseChargeMaxValueActionLinkButton1Pool;
@@ -286,6 +304,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>> _ChargeMaxValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>> _baseChargeMaxValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<ChargeMaxValueComponent<ActionLinkMouseRightComponent>> _ChargeMaxValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceComponent>>> _baseChargeMaxValueActionLinkSpacePool;
+        private readonly EcsPoolInject<ChargeMaxValueComponent<ActionLinkSpaceComponent>> _ChargeMaxValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeMaxValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<ChargeMaxValueComponent<ActionLinkSpaceForwardComponent>> _ChargeMaxValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeMaxValueComponent<HealingPotionValueComponent>>> _baseChargeMaxValueHealingPotionValuePool;
         private readonly EcsPoolInject<ChargeMaxValueComponent<HealingPotionValueComponent>> _ChargeMaxValueHealingPotionValuePool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeValueComponent<ActionLinkButton1Component>>> _baseChargeValueActionLinkButton1Pool;
@@ -300,6 +322,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<ChargeValueComponent<ActionLinkMouseLeftComponent>> _ChargeValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeValueComponent<ActionLinkMouseRightComponent>>> _baseChargeValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<ChargeValueComponent<ActionLinkMouseRightComponent>> _ChargeValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceComponent>>> _baseChargeValueActionLinkSpacePool;
+        private readonly EcsPoolInject<ChargeValueComponent<ActionLinkSpaceComponent>> _ChargeValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<ChargeValueComponent<ActionLinkSpaceForwardComponent>>> _baseChargeValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<ChargeValueComponent<ActionLinkSpaceForwardComponent>> _ChargeValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ChargeValueComponent<HealingPotionValueComponent>>> _baseChargeValueHealingPotionValuePool;
         private readonly EcsPoolInject<ChargeValueComponent<HealingPotionValueComponent>> _ChargeValueHealingPotionValuePool;
         private readonly EcsPoolInject<BaseValueComponent<CooldownValueComponent<ActionLinkButton1Component>>> _baseCooldownValueActionLinkButton1Pool;
@@ -314,6 +340,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<CooldownValueComponent<ActionLinkMouseLeftComponent>> _CooldownValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<CooldownValueComponent<ActionLinkMouseRightComponent>>> _baseCooldownValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<CooldownValueComponent<ActionLinkMouseRightComponent>> _CooldownValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceComponent>>> _baseCooldownValueActionLinkSpacePool;
+        private readonly EcsPoolInject<CooldownValueComponent<ActionLinkSpaceComponent>> _CooldownValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<CooldownValueComponent<ActionLinkSpaceForwardComponent>>> _baseCooldownValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<CooldownValueComponent<ActionLinkSpaceForwardComponent>> _CooldownValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<CooldownValueComponent<HealingPotionValueComponent>>> _baseCooldownValueHealingPotionValuePool;
         private readonly EcsPoolInject<CooldownValueComponent<HealingPotionValueComponent>> _CooldownValueHealingPotionValuePool;
         private readonly EcsPoolInject<BaseValueComponent<CostValueComponent<ActionLinkButton1Component>>> _baseCostValueActionLinkButton1Pool;
@@ -328,6 +358,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<CostValueComponent<ActionLinkMouseLeftComponent>> _CostValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<CostValueComponent<ActionLinkMouseRightComponent>>> _baseCostValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<CostValueComponent<ActionLinkMouseRightComponent>> _CostValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<CostValueComponent<ActionLinkSpaceComponent>>> _baseCostValueActionLinkSpacePool;
+        private readonly EcsPoolInject<CostValueComponent<ActionLinkSpaceComponent>> _CostValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<CostValueComponent<ActionLinkSpaceForwardComponent>>> _baseCostValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<CostValueComponent<ActionLinkSpaceForwardComponent>> _CostValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton1Component>>> _baseResourceRecoveryPerHitValueActionLinkButton1Pool;
         private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<ActionLinkButton1Component>> _ResourceRecoveryPerHitValueActionLinkButton1Pool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkButton2Component>>> _baseResourceRecoveryPerHitValueActionLinkButton2Pool;
@@ -340,6 +374,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>> _ResourceRecoveryPerHitValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>> _baseResourceRecoveryPerHitValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>> _ResourceRecoveryPerHitValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>> _baseResourceRecoveryPerHitValueActionLinkSpacePool;
+        private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>> _ResourceRecoveryPerHitValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>>> _baseResourceRecoveryPerHitValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceForwardComponent>> _ResourceRecoveryPerHitValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>>> _baseResourceRecoveryPerHitValueHealingPotionValuePool;
         private readonly EcsPoolInject<ResourceRecoveryPerHitValueComponent<HealingPotionValueComponent>> _ResourceRecoveryPerHitValueHealingPotionValuePool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkButton1Component>>> _baseResourceRecoveryPerUsingValueActionLinkButton1Pool;
@@ -354,6 +392,10 @@ namespace Core.Generated
         private readonly EcsPoolInject<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>> _ResourceRecoveryPerUsingValueActionLinkMouseLeftPool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>> _baseResourceRecoveryPerUsingValueActionLinkMouseRightPool;
         private readonly EcsPoolInject<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>> _ResourceRecoveryPerUsingValueActionLinkMouseRightPool;
+        private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>> _baseResourceRecoveryPerUsingValueActionLinkSpacePool;
+        private readonly EcsPoolInject<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>> _ResourceRecoveryPerUsingValueActionLinkSpacePool;
+        private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>>> _baseResourceRecoveryPerUsingValueActionLinkSpaceForwardPool;
+        private readonly EcsPoolInject<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceForwardComponent>> _ResourceRecoveryPerUsingValueActionLinkSpaceForwardPool;
         private readonly EcsPoolInject<BaseValueComponent<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>>> _baseResourceRecoveryPerUsingValueHealingPotionValuePool;
         private readonly EcsPoolInject<ResourceRecoveryPerUsingValueComponent<HealingPotionValueComponent>> _ResourceRecoveryPerUsingValueHealingPotionValuePool;
 
@@ -435,6 +477,8 @@ namespace Core.Generated
             foreach (var i in _baseChargeCostValueActionLinkButton4Filter.Value) _ChargeCostValueActionLinkButton4Pool.Value.Add(i).value = _baseChargeCostValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeCostValueActionLinkMouseLeftFilter.Value) _ChargeCostValueActionLinkMouseLeftPool.Value.Add(i).value = _baseChargeCostValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeCostValueActionLinkMouseRightFilter.Value) _ChargeCostValueActionLinkMouseRightPool.Value.Add(i).value = _baseChargeCostValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeCostValueActionLinkSpaceFilter.Value) _ChargeCostValueActionLinkSpacePool.Value.Add(i).value = _baseChargeCostValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeCostValueActionLinkSpaceForwardFilter.Value) _ChargeCostValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseChargeCostValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeCostValueHealingPotionValueFilter.Value) _ChargeCostValueHealingPotionValuePool.Value.Add(i).value = _baseChargeCostValueHealingPotionValuePool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeMaxValueActionLinkButton1Filter.Value) _ChargeMaxValueActionLinkButton1Pool.Value.Add(i).value = _baseChargeMaxValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeMaxValueActionLinkButton2Filter.Value) _ChargeMaxValueActionLinkButton2Pool.Value.Add(i).value = _baseChargeMaxValueActionLinkButton2Pool.Value.Get(i).baseValue;
@@ -442,6 +486,8 @@ namespace Core.Generated
             foreach (var i in _baseChargeMaxValueActionLinkButton4Filter.Value) _ChargeMaxValueActionLinkButton4Pool.Value.Add(i).value = _baseChargeMaxValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeMaxValueActionLinkMouseLeftFilter.Value) _ChargeMaxValueActionLinkMouseLeftPool.Value.Add(i).value = _baseChargeMaxValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeMaxValueActionLinkMouseRightFilter.Value) _ChargeMaxValueActionLinkMouseRightPool.Value.Add(i).value = _baseChargeMaxValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeMaxValueActionLinkSpaceFilter.Value) _ChargeMaxValueActionLinkSpacePool.Value.Add(i).value = _baseChargeMaxValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeMaxValueActionLinkSpaceForwardFilter.Value) _ChargeMaxValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseChargeMaxValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeMaxValueHealingPotionValueFilter.Value) _ChargeMaxValueHealingPotionValuePool.Value.Add(i).value = _baseChargeMaxValueHealingPotionValuePool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeValueActionLinkButton1Filter.Value) _ChargeValueActionLinkButton1Pool.Value.Add(i).value = _baseChargeValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeValueActionLinkButton2Filter.Value) _ChargeValueActionLinkButton2Pool.Value.Add(i).value = _baseChargeValueActionLinkButton2Pool.Value.Get(i).baseValue;
@@ -449,6 +495,8 @@ namespace Core.Generated
             foreach (var i in _baseChargeValueActionLinkButton4Filter.Value) _ChargeValueActionLinkButton4Pool.Value.Add(i).value = _baseChargeValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeValueActionLinkMouseLeftFilter.Value) _ChargeValueActionLinkMouseLeftPool.Value.Add(i).value = _baseChargeValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeValueActionLinkMouseRightFilter.Value) _ChargeValueActionLinkMouseRightPool.Value.Add(i).value = _baseChargeValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeValueActionLinkSpaceFilter.Value) _ChargeValueActionLinkSpacePool.Value.Add(i).value = _baseChargeValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseChargeValueActionLinkSpaceForwardFilter.Value) _ChargeValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseChargeValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseChargeValueHealingPotionValueFilter.Value) _ChargeValueHealingPotionValuePool.Value.Add(i).value = _baseChargeValueHealingPotionValuePool.Value.Get(i).baseValue;
             foreach (var i in _baseCooldownValueActionLinkButton1Filter.Value) _CooldownValueActionLinkButton1Pool.Value.Add(i).value = _baseCooldownValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseCooldownValueActionLinkButton2Filter.Value) _CooldownValueActionLinkButton2Pool.Value.Add(i).value = _baseCooldownValueActionLinkButton2Pool.Value.Get(i).baseValue;
@@ -456,6 +504,8 @@ namespace Core.Generated
             foreach (var i in _baseCooldownValueActionLinkButton4Filter.Value) _CooldownValueActionLinkButton4Pool.Value.Add(i).value = _baseCooldownValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseCooldownValueActionLinkMouseLeftFilter.Value) _CooldownValueActionLinkMouseLeftPool.Value.Add(i).value = _baseCooldownValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseCooldownValueActionLinkMouseRightFilter.Value) _CooldownValueActionLinkMouseRightPool.Value.Add(i).value = _baseCooldownValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseCooldownValueActionLinkSpaceFilter.Value) _CooldownValueActionLinkSpacePool.Value.Add(i).value = _baseCooldownValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseCooldownValueActionLinkSpaceForwardFilter.Value) _CooldownValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseCooldownValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseCooldownValueHealingPotionValueFilter.Value) _CooldownValueHealingPotionValuePool.Value.Add(i).value = _baseCooldownValueHealingPotionValuePool.Value.Get(i).baseValue;
             foreach (var i in _baseCostValueActionLinkButton1Filter.Value) _CostValueActionLinkButton1Pool.Value.Add(i).value = _baseCostValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseCostValueActionLinkButton2Filter.Value) _CostValueActionLinkButton2Pool.Value.Add(i).value = _baseCostValueActionLinkButton2Pool.Value.Get(i).baseValue;
@@ -463,12 +513,16 @@ namespace Core.Generated
             foreach (var i in _baseCostValueActionLinkButton4Filter.Value) _CostValueActionLinkButton4Pool.Value.Add(i).value = _baseCostValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseCostValueActionLinkMouseLeftFilter.Value) _CostValueActionLinkMouseLeftPool.Value.Add(i).value = _baseCostValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseCostValueActionLinkMouseRightFilter.Value) _CostValueActionLinkMouseRightPool.Value.Add(i).value = _baseCostValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseCostValueActionLinkSpaceFilter.Value) _CostValueActionLinkSpacePool.Value.Add(i).value = _baseCostValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseCostValueActionLinkSpaceForwardFilter.Value) _CostValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseCostValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkButton1Filter.Value) _ResourceRecoveryPerHitValueActionLinkButton1Pool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkButton2Filter.Value) _ResourceRecoveryPerHitValueActionLinkButton2Pool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkButton2Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkButton3Filter.Value) _ResourceRecoveryPerHitValueActionLinkButton3Pool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkButton3Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkButton4Filter.Value) _ResourceRecoveryPerHitValueActionLinkButton4Pool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkMouseLeftFilter.Value) _ResourceRecoveryPerHitValueActionLinkMouseLeftPool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueActionLinkMouseRightFilter.Value) _ResourceRecoveryPerHitValueActionLinkMouseRightPool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseResourceRecoveryPerHitValueActionLinkSpaceFilter.Value) _ResourceRecoveryPerHitValueActionLinkSpacePool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseResourceRecoveryPerHitValueActionLinkSpaceForwardFilter.Value) _ResourceRecoveryPerHitValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseResourceRecoveryPerHitValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerHitValueHealingPotionValueFilter.Value) _ResourceRecoveryPerHitValueHealingPotionValuePool.Value.Add(i).value = _baseResourceRecoveryPerHitValueHealingPotionValuePool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkButton1Filter.Value) _ResourceRecoveryPerUsingValueActionLinkButton1Pool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkButton1Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkButton2Filter.Value) _ResourceRecoveryPerUsingValueActionLinkButton2Pool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkButton2Pool.Value.Get(i).baseValue;
@@ -476,6 +530,8 @@ namespace Core.Generated
             foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkButton4Filter.Value) _ResourceRecoveryPerUsingValueActionLinkButton4Pool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkButton4Pool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkMouseLeftFilter.Value) _ResourceRecoveryPerUsingValueActionLinkMouseLeftPool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkMouseLeftPool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkMouseRightFilter.Value) _ResourceRecoveryPerUsingValueActionLinkMouseRightPool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkMouseRightPool.Value.Get(i).baseValue;
+            foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkSpaceFilter.Value) _ResourceRecoveryPerUsingValueActionLinkSpacePool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkSpacePool.Value.Get(i).baseValue;
+            foreach (var i in _baseResourceRecoveryPerUsingValueActionLinkSpaceForwardFilter.Value) _ResourceRecoveryPerUsingValueActionLinkSpaceForwardPool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueActionLinkSpaceForwardPool.Value.Get(i).baseValue;
             foreach (var i in _baseResourceRecoveryPerUsingValueHealingPotionValueFilter.Value) _ResourceRecoveryPerUsingValueHealingPotionValuePool.Value.Add(i).value = _baseResourceRecoveryPerUsingValueHealingPotionValuePool.Value.Get(i).baseValue;
         }
     }

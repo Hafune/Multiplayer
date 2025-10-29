@@ -29,14 +29,16 @@ namespace Core.Systems
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var scales = _pools.MoveUpdate.Get(i);
                 var velocity = _pools.MoveDirection.Get(i).direction.ToVector3XZ();
-                velocity.y = body.linearVelocity.y;
+                var y = body.linearVelocity.y;
 
                 var direction = Quaternion.Inverse(body.rotation) * velocity;
                 var scale = Math.Abs(direction.z) < 0.1f ? scales.sidewaysSpeed :
                     direction.z > 0 ? scales.forwardSpeed :
                     scales.backwardSpeed;
 
-                body.linearVelocity = velocity * _pools.MoveSpeedValue.Get(i).value * scale;
+                var total = velocity * _pools.MoveSpeedValue.Get(i).value * scale;
+                total.y = y;
+                body.linearVelocity = total;
             }
         }
     }
