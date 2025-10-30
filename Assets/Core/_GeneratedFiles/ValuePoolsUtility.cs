@@ -84,6 +84,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeCostValueActionLinkButton2: pools.ChargeCostValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton3: pools.ChargeCostValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton4: pools.ChargeCostValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeCostValueActionLinkForwardF: pools.ChargeCostValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseLeft: pools.ChargeCostValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseRight: pools.ChargeCostValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkSpace: pools.ChargeCostValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedChargeCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -93,6 +94,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeMaxValueActionLinkButton2: pools.ChargeMaxValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton3: pools.ChargeMaxValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton4: pools.ChargeMaxValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeMaxValueActionLinkForwardF: pools.ChargeMaxValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseLeft: pools.ChargeMaxValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseRight: pools.ChargeMaxValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkSpace: pools.ChargeMaxValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedChargeMaxValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -102,6 +104,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeValueActionLinkButton2: pools.ChargeValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton3: pools.ChargeValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton4: pools.ChargeValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeValueActionLinkForwardF: pools.ChargeValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseLeft: pools.ChargeValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseRight: pools.ChargeValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkSpace: pools.ChargeValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedChargeValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -111,6 +114,7 @@ namespace Core.Generated
                 case ValueEnum.CooldownValueActionLinkButton2: pools.CooldownValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton3: pools.CooldownValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton4: pools.CooldownValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CooldownValueActionLinkForwardF: pools.CooldownValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseLeft: pools.CooldownValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseRight: pools.CooldownValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkSpace: pools.CooldownValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedCooldownValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -120,6 +124,7 @@ namespace Core.Generated
                 case ValueEnum.CostValueActionLinkButton2: pools.CostValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton3: pools.CostValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton4: pools.CostValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CostValueActionLinkForwardF: pools.CostValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseLeft: pools.CostValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseRight: pools.CostValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkSpace: pools.CostValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -128,6 +133,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2: pools.ResourceRecoveryPerHitValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3: pools.ResourceRecoveryPerHitValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4: pools.ResourceRecoveryPerHitValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF: pools.ResourceRecoveryPerHitValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft: pools.ResourceRecoveryPerHitValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight: pools.ResourceRecoveryPerHitValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace: pools.ResourceRecoveryPerHitValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -137,6 +143,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2: pools.ResourceRecoveryPerUsingValueActionLinkButton2.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3: pools.ResourceRecoveryPerUsingValueActionLinkButton3.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4: pools.ResourceRecoveryPerUsingValueActionLinkButton4.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF: pools.ResourceRecoveryPerUsingValueActionLinkForwardF.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft: pools.ResourceRecoveryPerUsingValueActionLinkMouseLeft.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight: pools.ResourceRecoveryPerUsingValueActionLinkMouseRight.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace: pools.ResourceRecoveryPerUsingValueActionLinkSpace.Get(entity).value += byValue; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -222,6 +229,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeCostValueActionLinkButton2: pools.ChargeCostValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton3: pools.ChargeCostValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton4: pools.ChargeCostValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeCostValueActionLinkForwardF: pools.ChargeCostValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseLeft: pools.ChargeCostValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseRight: pools.ChargeCostValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkSpace: pools.ChargeCostValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -231,6 +239,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeMaxValueActionLinkButton2: pools.ChargeMaxValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton3: pools.ChargeMaxValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton4: pools.ChargeMaxValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeMaxValueActionLinkForwardF: pools.ChargeMaxValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseLeft: pools.ChargeMaxValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseRight: pools.ChargeMaxValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkSpace: pools.ChargeMaxValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeMaxValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -240,6 +249,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeValueActionLinkButton2: pools.ChargeValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton3: pools.ChargeValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton4: pools.ChargeValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeValueActionLinkForwardF: pools.ChargeValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseLeft: pools.ChargeValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseRight: pools.ChargeValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkSpace: pools.ChargeValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedChargeValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -249,6 +259,7 @@ namespace Core.Generated
                 case ValueEnum.CooldownValueActionLinkButton2: pools.CooldownValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton3: pools.CooldownValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton4: pools.CooldownValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CooldownValueActionLinkForwardF: pools.CooldownValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseLeft: pools.CooldownValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseRight: pools.CooldownValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkSpace: pools.CooldownValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCooldownValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -258,6 +269,7 @@ namespace Core.Generated
                 case ValueEnum.CostValueActionLinkButton2: pools.CostValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton3: pools.CostValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton4: pools.CostValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CostValueActionLinkForwardF: pools.CostValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseLeft: pools.CostValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseRight: pools.CostValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkSpace: pools.CostValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -266,6 +278,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2: pools.ResourceRecoveryPerHitValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3: pools.ResourceRecoveryPerHitValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4: pools.ResourceRecoveryPerHitValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF: pools.ResourceRecoveryPerHitValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft: pools.ResourceRecoveryPerHitValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight: pools.ResourceRecoveryPerHitValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace: pools.ResourceRecoveryPerHitValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerHitValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -275,6 +288,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2: pools.ResourceRecoveryPerUsingValueActionLinkButton2.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3: pools.ResourceRecoveryPerUsingValueActionLinkButton3.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4: pools.ResourceRecoveryPerUsingValueActionLinkButton4.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF: pools.ResourceRecoveryPerUsingValueActionLinkForwardF.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft: pools.ResourceRecoveryPerUsingValueActionLinkMouseLeft.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight: pools.ResourceRecoveryPerUsingValueActionLinkMouseRight.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace: pools.ResourceRecoveryPerUsingValueActionLinkSpace.Get(entity).value += GetValue(pools, entity, byValue); pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -358,6 +372,7 @@ namespace Core.Generated
             ValueEnum.ChargeCostValueActionLinkButton2 => pools.ChargeCostValueActionLinkButton2.Get(entity).value,
             ValueEnum.ChargeCostValueActionLinkButton3 => pools.ChargeCostValueActionLinkButton3.Get(entity).value,
             ValueEnum.ChargeCostValueActionLinkButton4 => pools.ChargeCostValueActionLinkButton4.Get(entity).value,
+            ValueEnum.ChargeCostValueActionLinkForwardF => pools.ChargeCostValueActionLinkForwardF.Get(entity).value,
             ValueEnum.ChargeCostValueActionLinkMouseLeft => pools.ChargeCostValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.ChargeCostValueActionLinkMouseRight => pools.ChargeCostValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.ChargeCostValueActionLinkSpace => pools.ChargeCostValueActionLinkSpace.Get(entity).value,
@@ -367,6 +382,7 @@ namespace Core.Generated
             ValueEnum.ChargeMaxValueActionLinkButton2 => pools.ChargeMaxValueActionLinkButton2.Get(entity).value,
             ValueEnum.ChargeMaxValueActionLinkButton3 => pools.ChargeMaxValueActionLinkButton3.Get(entity).value,
             ValueEnum.ChargeMaxValueActionLinkButton4 => pools.ChargeMaxValueActionLinkButton4.Get(entity).value,
+            ValueEnum.ChargeMaxValueActionLinkForwardF => pools.ChargeMaxValueActionLinkForwardF.Get(entity).value,
             ValueEnum.ChargeMaxValueActionLinkMouseLeft => pools.ChargeMaxValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.ChargeMaxValueActionLinkMouseRight => pools.ChargeMaxValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.ChargeMaxValueActionLinkSpace => pools.ChargeMaxValueActionLinkSpace.Get(entity).value,
@@ -376,6 +392,7 @@ namespace Core.Generated
             ValueEnum.ChargeValueActionLinkButton2 => pools.ChargeValueActionLinkButton2.Get(entity).value,
             ValueEnum.ChargeValueActionLinkButton3 => pools.ChargeValueActionLinkButton3.Get(entity).value,
             ValueEnum.ChargeValueActionLinkButton4 => pools.ChargeValueActionLinkButton4.Get(entity).value,
+            ValueEnum.ChargeValueActionLinkForwardF => pools.ChargeValueActionLinkForwardF.Get(entity).value,
             ValueEnum.ChargeValueActionLinkMouseLeft => pools.ChargeValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.ChargeValueActionLinkMouseRight => pools.ChargeValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.ChargeValueActionLinkSpace => pools.ChargeValueActionLinkSpace.Get(entity).value,
@@ -385,6 +402,7 @@ namespace Core.Generated
             ValueEnum.CooldownValueActionLinkButton2 => pools.CooldownValueActionLinkButton2.Get(entity).value,
             ValueEnum.CooldownValueActionLinkButton3 => pools.CooldownValueActionLinkButton3.Get(entity).value,
             ValueEnum.CooldownValueActionLinkButton4 => pools.CooldownValueActionLinkButton4.Get(entity).value,
+            ValueEnum.CooldownValueActionLinkForwardF => pools.CooldownValueActionLinkForwardF.Get(entity).value,
             ValueEnum.CooldownValueActionLinkMouseLeft => pools.CooldownValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.CooldownValueActionLinkMouseRight => pools.CooldownValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.CooldownValueActionLinkSpace => pools.CooldownValueActionLinkSpace.Get(entity).value,
@@ -394,6 +412,7 @@ namespace Core.Generated
             ValueEnum.CostValueActionLinkButton2 => pools.CostValueActionLinkButton2.Get(entity).value,
             ValueEnum.CostValueActionLinkButton3 => pools.CostValueActionLinkButton3.Get(entity).value,
             ValueEnum.CostValueActionLinkButton4 => pools.CostValueActionLinkButton4.Get(entity).value,
+            ValueEnum.CostValueActionLinkForwardF => pools.CostValueActionLinkForwardF.Get(entity).value,
             ValueEnum.CostValueActionLinkMouseLeft => pools.CostValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.CostValueActionLinkMouseRight => pools.CostValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.CostValueActionLinkSpace => pools.CostValueActionLinkSpace.Get(entity).value,
@@ -402,6 +421,7 @@ namespace Core.Generated
             ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2 => pools.ResourceRecoveryPerHitValueActionLinkButton2.Get(entity).value,
             ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3 => pools.ResourceRecoveryPerHitValueActionLinkButton3.Get(entity).value,
             ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4 => pools.ResourceRecoveryPerHitValueActionLinkButton4.Get(entity).value,
+            ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF => pools.ResourceRecoveryPerHitValueActionLinkForwardF.Get(entity).value,
             ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft => pools.ResourceRecoveryPerHitValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight => pools.ResourceRecoveryPerHitValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace => pools.ResourceRecoveryPerHitValueActionLinkSpace.Get(entity).value,
@@ -411,6 +431,7 @@ namespace Core.Generated
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2 => pools.ResourceRecoveryPerUsingValueActionLinkButton2.Get(entity).value,
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3 => pools.ResourceRecoveryPerUsingValueActionLinkButton3.Get(entity).value,
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4 => pools.ResourceRecoveryPerUsingValueActionLinkButton4.Get(entity).value,
+            ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF => pools.ResourceRecoveryPerUsingValueActionLinkForwardF.Get(entity).value,
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft => pools.ResourceRecoveryPerUsingValueActionLinkMouseLeft.Get(entity).value,
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight => pools.ResourceRecoveryPerUsingValueActionLinkMouseRight.Get(entity).value,
             ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace => pools.ResourceRecoveryPerUsingValueActionLinkSpace.Get(entity).value,
@@ -494,6 +515,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeCostValueActionLinkButton2: pools.ChargeCostValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton3: pools.ChargeCostValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkButton4: pools.ChargeCostValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeCostValueActionLinkForwardF: pools.ChargeCostValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseLeft: pools.ChargeCostValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseRight: pools.ChargeCostValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeCostValueActionLinkSpace: pools.ChargeCostValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedChargeCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -503,6 +525,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeMaxValueActionLinkButton2: pools.ChargeMaxValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton3: pools.ChargeMaxValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton4: pools.ChargeMaxValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeMaxValueActionLinkForwardF: pools.ChargeMaxValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseLeft: pools.ChargeMaxValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseRight: pools.ChargeMaxValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeMaxValueActionLinkSpace: pools.ChargeMaxValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedChargeMaxValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -512,6 +535,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeValueActionLinkButton2: pools.ChargeValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton3: pools.ChargeValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkButton4: pools.ChargeValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ChargeValueActionLinkForwardF: pools.ChargeValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseLeft: pools.ChargeValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkMouseRight: pools.ChargeValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ChargeValueActionLinkSpace: pools.ChargeValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedChargeValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -521,6 +545,7 @@ namespace Core.Generated
                 case ValueEnum.CooldownValueActionLinkButton2: pools.CooldownValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton3: pools.CooldownValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkButton4: pools.CooldownValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CooldownValueActionLinkForwardF: pools.CooldownValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseLeft: pools.CooldownValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkMouseRight: pools.CooldownValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CooldownValueActionLinkSpace: pools.CooldownValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedCooldownValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -530,6 +555,7 @@ namespace Core.Generated
                 case ValueEnum.CostValueActionLinkButton2: pools.CostValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton3: pools.CostValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkButton4: pools.CostValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.CostValueActionLinkForwardF: pools.CostValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseLeft: pools.CostValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkMouseRight: pools.CostValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.CostValueActionLinkSpace: pools.CostValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedCostValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -538,6 +564,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2: pools.ResourceRecoveryPerHitValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3: pools.ResourceRecoveryPerHitValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4: pools.ResourceRecoveryPerHitValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF: pools.ResourceRecoveryPerHitValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft: pools.ResourceRecoveryPerHitValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight: pools.ResourceRecoveryPerHitValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace: pools.ResourceRecoveryPerHitValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerHitValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -547,6 +574,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2: pools.ResourceRecoveryPerUsingValueActionLinkButton2.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton2.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3: pools.ResourceRecoveryPerUsingValueActionLinkButton3.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton3.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4: pools.ResourceRecoveryPerUsingValueActionLinkButton4.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkButton4.AddIfNotExist(entity); break;
+                case ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF: pools.ResourceRecoveryPerUsingValueActionLinkForwardF.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkForwardF.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft: pools.ResourceRecoveryPerUsingValueActionLinkMouseLeft.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseLeft.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight: pools.ResourceRecoveryPerUsingValueActionLinkMouseRight.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkMouseRight.AddIfNotExist(entity); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace: pools.ResourceRecoveryPerUsingValueActionLinkSpace.Get(entity).value = value; pools.EventUpdatedResourceRecoveryPerUsingValueActionLinkSpace.AddIfNotExist(entity); break;
@@ -632,6 +660,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeCostValueActionLinkButton2: poolContext.GenericRun(pools.ChargeCostValueActionLinkButton2); break;
                 case ValueEnum.ChargeCostValueActionLinkButton3: poolContext.GenericRun(pools.ChargeCostValueActionLinkButton3); break;
                 case ValueEnum.ChargeCostValueActionLinkButton4: poolContext.GenericRun(pools.ChargeCostValueActionLinkButton4); break;
+                case ValueEnum.ChargeCostValueActionLinkForwardF: poolContext.GenericRun(pools.ChargeCostValueActionLinkForwardF); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseLeft: poolContext.GenericRun(pools.ChargeCostValueActionLinkMouseLeft); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseRight: poolContext.GenericRun(pools.ChargeCostValueActionLinkMouseRight); break;
                 case ValueEnum.ChargeCostValueActionLinkSpace: poolContext.GenericRun(pools.ChargeCostValueActionLinkSpace); break;
@@ -641,6 +670,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeMaxValueActionLinkButton2: poolContext.GenericRun(pools.ChargeMaxValueActionLinkButton2); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton3: poolContext.GenericRun(pools.ChargeMaxValueActionLinkButton3); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton4: poolContext.GenericRun(pools.ChargeMaxValueActionLinkButton4); break;
+                case ValueEnum.ChargeMaxValueActionLinkForwardF: poolContext.GenericRun(pools.ChargeMaxValueActionLinkForwardF); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseLeft: poolContext.GenericRun(pools.ChargeMaxValueActionLinkMouseLeft); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseRight: poolContext.GenericRun(pools.ChargeMaxValueActionLinkMouseRight); break;
                 case ValueEnum.ChargeMaxValueActionLinkSpace: poolContext.GenericRun(pools.ChargeMaxValueActionLinkSpace); break;
@@ -650,6 +680,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeValueActionLinkButton2: poolContext.GenericRun(pools.ChargeValueActionLinkButton2); break;
                 case ValueEnum.ChargeValueActionLinkButton3: poolContext.GenericRun(pools.ChargeValueActionLinkButton3); break;
                 case ValueEnum.ChargeValueActionLinkButton4: poolContext.GenericRun(pools.ChargeValueActionLinkButton4); break;
+                case ValueEnum.ChargeValueActionLinkForwardF: poolContext.GenericRun(pools.ChargeValueActionLinkForwardF); break;
                 case ValueEnum.ChargeValueActionLinkMouseLeft: poolContext.GenericRun(pools.ChargeValueActionLinkMouseLeft); break;
                 case ValueEnum.ChargeValueActionLinkMouseRight: poolContext.GenericRun(pools.ChargeValueActionLinkMouseRight); break;
                 case ValueEnum.ChargeValueActionLinkSpace: poolContext.GenericRun(pools.ChargeValueActionLinkSpace); break;
@@ -659,6 +690,7 @@ namespace Core.Generated
                 case ValueEnum.CooldownValueActionLinkButton2: poolContext.GenericRun(pools.CooldownValueActionLinkButton2); break;
                 case ValueEnum.CooldownValueActionLinkButton3: poolContext.GenericRun(pools.CooldownValueActionLinkButton3); break;
                 case ValueEnum.CooldownValueActionLinkButton4: poolContext.GenericRun(pools.CooldownValueActionLinkButton4); break;
+                case ValueEnum.CooldownValueActionLinkForwardF: poolContext.GenericRun(pools.CooldownValueActionLinkForwardF); break;
                 case ValueEnum.CooldownValueActionLinkMouseLeft: poolContext.GenericRun(pools.CooldownValueActionLinkMouseLeft); break;
                 case ValueEnum.CooldownValueActionLinkMouseRight: poolContext.GenericRun(pools.CooldownValueActionLinkMouseRight); break;
                 case ValueEnum.CooldownValueActionLinkSpace: poolContext.GenericRun(pools.CooldownValueActionLinkSpace); break;
@@ -668,6 +700,7 @@ namespace Core.Generated
                 case ValueEnum.CostValueActionLinkButton2: poolContext.GenericRun(pools.CostValueActionLinkButton2); break;
                 case ValueEnum.CostValueActionLinkButton3: poolContext.GenericRun(pools.CostValueActionLinkButton3); break;
                 case ValueEnum.CostValueActionLinkButton4: poolContext.GenericRun(pools.CostValueActionLinkButton4); break;
+                case ValueEnum.CostValueActionLinkForwardF: poolContext.GenericRun(pools.CostValueActionLinkForwardF); break;
                 case ValueEnum.CostValueActionLinkMouseLeft: poolContext.GenericRun(pools.CostValueActionLinkMouseLeft); break;
                 case ValueEnum.CostValueActionLinkMouseRight: poolContext.GenericRun(pools.CostValueActionLinkMouseRight); break;
                 case ValueEnum.CostValueActionLinkSpace: poolContext.GenericRun(pools.CostValueActionLinkSpace); break;
@@ -676,6 +709,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkButton2); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkButton3); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkButton4); break;
+                case ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkForwardF); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkMouseLeft); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkMouseRight); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace: poolContext.GenericRun(pools.ResourceRecoveryPerHitValueActionLinkSpace); break;
@@ -685,6 +719,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkButton2); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkButton3); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkButton4); break;
+                case ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkForwardF); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkMouseLeft); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkMouseRight); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace: poolContext.GenericRun(pools.ResourceRecoveryPerUsingValueActionLinkSpace); break;
@@ -770,6 +805,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeCostValueActionLinkButton2: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.ChargeCostValueActionLinkButton3: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.ChargeCostValueActionLinkButton4: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.ChargeCostValueActionLinkForwardF: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseLeft: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.ChargeCostValueActionLinkMouseRight: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.ChargeCostValueActionLinkSpace: valueContext.GenericValueRun<ChargeCostValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -779,6 +815,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeMaxValueActionLinkButton2: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton3: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.ChargeMaxValueActionLinkButton4: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.ChargeMaxValueActionLinkForwardF: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseLeft: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.ChargeMaxValueActionLinkMouseRight: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.ChargeMaxValueActionLinkSpace: valueContext.GenericValueRun<ChargeMaxValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -788,6 +825,7 @@ namespace Core.Generated
                 case ValueEnum.ChargeValueActionLinkButton2: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.ChargeValueActionLinkButton3: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.ChargeValueActionLinkButton4: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.ChargeValueActionLinkForwardF: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.ChargeValueActionLinkMouseLeft: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.ChargeValueActionLinkMouseRight: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.ChargeValueActionLinkSpace: valueContext.GenericValueRun<ChargeValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -797,6 +835,7 @@ namespace Core.Generated
                 case ValueEnum.CooldownValueActionLinkButton2: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.CooldownValueActionLinkButton3: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.CooldownValueActionLinkButton4: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.CooldownValueActionLinkForwardF: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.CooldownValueActionLinkMouseLeft: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.CooldownValueActionLinkMouseRight: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.CooldownValueActionLinkSpace: valueContext.GenericValueRun<CooldownValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -806,6 +845,7 @@ namespace Core.Generated
                 case ValueEnum.CostValueActionLinkButton2: valueContext.GenericValueRun<CostValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.CostValueActionLinkButton3: valueContext.GenericValueRun<CostValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.CostValueActionLinkButton4: valueContext.GenericValueRun<CostValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.CostValueActionLinkForwardF: valueContext.GenericValueRun<CostValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.CostValueActionLinkMouseLeft: valueContext.GenericValueRun<CostValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.CostValueActionLinkMouseRight: valueContext.GenericValueRun<CostValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.CostValueActionLinkSpace: valueContext.GenericValueRun<CostValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -814,6 +854,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace: valueContext.GenericValueRun<ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -823,6 +864,7 @@ namespace Core.Generated
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>>(); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkButton3Component>>(); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>>(); break;
+                case ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkForwardFComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>>(); break;
                 case ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace: valueContext.GenericValueRun<ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>>(); break;
@@ -915,6 +957,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkButton2Component>)) return ValueEnum.ChargeCostValueActionLinkButton2;
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkButton3Component>)) return ValueEnum.ChargeCostValueActionLinkButton3;
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkButton4Component>)) return ValueEnum.ChargeCostValueActionLinkButton4;
+            if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.ChargeCostValueActionLinkForwardF;
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.ChargeCostValueActionLinkMouseLeft;
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.ChargeCostValueActionLinkMouseRight;
             if (typeof(T) == typeof(ChargeCostValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.ChargeCostValueActionLinkSpace;
@@ -924,6 +967,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkButton2Component>)) return ValueEnum.ChargeMaxValueActionLinkButton2;
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkButton3Component>)) return ValueEnum.ChargeMaxValueActionLinkButton3;
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkButton4Component>)) return ValueEnum.ChargeMaxValueActionLinkButton4;
+            if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.ChargeMaxValueActionLinkForwardF;
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.ChargeMaxValueActionLinkMouseLeft;
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.ChargeMaxValueActionLinkMouseRight;
             if (typeof(T) == typeof(ChargeMaxValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.ChargeMaxValueActionLinkSpace;
@@ -933,6 +977,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkButton2Component>)) return ValueEnum.ChargeValueActionLinkButton2;
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkButton3Component>)) return ValueEnum.ChargeValueActionLinkButton3;
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkButton4Component>)) return ValueEnum.ChargeValueActionLinkButton4;
+            if (typeof(T) == typeof(ChargeValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.ChargeValueActionLinkForwardF;
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.ChargeValueActionLinkMouseLeft;
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.ChargeValueActionLinkMouseRight;
             if (typeof(T) == typeof(ChargeValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.ChargeValueActionLinkSpace;
@@ -942,6 +987,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkButton2Component>)) return ValueEnum.CooldownValueActionLinkButton2;
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkButton3Component>)) return ValueEnum.CooldownValueActionLinkButton3;
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkButton4Component>)) return ValueEnum.CooldownValueActionLinkButton4;
+            if (typeof(T) == typeof(CooldownValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.CooldownValueActionLinkForwardF;
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.CooldownValueActionLinkMouseLeft;
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.CooldownValueActionLinkMouseRight;
             if (typeof(T) == typeof(CooldownValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.CooldownValueActionLinkSpace;
@@ -951,6 +997,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(CostValueComponent<ActionLinkButton2Component>)) return ValueEnum.CostValueActionLinkButton2;
             if (typeof(T) == typeof(CostValueComponent<ActionLinkButton3Component>)) return ValueEnum.CostValueActionLinkButton3;
             if (typeof(T) == typeof(CostValueComponent<ActionLinkButton4Component>)) return ValueEnum.CostValueActionLinkButton4;
+            if (typeof(T) == typeof(CostValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.CostValueActionLinkForwardF;
             if (typeof(T) == typeof(CostValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.CostValueActionLinkMouseLeft;
             if (typeof(T) == typeof(CostValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.CostValueActionLinkMouseRight;
             if (typeof(T) == typeof(CostValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.CostValueActionLinkSpace;
@@ -959,6 +1006,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkButton2Component>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkButton2;
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkButton3Component>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkButton3;
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkButton4Component>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkButton4;
+            if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkForwardF;
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseLeft;
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkMouseRight;
             if (typeof(T) == typeof(ResourceRecoveryPerHitValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.ResourceRecoveryPerHitValueActionLinkSpace;
@@ -968,6 +1016,7 @@ namespace Core.Generated
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkButton2Component>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton2;
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkButton3Component>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton3;
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkButton4Component>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkButton4;
+            if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkForwardFComponent>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkForwardF;
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkMouseLeftComponent>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseLeft;
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkMouseRightComponent>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkMouseRight;
             if (typeof(T) == typeof(ResourceRecoveryPerUsingValueComponent<ActionLinkSpaceComponent>)) return ValueEnum.ResourceRecoveryPerUsingValueActionLinkSpace;

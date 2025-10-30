@@ -56,6 +56,7 @@ namespace Core.Services
             RegisterActionLink<ActionLinkMouseRightComponent, MouseRightTag>();
             RegisterActionLink<ActionLinkSpaceComponent, ButtonJumpTag>();
             RegisterActionLink<ActionLinkSpaceForwardComponent, ButtonJumpForwardTag>();
+            RegisterActionLink<ActionLinkForwardFComponent, ButtonForwardFTag>();
             // RegisterActionLink<ActionLinkButton1Component, Button1Tag>();
             // RegisterActionLink<ActionLinkButton2Component, Button2Tag>();
             // RegisterActionLink<ActionLinkButton3Component, Button3Tag>();
@@ -136,6 +137,7 @@ namespace Core.Services
             UnlockDefaultAction<ActionLinkMouseRightComponent>(entity);
             UnlockDefaultAction<ActionLinkSpaceComponent>(entity);
             UnlockDefaultAction<ActionLinkSpaceForwardComponent>(entity);
+            UnlockDefaultAction<ActionLinkForwardFComponent>(entity);
         }
 
         public void SetupActionLogic<T>(int entity, AbstractEntityAction action)

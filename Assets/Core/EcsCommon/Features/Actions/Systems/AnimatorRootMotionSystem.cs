@@ -19,7 +19,11 @@ namespace Core.Systems
         public void Run(IEcsSystems systems)
         {
             foreach (var i in _filter.Value)
-                _pools.Rigidbody.Get(i).rigidbody.linearVelocity = _pools.AnimatorRootMotion.Get(i).deltaPosition / Time.fixedUnscaledTime;
+            {
+                ref var delta = ref _pools.AnimatorRootMotion.Get(i);
+                _pools.Rigidbody.Get(i).rigidbody.linearVelocity = delta.deltaPosition / Time.fixedUnscaledDeltaTime;
+                delta.deltaPosition = Vector3.zero;
+            }
         }
     }
 }

@@ -2897,10 +2897,6 @@ GameObject:
   - component: {fileID: 6910321022448170990}
   - component: {fileID: 420813639563387385}
   - component: {fileID: 5879990332899949736}
-  - component: {fileID: 6411273652790422844}
-  - component: {fileID: 8226728272496318728}
-  - component: {fileID: -6369379204088019415}
-  - component: {fileID: 2651772191296495516}
   - component: {fileID: -8168844493951385815}
   - component: {fileID: 3886662502187016067}
   - component: {fileID: -5902542504442907320}
@@ -2967,6 +2963,7 @@ MonoBehaviour:
   - {fileID: 8411750663009216246}
   - {fileID: 4460927496610059711}
   - {fileID: 2349645038012129290}
+  - {fileID: 2539052574392221980}
 --- !u!114 &8015666007651235147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,62 +3045,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionDefaultProvider
   value:
     <logic>k__BackingField: {fileID: 6964305005373469137}
---- !u!114 &6411273652790422844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658124197020847827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c388a47fe0cb4853908fa2b33323b437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionLinkMouseLeftProvider
-  value:
-    <logic>k__BackingField: {fileID: 9120344060614331699}
---- !u!114 &8226728272496318728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658124197020847827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbb0122d0a514169bf38dbad0954659b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionLinkMouseRightProvider
-  value:
-    <logic>k__BackingField: {fileID: 8411750663009216246}
---- !u!114 &-6369379204088019415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658124197020847827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf0b7338ad04d2aaa58f207ff6c6eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionLinkSpaceForwardProvider
-  value:
-    <logic>k__BackingField: {fileID: 2349645038012129290}
---- !u!114 &2651772191296495516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5658124197020847827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d23d01d87abd4aa880bdae9422da14e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionLinkSpaceProvider
-  value:
-    <logic>k__BackingField: {fileID: 2539052574392221980}
 --- !u!114 &-8168844493951385815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5243,6 +5184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647170935928869683, guid: 15122b4cf85c67a47b03c3e679dd5581,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1647170935928869683, guid: 15122b4cf85c67a47b03c3e679dd5581,
         type: 3}

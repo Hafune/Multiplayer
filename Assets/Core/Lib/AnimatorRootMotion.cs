@@ -36,8 +36,9 @@ namespace Core.Lib
 
         private void OnAnimatorMove()
         {
+            var delta = _animator.deltaPosition * 3;
             _rootMotionPool.GetOrInitialize(_convertToEntity.RawEntity).deltaPosition +=
-                _movePostProcessing?.Invoke(_animator.deltaPosition) ?? _animator.deltaPosition;
+                _movePostProcessing?.Invoke(delta) ?? delta;
         }
     }
 }

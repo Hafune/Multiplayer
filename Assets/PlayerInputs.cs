@@ -129,6 +129,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ForwardF"",
+                    ""type"": ""Button"",
+                    ""id"": ""2adc6e13-d7f4-4fd7-bea4-96b3e192f52f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""MouseLeft"",
                     ""type"": ""Button"",
                     ""id"": ""fbef3937-3437-4907-866b-18bcb97df7a0"",
@@ -334,6 +343,39 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""SpaceForward"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""2b8cd5ef-55c6-4ba1-b361-d5d54b675a83"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ForwardF"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""703cd039-4201-4464-b531-44621d67807f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ForwardF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""60550650-9767-407a-a1ce-f749620fe0e6"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ForwardF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -434,6 +476,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Shift = m_Player.FindAction("Shift", throwIfNotFound: true);
         m_Player_Space = m_Player.FindAction("Space", throwIfNotFound: true);
         m_Player_SpaceForward = m_Player.FindAction("SpaceForward", throwIfNotFound: true);
+        m_Player_ForwardF = m_Player.FindAction("ForwardF", throwIfNotFound: true);
         m_Player_MouseLeft = m_Player.FindAction("MouseLeft", throwIfNotFound: true);
         m_Player_MouseRight = m_Player.FindAction("MouseRight", throwIfNotFound: true);
         // UI
@@ -527,6 +570,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Shift;
     private readonly InputAction m_Player_Space;
     private readonly InputAction m_Player_SpaceForward;
+    private readonly InputAction m_Player_ForwardF;
     private readonly InputAction m_Player_MouseLeft;
     private readonly InputAction m_Player_MouseRight;
     /// <summary>
@@ -556,6 +600,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/SpaceForward".
         /// </summary>
         public InputAction @SpaceForward => m_Wrapper.m_Player_SpaceForward;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ForwardF".
+        /// </summary>
+        public InputAction @ForwardF => m_Wrapper.m_Player_ForwardF;
         /// <summary>
         /// Provides access to the underlying input action "Player/MouseLeft".
         /// </summary>
@@ -602,6 +650,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @SpaceForward.started += instance.OnSpaceForward;
             @SpaceForward.performed += instance.OnSpaceForward;
             @SpaceForward.canceled += instance.OnSpaceForward;
+            @ForwardF.started += instance.OnForwardF;
+            @ForwardF.performed += instance.OnForwardF;
+            @ForwardF.canceled += instance.OnForwardF;
             @MouseLeft.started += instance.OnMouseLeft;
             @MouseLeft.performed += instance.OnMouseLeft;
             @MouseLeft.canceled += instance.OnMouseLeft;
@@ -631,6 +682,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @SpaceForward.started -= instance.OnSpaceForward;
             @SpaceForward.performed -= instance.OnSpaceForward;
             @SpaceForward.canceled -= instance.OnSpaceForward;
+            @ForwardF.started -= instance.OnForwardF;
+            @ForwardF.performed -= instance.OnForwardF;
+            @ForwardF.canceled -= instance.OnForwardF;
             @MouseLeft.started -= instance.OnMouseLeft;
             @MouseLeft.performed -= instance.OnMouseLeft;
             @MouseLeft.canceled -= instance.OnMouseLeft;
@@ -834,6 +888,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSpaceForward(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ForwardF" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnForwardF(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "MouseLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

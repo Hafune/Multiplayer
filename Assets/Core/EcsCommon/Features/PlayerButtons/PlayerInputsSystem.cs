@@ -45,28 +45,33 @@ namespace Core.Systems
         private readonly ActionControls<MouseRightTag, ActionLinkMouseRightComponent> _mouseRightHandler;
         private readonly ActionControls<ButtonJumpTag, ActionLinkSpaceComponent> _jumpHandler;
         private readonly ActionControls<ButtonJumpForwardTag, ActionLinkSpaceForwardComponent> _jumpForwardHandler;
+        private readonly ActionControls<ButtonForwardFTag, ActionLinkForwardFComponent> _dashHandler;
+        
         // private readonly SimpleActionControls<ButtonTeleport, ActionLinkTeleportToHubComponent> _buttonTeleportHandler;
 
+        private readonly Action[] _actions;
 
         public PlayerInputsSystem(Context context, PlayerInputs.PlayerActions playerActions)
         {
             _playerActions = playerActions;
             _cameraTransform = context.Resolve<Camera>().transform;
-            
-            _mouseLeftHandler = new(context);
-            _mouseRightHandler = new(context);
-            _jumpHandler = new(context);
-            _jumpForwardHandler = new(context);
+
+            _actions = new Action[]
+            {
+                (_mouseLeftHandler = new(context)).Run,
+                (_mouseRightHandler = new(context)).Run,
+                (_jumpHandler = new(context)).Run,
+                (_jumpForwardHandler = new(context)).Run,
+                (_dashHandler = new(context)).Run,
+            };
             // _buttonTeleportHandler = new(context);
         }
 
         public void Run(IEcsSystems systems)
         {
-            _mouseLeftHandler.Run();
-            _mouseRightHandler.Run();
-            _jumpHandler.Run();
-            _jumpForwardHandler.Run();
-            
+            foreach (var action in _actions)
+                action.Invoke();
+
             foreach (var i in _moveStreamingFilter.Value)
             {
                 var cameraForward = _cameraTransform.forward;

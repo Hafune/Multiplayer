@@ -75,7 +75,7 @@ export class StateHandlerRoom extends Room<State> {
     onCreate(options) {
         console.log("StateHandlerRoom created!", options);
 
-        // this.setPatchRate(20);
+        // this.setPatchRate(150);
         this.setState(new State(this.patchRate));
 
         this.onMessage("move", (client, data) => {
