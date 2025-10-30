@@ -3,7 +3,7 @@ using UnityEngine.Assertions;
 
 namespace Core.Lib
 {
-    public class RootMotionForwardPostProcessing : MonoBehaviour
+    public class RootMotionForwardPostProcessing : MonoBehaviour, ITriggerDispatcherTarget
     {
         [SerializeField] private AnimatorRootMotion _rootMotion;
         private int _contactCount;
@@ -16,8 +16,9 @@ namespace Core.Lib
 #endif
         private void OnDisable() => _rootMotion.SetDeltaPostProcessing(null);
 
-        private void OnTriggerEnter2D(Collider2D col)
+        public void OnTriggerEnter(Collider col)
         {
+            TriggerDisableHandler.RegisterTrigger(this, col);
             _contactCount++;
 
             if (!enabled || _contactCount != 1)
@@ -26,8 +27,9 @@ namespace Core.Lib
             _rootMotion.SetDeltaPostProcessing(PostProcess);
         }
 
-        private void OnTriggerExit2D(Collider2D col)
+        public void OnTriggerExit(Collider col)
         {
+            TriggerDisableHandler.UnRegisterTrigger(this, col);
             _contactCount--;
 
             if (!enabled || _contactCount != 0)
@@ -36,6 +38,6 @@ namespace Core.Lib
             _rootMotion.SetDeltaPostProcessing(null);
         }
 
-        private static Vector2 PostProcess(Vector2 delta) => Vector2.zero;
+        private static Vector3 PostProcess(Vector3 delta) => Vector3.zero;
     }
 }

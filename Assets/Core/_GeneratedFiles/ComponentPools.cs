@@ -42,6 +42,7 @@ namespace Core.Generated
         public readonly EcsPool<AimComponent> Aim;
         public readonly EcsPool<AngularSpeedComponent> AngularSpeed;
         public readonly EcsPool<AnimatorComponent> Animator;
+        public readonly EcsPool<AnimatorRootMotionComponent> AnimatorRootMotion;
         public readonly EcsPool<ArcaneOrbTag> ArcaneOrb;
         public readonly EcsPool<ArmorPercentValueComponent> ArmorPercentValue;
         public readonly EcsPool<ArmorPropertyValueComponent> ArmorPropertyValue;
@@ -646,6 +647,7 @@ namespace Core.Generated
             Aim = world.GetPool<AimComponent>();
             AngularSpeed = world.GetPool<AngularSpeedComponent>();
             Animator = world.GetPool<AnimatorComponent>();
+            AnimatorRootMotion = world.GetPool<AnimatorRootMotionComponent>();
             ArcaneOrb = world.GetPool<ArcaneOrbTag>();
             ArmorPercentValue = world.GetPool<ArmorPercentValueComponent>();
             ArmorPropertyValue = world.GetPool<ArmorPropertyValueComponent>();

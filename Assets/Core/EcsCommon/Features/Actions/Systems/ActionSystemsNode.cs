@@ -25,6 +25,7 @@ namespace Core.Systems
                 //
                 new DelHere<EventActionChanged>(),
                 //Срабатывание timeline события.
+                new AnimatorRootMotionSystem(),
                 new EventTimelineActionSystem(),
                 //
                 // new PlaybackAndRecordingActionsSystem(),
@@ -61,7 +62,7 @@ namespace Core.Systems
                     EventActionCompleteStreaming,
                     EventTimelineAction
                 >(),
-                
+
                 //системы скилов персонажей
                 // new BarbRevengeSystem(),
             };

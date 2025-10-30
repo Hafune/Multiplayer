@@ -1,56 +1,43 @@
 using System;
+using Core.Components;
+using Core.Generated;
+using Leopotam.EcsLite;
+using Lib;
 using UnityEngine;
 
 namespace Core.Lib
 {
-    public class AnimatorRootMotion : MonoBehaviour
+    public class AnimatorRootMotion : MonoConstruct
     {
-        [SerializeField] private Animator _animator;
-        [SerializeField] private Rigidbody2D _rigidbody;
+        private Animator _animator;
+        private ConvertToEntity _convertToEntity;
+        private EcsPool<AnimatorRootMotionComponent> _rootMotionPool;
+        private Func<Vector3, Vector3> _movePostProcessing;
 
-        private Vector2 _deltaPosition;
-        private Func<Vector2, Vector2> _movePostProcessing;
-
-        private void OnValidate()
+        private void Awake()
         {
-            _animator = _animator ? _animator : GetComponent<Animator>();
-            _rigidbody = _rigidbody ? _rigidbody : GetComponent<Rigidbody2D>();
+            _convertToEntity = GetComponentInParent<ConvertToEntity>();
+            _animator = GetComponentInParent<Animator>();
+            _animator.applyRootMotion = false;
+            _rootMotionPool = context.Resolve<ComponentPools>().AnimatorRootMotion;
         }
 
-        private void Awake() => _animator.applyRootMotion = false;
+        private void OnEnable() => _animator.applyRootMotion = true;
 
-        private void OnEnable()
+        private void OnDisable()
         {
-            _animator.applyRootMotion = true;
-            _rigidbody.linearVelocity = -Physics2D.gravity * _rigidbody.gravityScale;
-            _deltaPosition = Vector2.zero;
+            _animator.applyRootMotion = false;
+            
+            if (_convertToEntity.RawEntity != -1)
+                _rootMotionPool.DelIfExist(_convertToEntity.RawEntity);
         }
 
-        private void OnDisable() => _animator.applyRootMotion = false;
-
-        public void SetDeltaPostProcessing(Func<Vector2, Vector2> action) => _movePostProcessing = action;
+        public void SetDeltaPostProcessing(Func<Vector3, Vector3> action) => _movePostProcessing = action;
 
         private void OnAnimatorMove()
         {
-            if (!enabled)
-                return;
-            
-            var delta = _movePostProcessing?.Invoke(_animator.deltaPosition) ?? _animator.deltaPosition;
-
-            _deltaPosition += delta;
-        }
-
-        private void FixedUpdate()
-        {
-            _rigidbody.MovePosition(_rigidbody.position + _deltaPosition);
-            // var velocity = _deltaPosition / Time.deltaTime;
-            //
-            // _rigidbody.velocity = Vector2.MoveTowards(
-            //     _rigidbody.velocity,
-            //     velocity,
-            //     velocity.magnitude);
-
-            _deltaPosition = Vector2.zero;
+            _rootMotionPool.GetOrInitialize(_convertToEntity.RawEntity).deltaPosition +=
+                _movePostProcessing?.Invoke(_animator.deltaPosition) ?? _animator.deltaPosition;
         }
     }
 }
