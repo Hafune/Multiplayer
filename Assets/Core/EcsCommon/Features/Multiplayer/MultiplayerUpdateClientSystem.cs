@@ -16,7 +16,7 @@ namespace Core
                 EventMultiplayerDataUpdated,
                 AnimatorComponent,
                 PositionComponent,
-                MultiplayerLogicsComponent
+                MultiplayerStateComponent
             >,
             Exc<
                 Player1UniqueTag
@@ -42,7 +42,6 @@ namespace Core
             >> _movePositionFilter;
 
         private readonly ComponentPools _pools;
-        private readonly MySerializablePose _pose = new();
 
         public void Run(IEcsSystems systems)
         {
@@ -55,7 +54,7 @@ namespace Core
                 var euler = transform.eulerAngles;
                 var bodyAngle = euler.y;
 
-                AssignValues(ref target.position, ref target.velocity, ref bodyAngle, out var state, update.changes);
+                AssignValues(ref target.position, ref target.velocity, ref bodyAngle, update.changes);
 
                 euler.y = bodyAngle;
 
@@ -64,15 +63,7 @@ namespace Core
                 target.distance = (target.position - transform.position).magnitude;
                 target.delay = update.delay;
                 _pools.InProgressMultiplayerData.AddIfNotExist(i);
-
-                _pools.MultiplayerLogics.Get(i).logics.SetParameters(i, Quaternion.Inverse(target.rotation) * target.velocity);
-
-                if (string.IsNullOrEmpty(state))
-                    continue;
-
-                var animancer = _pools.Animator.Get(i).animancer;
-                JsonUtility.FromJsonOverwrite(state, _pose);
-                _pose.ApplyTo(animancer);
+                _pools.MultiplayerState.Get(i).state.SetParameters(i, Quaternion.Inverse(target.rotation) * target.velocity);
             }
 
             foreach (var i in _readHitPointFilter.Value)
@@ -140,10 +131,8 @@ namespace Core
             ref Vector3 position,
             ref Vector3 velocity,
             ref float bodyAngle,
-            out string states,
-            List<DataChange> changes)
+            List<MyDataChange> changes)
         {
-            states = "";
             foreach (var dataChange in changes)
             {
                 switch (dataChange.Field)
@@ -170,7 +159,6 @@ namespace Core
                         bodyAngle = (float)dataChange.Value;
                         break;
                     case nameof(Player.state):
-                        states = (string)dataChange.Value;
                         break;
                 }
             }
@@ -179,7 +167,7 @@ namespace Core
         private static void AssignHitPointValues(
             ref int currentHp,
             ref int maxHp,
-            List<DataChange> changes)
+            List<MyDataChange> changes)
         {
             foreach (var dataChange in changes)
             {

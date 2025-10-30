@@ -7,5 +7,6 @@ namespace Core
     {
         public string key;
         public int index;
+        public float[] values;
     }
 }

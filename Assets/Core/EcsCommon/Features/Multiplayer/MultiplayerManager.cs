@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Animancer;
 using Colyseus;
+using Colyseus.Schema;
 using Core.Components;
 using Core.Generated;
 using Core.Lib;
@@ -25,10 +25,19 @@ namespace Core
         private readonly Dictionary<string, ConvertToEntity> _storages = new();
         private MyPool _objectPool;
         private EcsFilter _filter;
+        private readonly List<DataChange> _immediatelyChanges = new();
 
         protected override void Start()
         {
             base.Start();
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.x)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.y)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.z)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityX)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityY)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityZ)});
+            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.bodyAngle)});
+            
             Instance.InitializeClient();
             Connect();
         }
@@ -45,7 +54,7 @@ namespace Core
             _context = context;
             _pools = context.Resolve<ComponentPools>();
             _objectPool = context.Resolve<PoolService>().DontDisposablePool;
-            _filter = context.Resolve<EcsWorld>().Filter<MultiplayerDataComponent>().Inc<MultiplayerLogicsComponent>().End();
+            _filter = context.Resolve<EcsWorld>().Filter<MultiplayerDataComponent>().Inc<MultiplayerStateComponent>().End();
         }
 
         public string GetClientId() => _room.Id;
@@ -95,7 +104,7 @@ namespace Core
                 }
             });
 
-            _room.OnMessage<string>("logics", data =>
+            _room.OnMessage<string>("state", data =>
             {
                 var info = JsonUtility.FromJson<MultiplayerActionInfo>(data);
 
@@ -104,7 +113,17 @@ namespace Core
                     if (info.key != _pools.MultiplayerData.Get(i).data.SessionId)
                         continue;
                     
-                    _pools.MultiplayerLogics.Get(i).logics.RunMultiplayerLogic(i, info.index);
+                    _immediatelyChanges[0].Value = info.values[0];
+                    _immediatelyChanges[0].PreviousValue = info.values[0];
+                    _immediatelyChanges[1].Value = info.values[1];
+                    _immediatelyChanges[2].Value = info.values[2];
+                    _immediatelyChanges[3].Value = info.values[3];
+                    _immediatelyChanges[4].Value = info.values[4];
+                    _immediatelyChanges[5].Value = info.values[5];
+                    _immediatelyChanges[6].Value = info.values[6];
+
+                    _pools.MultiplayerData.Get(i).data.OnChange(_immediatelyChanges);
+                    _pools.MultiplayerState.Get(i).state.RunMultiplayerLogic(i, info.index);
                 }
             });
         }

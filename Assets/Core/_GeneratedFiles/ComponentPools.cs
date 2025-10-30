@@ -540,7 +540,7 @@ namespace Core.Generated
         public readonly EcsPool<MoveUpdate2DComponent> MoveUpdate2D;
         public readonly EcsPool<MoveUpdateComponent> MoveUpdate;
         public readonly EcsPool<MultiplayerDataComponent> MultiplayerData;
-        public readonly EcsPool<MultiplayerLogicsComponent> MultiplayerLogics;
+        public readonly EcsPool<MultiplayerStateComponent> MultiplayerState;
         public readonly EcsPool<NodeComponent> Node;
         public readonly EcsPool<NpcActionComponent> NpcAction;
         public readonly EcsPool<OnGroundTag> OnGround;
@@ -1144,7 +1144,7 @@ namespace Core.Generated
             MoveUpdate2D = world.GetPool<MoveUpdate2DComponent>();
             MoveUpdate = world.GetPool<MoveUpdateComponent>();
             MultiplayerData = world.GetPool<MultiplayerDataComponent>();
-            MultiplayerLogics = world.GetPool<MultiplayerLogicsComponent>();
+            MultiplayerState = world.GetPool<MultiplayerStateComponent>();
             Node = world.GetPool<NodeComponent>();
             NpcAction = world.GetPool<NpcActionComponent>();
             OnGround = world.GetPool<OnGroundTag>();

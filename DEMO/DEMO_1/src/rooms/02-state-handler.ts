@@ -29,8 +29,8 @@ export class Player extends Schema {
     @type("number")
     bodyAngle = 0;
 
-    @type("string")
-    state = "";
+    @type("int16")
+    state = -1;
 
     @type("int16")
     patchRate;
@@ -75,11 +75,32 @@ export class StateHandlerRoom extends Room<State> {
     onCreate(options) {
         console.log("StateHandlerRoom created!", options);
 
-        this.setPatchRate(20);
+        // this.setPatchRate(20);
         this.setState(new State(this.patchRate));
 
         this.onMessage("move", (client, data) => {
-            this.state.movePlayer(client.sessionId, data);
+            var state = data.state;
+            var player = this.state.players.get(client.sessionId);
+
+            if (player.state != state) {
+                this.state.movePlayer(client.sessionId, data);
+                this.broadcast("state", JSON.stringify({
+                    key: client.sessionId,
+                    index: state,
+                    values: [
+                        player.x,
+                        player.y,
+                        player.z,
+                        player.velocityX,
+                        player.velocityY,
+                        player.velocityZ,
+                        player.bodyAngle
+                    ]
+                }), { except: client });
+            }
+            else {
+                this.state.movePlayer(client.sessionId, data);
+            }
         });
 
         this.onMessage("damage", (client, data) => {

@@ -5,7 +5,7 @@ namespace Core.Components
 {
     public struct EventMultiplayerDataUpdated
     {
-        public List<DataChange> changes;
+        public List<MyDataChange> changes;
         public float delay;
     }
 }

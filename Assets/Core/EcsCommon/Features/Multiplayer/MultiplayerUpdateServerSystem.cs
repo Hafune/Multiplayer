@@ -13,7 +13,8 @@ namespace Core
             Inc<
                 Player1UniqueTag,
                 AnimatorComponent,
-                RigidbodyComponent
+                RigidbodyComponent,
+                MultiplayerStateComponent
             >> _updateServerFilter;
 
         private readonly EcsFilterInject<
@@ -36,7 +37,6 @@ namespace Core
         private readonly List<int> _damages = new();
 
         private readonly List<string> _targets = new();
-        // private readonly MySerializablePose _pose = new();
 
         public void Run(IEcsSystems systems)
         {
@@ -44,10 +44,6 @@ namespace Core
             {
                 var body = _pools.Rigidbody.Get(i).rigidbody;
                 var bodyAngle = body.transform.eulerAngles.y;
-
-                // var animancer = _pools.Animator.Get(i).animancer;
-                // _pose.GatherFrom(animancer);
-                // var state = JsonUtility.ToJson(_pose);
 
                 var position = body.position;
                 var velocity = body.linearVelocity;
@@ -59,7 +55,7 @@ namespace Core
                 _message["velocityY"] = velocity.y;
                 _message["velocityZ"] = velocity.z;
                 _message["bodyAngle"] = bodyAngle;
-                _message["state"] = "";
+                _message["state"] = _pools.MultiplayerState.Get(i).state.GetState();
 
                 MultiplayerManager.Instance.SendData("move", _message);
             }

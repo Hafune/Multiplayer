@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Components.MultiplayerLogicsProvider
   value:
-    logics: {fileID: 2387013622626283375}
+    state: {fileID: 2387013622626283375}
 --- !u!114 &5150072211604679381
 MonoBehaviour:
   m_ObjectHideFlags: 0

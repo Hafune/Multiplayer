@@ -35,8 +35,8 @@ public partial class Player : Schema {
     [Type(8, "number")]
     public float bodyAngle = default(float);
 
-    [Type(9, "string")]
-    public string state = default(string);
+    [Type(9, "int16")]
+    public short state = default(short);
 
     [Type(10, "int16")]
     public short patchRate = default(short);
