@@ -14,6 +14,7 @@ namespace Core.Systems
         private readonly EcsFilter _eventButtonPerformedFilter;
         private readonly EcsFilter _releasedFilter;
         private readonly EcsFilter _completeStreamingFilter;
+        private readonly EcsFilter _actionPressedFilter;
         private readonly EcsPool<A> _actionPool;
 
         private readonly ComponentPools _pools;
@@ -25,6 +26,12 @@ namespace Core.Systems
             
             _eventButtonPerformedFilter = world
                 .Filter<EventButtonPerformed<B>>()
+                .Inc<ActionAttackComponent>()
+                .End();
+            
+            _actionPressedFilter = world
+                .Filter<B>()
+                .Inc<A>()
                 .Inc<ActionAttackComponent>()
                 .End();
 
@@ -40,10 +47,10 @@ namespace Core.Systems
         public void Run()
         {
             foreach (var i in _eventButtonPerformedFilter)
-            {
                 _pools.ActionPressed.GetOrInitialize(i).pressedCount++;
+            
+            foreach (var i in _actionPressedFilter)
                 PrepareActionAndSendStartEvent(i);
-            }
 
             foreach (var i in _releasedFilter)
                 if (--_pools.ActionPressed.Get(i).pressedCount == 0)

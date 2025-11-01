@@ -21,6 +21,8 @@ namespace Core.Systems
 
         private readonly ComponentPools _pools;
         private readonly EcsPoolInject<ActionCurrentComponent> _actionCurrentPool;
+        private readonly Collider[] _colliders = new Collider[4];
+        private readonly int _mask = LayerMask.GetMask("UnitCollision");
 
         public void Run(IEcsSystems systems)
         {
@@ -37,6 +39,30 @@ namespace Core.Systems
                     scales.backwardSpeed;
 
                 var total = velocity * _pools.MoveSpeedValue.Get(i).value * scale;
+                var horizontalVelocity = new Vector3(total.x, 0, total.z);
+                const float sphereRadius = 0.18f;
+
+                var position = body.position + new Vector3(0,.5f,0);
+                int count = Physics.OverlapSphereNonAlloc(position, sphereRadius, _colliders, _mask);
+                for (var index = 0; index < count; index++)
+                {
+                    var col = _colliders[index];
+                    if (col.attachedRigidbody == body) 
+                        continue;
+
+                    var colliderCenter = col.bounds.center;
+                    var currentDistance = Vector3.Distance(position, colliderCenter);
+                    var nextPosition = position + horizontalVelocity * Time.deltaTime;
+                    var nextDistance = Vector3.Distance(nextPosition, colliderCenter);
+
+                    if (nextDistance < currentDistance)
+                    {
+                        total.x = 0;
+                        total.z = 0;
+                        break;
+                    }
+                }
+
                 total.y = y;
                 body.linearVelocity = total;
             }

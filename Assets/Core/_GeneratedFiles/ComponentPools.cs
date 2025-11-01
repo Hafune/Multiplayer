@@ -20,6 +20,7 @@ namespace Core.Generated
         public readonly EcsPool<ActionDefaultComponent> ActionDefault;
         public readonly EcsPool<ActionDizzyComponent> ActionDizzy;
         public readonly EcsPool<ActionHitStunComponent> ActionHitStun;
+        public readonly EcsPool<ActionKnockdownComponent> ActionKnockdown;
         public readonly EcsPool<ActionLinkButton1Component> ActionLinkButton1;
         public readonly EcsPool<ActionLinkButton2Component> ActionLinkButton2;
         public readonly EcsPool<ActionLinkButton3Component> ActionLinkButton3;
@@ -649,6 +650,7 @@ namespace Core.Generated
             ActionDefault = world.GetPool<ActionDefaultComponent>();
             ActionDizzy = world.GetPool<ActionDizzyComponent>();
             ActionHitStun = world.GetPool<ActionHitStunComponent>();
+            ActionKnockdown = world.GetPool<ActionKnockdownComponent>();
             ActionLinkButton1 = world.GetPool<ActionLinkButton1Component>();
             ActionLinkButton2 = world.GetPool<ActionLinkButton2Component>();
             ActionLinkButton3 = world.GetPool<ActionLinkButton3Component>();

@@ -125,7 +125,7 @@ namespace Core.Systems
 
             damage = (int)damage;
 
-            var impactIndex = _multiplayerState.GetimpactIndex(_targetEvents);
+            var impactIndex = _multiplayerState.GetImpactIndex(_targetEvents);
             if (impactIndex != -1 || damage != 0)
             {
                 var data = new MultiplayerDamageAreaDataComponent

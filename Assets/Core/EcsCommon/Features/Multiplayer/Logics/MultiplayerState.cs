@@ -13,7 +13,6 @@ namespace Core
         [SerializeField] private SmoothedVector2ParameterContainer _moveDirection;
 
         private MultiplayerSendStateLogic[] _totalStates;
-        private AbstractEntityLogic[] _totalLogics;
         private int _applyIndex;
         private int _sendIndex;
         private bool _wasIdle = false;
@@ -23,7 +22,6 @@ namespace Core
         private void Awake()
         {
             _totalStates = GetComponentsInChildren<MultiplayerSendStateLogic>(true);
-            _totalLogics = GetComponentsInChildren<AbstractEntityLogic>(true);
             _applyIndex = Array.IndexOf(_totalStates, _idle);
             _sendIndex = _applyIndex;
         }
@@ -51,7 +49,7 @@ namespace Core
         public void WriteState(MultiplayerSendStateLogic multiplayerSendLogic) =>
             _sendIndex = Array.IndexOf(_totalStates, multiplayerSendLogic);
 
-        public short GetimpactIndex(AbstractEntityLogic logic) => (short)Array.IndexOf(_totalLogics, logic);
+        public short GetImpactIndex(AbstractEntityLogic logic) => (short)(logic is null ? -1 : 0);
 
         public short GetState() => (short)_sendIndex;
 
