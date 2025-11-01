@@ -80,13 +80,14 @@ export class StateHandlerRoom extends Room<State> {
 
         this.onMessage("move", (client, data) => {
             var state = data.state;
-            var player = this.state.players.get(client.sessionId);
+            var sessionId = client.sessionId;
+            var player = this.state.players.get(sessionId);
 
             if (player.state != state) {
-                this.state.movePlayer(client.sessionId, data);
+                this.state.movePlayer(sessionId, data);
                 this.broadcast("state", JSON.stringify({
-                    key: client.sessionId,
-                    index: state,
+                    key: sessionId,
+                    state: state,
                     values: [
                         player.x,
                         player.y,
@@ -99,16 +100,28 @@ export class StateHandlerRoom extends Room<State> {
                 }), { except: client });
             }
             else {
-                this.state.movePlayer(client.sessionId, data);
+                this.state.movePlayer(sessionId, data);
             }
         });
 
         this.onMessage("damage", (client, data) => {
-            for (let i = 0; i < data.ids.length; i++) {
-                var id = data.ids[i];
-                var damage = data.damages[i];
-                var player = this.state.players.get(id);
+            for (let i = 0; i < data.length; i++) {
+                var v = data[i];
+                var damage = v.damage;
+                var sessionId = v.sessionId;
+
+                var player = this.state.players.get(sessionId);
                 player.currentHp = Math.max(0, player.currentHp - damage);
+                const target = this.clients.find(c => c.sessionId === sessionId)
+
+                if (!target)
+                    continue;
+
+                target.send("damage", JSON.stringify({
+                    impactIndex: v.impactIndex,
+                    damage: damage,
+                    sessionId: sessionId,
+                }));
             }
         });
 

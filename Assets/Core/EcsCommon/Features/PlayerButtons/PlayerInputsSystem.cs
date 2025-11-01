@@ -40,37 +40,24 @@ namespace Core.Systems
 
         private readonly ComponentPools _pools;
         private readonly Transform _cameraTransform;
-
-        private readonly ActionControls<MouseLeftTag, ActionLinkMouseLeftComponent> _mouseLeftHandler;
-        private readonly ActionControls<MouseRightTag, ActionLinkMouseRightComponent> _mouseRightHandler;
-        private readonly ActionControls<ButtonJumpTag, ActionLinkSpaceComponent> _jumpHandler;
-        private readonly ActionControls<ButtonJumpForwardTag, ActionLinkSpaceForwardComponent> _jumpForwardHandler;
-        private readonly ActionControls<ButtonForwardFTag, ActionLinkForwardFComponent> _dashHandler;
-        
-        // private readonly SimpleActionControls<ButtonTeleport, ActionLinkTeleportToHubComponent> _buttonTeleportHandler;
-
-        private readonly Action[] _actions;
+        private readonly Action _actions;
 
         public PlayerInputsSystem(Context context, PlayerInputs.PlayerActions playerActions)
         {
             _playerActions = playerActions;
             _cameraTransform = context.Resolve<Camera>().transform;
 
-            _actions = new Action[]
-            {
-                (_mouseLeftHandler = new(context)).Run,
-                (_mouseRightHandler = new(context)).Run,
-                (_jumpHandler = new(context)).Run,
-                (_jumpForwardHandler = new(context)).Run,
-                (_dashHandler = new(context)).Run,
-            };
-            // _buttonTeleportHandler = new(context);
+            _actions += new ActionControls<MouseLeftTag, ActionLinkMouseLeftComponent>(context).Run;
+            _actions += new ActionControls<MouseRightTag, ActionLinkMouseRightComponent>(context).Run;
+            _actions += new ActionControls<ButtonJumpTag, ActionLinkSpaceComponent>(context).Run;
+            _actions += new ActionControls<ButtonJumpForwardTag, ActionLinkSpaceForwardComponent>(context).Run;
+            _actions += new ActionControls<ButtonForwardFTag, ActionLinkForwardFComponent>(context).Run;
+            // _actions += new SimpleActionControls<ButtonTeleport, ActionLinkTeleportToHubComponent>(context).Run;
         }
 
         public void Run(IEcsSystems systems)
         {
-            foreach (var action in _actions)
-                action.Invoke();
+            _actions.Invoke();
 
             foreach (var i in _moveStreamingFilter.Value)
             {

@@ -63,7 +63,6 @@ namespace Core.Systems
                 eventIncomingDamage.data.Add((
                     damage,
                     position,
-                    position + (Vector3)Random.insideUnitCircle,
                     owner,
                     value.showDamage ? _damageTextEffectPrefab : null
                 ));

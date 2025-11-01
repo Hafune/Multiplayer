@@ -1,12 +1,8 @@
-﻿using System;
-using Core.Components;
+﻿using Core.Components;
 using Core.Generated;
-using Core.Lib.Utils;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using Lib;
-using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Core.Systems
 {
@@ -33,18 +29,15 @@ namespace Core.Systems
                 if (eventApplyDamage.Count == 0)
                     return;
 
-                var totalPoint = Vector3.zero;
-                var ownerPosition = Vector3.zero;
+                var hitPosition = _pools.Position.Get(i).transform.position;
                 ref var eventDamageTaken = ref _pools.EventDamageTaken.Add(i);
 
                 foreach (ref var value in eventApplyDamage)
                 {
                     eventDamageTaken.count++;
-                    totalPoint += value.triggerPoint;
-                    ownerPosition += value.ownerPosition;
 
                     if (value.effect)
-                        value.effect.Spawn(value.triggerPoint + Vector3.back, (int)value.damage);
+                        value.effect.Spawn(hitPosition, (int)value.damage);
 
                     _pools.EventCausedDamage.GetOrInitialize(value.owner).AddDamage(i, value.damage);
                 }

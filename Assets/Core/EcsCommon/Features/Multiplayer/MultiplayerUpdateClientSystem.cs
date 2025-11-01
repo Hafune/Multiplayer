@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Colyseus.Schema;
 using Core.Components;
 using Core.Generated;
 using Leopotam.EcsLite;

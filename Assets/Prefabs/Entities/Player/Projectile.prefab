@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1272444721441906500}
+  - component: {fileID: -1666520955331764464}
   - component: {fileID: 591892178138878262}
   - component: {fileID: 3100406230861038418}
   - component: {fileID: 8023217090608046296}
+  - component: {fileID: -4923959809968237381}
   - component: {fileID: 3841236574827558105}
   - component: {fileID: 1693557171532904418}
   - component: {fileID: 4989812079317947636}
@@ -46,6 +48,21 @@ Transform:
   - {fileID: 8719100567685355979}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1666520955331764464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897899900747904142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1e11be4c4642b3b963c4528eb82552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.MultiplayerState
+  _idle: {fileID: 0}
+  _move: {fileID: 0}
+  _moveDirection: {fileID: 0}
 --- !u!54 &591892178138878262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,6 +116,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f12e9383d2b402bb3aefd782aef5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Components.EventMultiplayerEntityCreatedProvider
+--- !u!114 &-4923959809968237381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897899900747904142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7872315c55e4832968a52d3f4ecc7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Components.MultiplayerStateProvider
+  value:
+    state: {fileID: -1666520955331764464}
 --- !u!114 &3841236574827558105
 MonoBehaviour:
   m_ObjectHideFlags: 0

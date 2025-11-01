@@ -57,10 +57,6 @@ namespace Core.Services
             RegisterActionLink<ActionLinkSpaceComponent, ButtonJumpTag>();
             RegisterActionLink<ActionLinkSpaceForwardComponent, ButtonJumpForwardTag>();
             RegisterActionLink<ActionLinkForwardFComponent, ButtonForwardFTag>();
-            // RegisterActionLink<ActionLinkButton1Component, Button1Tag>();
-            // RegisterActionLink<ActionLinkButton2Component, Button2Tag>();
-            // RegisterActionLink<ActionLinkButton3Component, Button3Tag>();
-            // RegisterActionLink<ActionLinkButton4Component, Button4Tag>();
         }
 
         // public void ToggleView() => OnToggleView!.Invoke();

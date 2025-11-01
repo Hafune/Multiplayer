@@ -7,7 +7,7 @@ namespace Core.Components
 {
     public struct EventIncomingDamage : IEcsAutoReset<EventIncomingDamage>
     {
-        public MyList<(float damage, Vector3 triggerPoint, Vector3 ownerPosition, int owner, DamageNumber effect)> data;
+        public MyList<(float damage, Vector3 ownerPosition, int owner, DamageNumber effect)> data;
 
         public void AutoReset(ref EventIncomingDamage c)
         {

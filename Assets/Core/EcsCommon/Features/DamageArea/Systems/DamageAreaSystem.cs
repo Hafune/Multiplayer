@@ -46,10 +46,10 @@ namespace Core.Systems
 
         private int _entity;
         private float _damage;
-        private Vector3 _position;
-        private DamageArea _area;
-        private AbstractEntityLogic _targetEvents;
         private bool _canBeCritical;
+        private Vector3 _position;
+        private AbstractEntityLogic _targetEvents;
+        private MultiplayerState _multiplayerState;
 
         public DamageAreaSystem(Context context)
         {
@@ -83,10 +83,10 @@ namespace Core.Systems
             var position = _pools.Position.Get(entity).transform.position;
 
             _damage = damage;
-            _area = area;
             _position = position;
             _entity = entity;
             _targetEvents = hitImpactsNode.targetEvents;
+            _multiplayerState = _pools.MultiplayerState.Get(entity).state;
             //этот ивент не нужен ни одному фильтру, возможно стоит объеденить с каким нибудь компонентоа этой системы  
             _pools.EventDamageAreaSelfImpactInfo.GetOrInitialize(entity) = default;
 
@@ -123,15 +123,27 @@ namespace Core.Systems
                 }
             }
 
-            _targetEvents?.Run(targetEntity);
+            damage = (int)damage;
 
+            var impactIndex = _multiplayerState.GetimpactIndex(_targetEvents);
+            if (impactIndex != -1 || damage != 0)
+            {
+                var data = new MultiplayerDamageAreaDataComponent
+                {
+                    impactIndex = impactIndex,
+                    damage = (int)damage,
+                    sessionId = _pools.MultiplayerData.Get(targetEntity).data.SessionId
+                };
+
+                MultiplayerManager.Instance.PrepareToSendDamage(data);
+            }
+            
             if (damage == 0)
                 return;
 
             var eventIncomingDamage = _pools.EventIncomingDamage.GetOrInitialize(targetEntity);
             eventIncomingDamage.data.Add((
                 damage,
-                _area.TriggerPoint,
                 _position,
                 _entity,
                 damageNumberPrefab));

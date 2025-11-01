@@ -22,22 +22,24 @@ namespace Core
         private ColyseusRoom<State> _room;
         private Context _context;
         private ComponentPools _pools;
-        private readonly Dictionary<string, ConvertToEntity> _storages = new();
         private MyPool _objectPool;
-        private EcsFilter _filter;
+        private EcsFilter _othersFilter;
+        private EcsFilter _playerFilter;
+        private readonly Dictionary<string, ConvertToEntity> _multiplayerEntities = new();
         private readonly List<DataChange> _immediatelyChanges = new();
+        private readonly List<MultiplayerDamageAreaDataComponent> _damages = new();
 
         protected override void Start()
         {
             base.Start();
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.x)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.y)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.z)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityX)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityY)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.velocityZ)});
-            _immediatelyChanges.Add(new DataChange{Field = nameof(Player.bodyAngle)});
-            
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.x) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.y) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.z) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.velocityX) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.velocityY) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.velocityZ) });
+            _immediatelyChanges.Add(new DataChange { Field = nameof(Player.bodyAngle) });
+
             Instance.InitializeClient();
             Connect();
         }
@@ -54,7 +56,9 @@ namespace Core
             _context = context;
             _pools = context.Resolve<ComponentPools>();
             _objectPool = context.Resolve<PoolService>().DontDisposablePool;
-            _filter = context.Resolve<EcsWorld>().Filter<MultiplayerDataComponent>().Inc<MultiplayerStateComponent>().End();
+            var world = context.Resolve<EcsWorld>();
+            _othersFilter = world.Filter<MultiplayerDataComponent>().Inc<MultiplayerStateComponent>().Exc<Player1UniqueTag>().End();
+            _playerFilter = world.Filter<Player1UniqueTag>().End();
         }
 
         public string GetClientId() => _room.Id;
@@ -62,7 +66,19 @@ namespace Core
         public void SendData(string key, Dictionary<string, object> data) => _room.Send(key, data);
 
         public void SendData(string key, string data) => _room.Send(key, data);
-        public void SendData(string key, int data) => _room.Send(key, data);
+
+        public void PrepareToSendDamage(MultiplayerDamageAreaDataComponent data) => _damages.Add(data);
+
+        public void SendAll(MultiplayerMoveData data)
+        {
+            _room.Send("move", data);
+
+            if (_damages.Count == 0)
+                return;
+
+            _room.Send("damage", _damages);
+            _damages.Clear();
+        }
 
         private async void Connect()
         {
@@ -95,10 +111,6 @@ namespace Core
                     var up = Math.Abs(forward.y) > 0.99f ? new Vector3(0, 0, 1) : new Vector3(0, 1, 0);
                     var rotation = Quaternion.LookRotation(forward, up);
                     body.rotation = rotation;
-                    // var multiplayerData = convertToEntity.GetComponent<MultiplayerData>();
-                    // multiplayerData.SetupData(data);
-                    // _pools.MultiplayerData.Add(convertToEntity.RawEntity).data = multiplayerData;
-                    // _storages[key] = convertToEntity;
 
                     return;
                 }
@@ -108,11 +120,11 @@ namespace Core
             {
                 var info = JsonUtility.FromJson<MultiplayerActionInfo>(data);
 
-                foreach (var i in _filter)
+                foreach (var i in _othersFilter)
                 {
                     if (info.key != _pools.MultiplayerData.Get(i).data.SessionId)
                         continue;
-                    
+
                     _immediatelyChanges[0].Value = info.values[0];
                     _immediatelyChanges[0].PreviousValue = info.values[0];
                     _immediatelyChanges[1].Value = info.values[1];
@@ -123,8 +135,19 @@ namespace Core
                     _immediatelyChanges[6].Value = info.values[6];
 
                     _pools.MultiplayerData.Get(i).data.OnChange(_immediatelyChanges);
-                    _pools.MultiplayerState.Get(i).state.RunMultiplayerLogic(i, info.index);
+                    _pools.MultiplayerState.Get(i).state.RunMultiplayerLogic(i, info.state);
                 }
+            });
+
+            _room.OnMessage<string>("damage", data =>
+            {
+                var damageData = JsonUtility.FromJson<MultiplayerDamageAreaDataComponent>(data);
+                
+                if (damageData.impactIndex == -1)
+                    return;
+                
+                int entity = _playerFilter.GetFirst();
+                _pools.EventKnockdown.AddIfNotExist(entity);
             });
         }
 
@@ -153,7 +176,7 @@ namespace Core
             ref var dataComponent = ref _pools.MultiplayerData.Add(convertToEntity.RawEntity);
             dataComponent.data = multiplayerData;
             dataComponent.position = position;
-            _storages[key] = convertToEntity;
+            _multiplayerEntities[key] = convertToEntity;
 
             if (key != _room.SessionId)
                 return;
@@ -168,7 +191,7 @@ namespace Core
 
         private void RemovePlayer(string key, Player data)
         {
-            var entity = _storages[key].RawEntity;
+            var entity = _multiplayerEntities[key].RawEntity;
             _pools.EventRemoveEntity.AddIfNotExist(entity);
         }
 

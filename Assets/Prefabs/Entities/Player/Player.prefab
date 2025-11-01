@@ -2903,6 +2903,7 @@ GameObject:
   - component: {fileID: 3908767944188042988}
   - component: {fileID: 5150072211604679381}
   - component: {fileID: 1014095271700937415}
+  - component: {fileID: 271642366709899475}
   - component: {fileID: 1481910208008276301}
   - component: {fileID: -216519883093473632}
   - component: {fileID: -250386771771252390}
@@ -3130,6 +3131,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageBaseValueProvider
   value:
     <baseValue>k__BackingField: 10
+--- !u!114 &271642366709899475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5658124197020847827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f337ef236648e7913122556da5621d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitImpactsProvider
+  value:
+    targetEvents: {fileID: 0}
+    selfEvents: {fileID: 0}
 --- !u!114 &1481910208008276301
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ namespace Core
     public struct MultiplayerActionInfo
     {
         public string key;
-        public int index;
+        public int state;
         public float[] values;
     }
 }

@@ -35,7 +35,6 @@ namespace Core.Systems
                     ownerData.Add((
                         targetData.damage * percent,
                         targetData.ownerPosition,
-                        targetData.triggerPoint,
                         i,
                         _damageTextEffectPrefab
                         ));
